@@ -16,8 +16,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000000 url(http://hello-site.ru//main/images/preloads/tail-spin.svg) center center no-repeat;
-    background-size:41px;
+    background: #E8E2B3 url(/img/Animation.gif) center center no-repeat;
+    background-size:120px;
 }
 a {
     text-decoration: none;
@@ -58,8 +58,8 @@ main {
     align-items: center;
     justify-content: center;
     position: relative;  
-    overflow: hidden;
     margin-top: 12px;
+	overflow: hidden;
     width: 115px;
     height: 115px;
     border-radius: 115px;
@@ -204,7 +204,9 @@ main {
     flex-direction: column;
 	
 }
-
+.status .status-block  p {
+margin-right: 12px;	
+}
 #laboratory, #research, #rest,#training,#work,#cooperation{
     display: none;
 }
@@ -428,6 +430,23 @@ main {
 }
 #tempH, #tempM {
     display: none;
+}
+.eyebrows {
+	position: absolute;
+	top:45px;
+	width: 33px;
+	
+}
+.eye {
+	position: absolute;
+	width: 33px;
+	top:50px;
+	
+}
+.mouth {
+	position: absolute;
+	top:65px;
+	width: 14px;
 }
 ////////
 

@@ -1,11 +1,16 @@
 $(window).on('load', function() {
-    $("#preload").animate({
+	
+	 setTimeout(function(){
+       $("#preload").animate({
         opacity:'0',   
     },1000); 
+    },2300);
+	setTimeout(function(){
+      $("#preload").css('display','none');
+    },3300);
+    
 
-    setTimeout(function(){
-        $("#preload").css("display","none");
-    },1000);
+   
 });
 //$('.bgImgProfileHov').on('click',function(){
 //    $('#avatarBlock').slideDown();

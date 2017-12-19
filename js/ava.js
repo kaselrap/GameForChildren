@@ -63,4 +63,4 @@ function off() {
 	$('#tempH').css('display','none');
 	$('#tempM').css('display','none');
 }
-changeHealth(2,1,3,1);
+changeHealth(2,1,3,2);

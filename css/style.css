@@ -58,10 +58,11 @@ main {
     align-items: center;
     justify-content: center;
     position: relative;  
+    overflow: hidden;
     margin-top: 12px;
-	overflow: hidden;
     width: 115px;
     height: 115px;
+     border: 4px solid #fff;
     border-radius: 115px;
     background-color: #e8e2b3;
     box-shadow: 0 3px 8px rgba(76,50,0,0.42);
@@ -72,6 +73,7 @@ main {
     align-items: center;
     border-radius: 4px;
     margin-top: 31px;
+    border: 4px solid #fff;
     width: 115px;
     height: 378px;
     background-color: #e8e2b3;
@@ -82,11 +84,14 @@ main {
     justify-content: space-between;
     align-items: center;
     font-size: 18px;
-    margin-top: 8.6px; 
+    margin-top: 7.6px; 
    width: 100px;
     height: auto;
     color: #2c3402;
     
+}
+.status .status-block p {
+    margin-right: 12px;
 }
 .buttonRun {
     margin-top:38px;
@@ -161,7 +166,9 @@ main {
     font-family: Tahoma;
     border-top-left-radius: 4px;
     text-decoration: none;
-    padding: 0 18px;
+    padding: 0 14px;
+    border: 4px solid #fff;
+    border-right: none;
     border-bottom: none;
     display: flex;
     flex-direction: column;
@@ -170,7 +177,7 @@ main {
     cursor: pointer;
 }
 .buttonChange {
-    margin: 0 5px;
+    margin: 0 7px;
 }
 .buttonChange:first-child {
     margin-left: 0;
@@ -179,16 +186,57 @@ main {
 .buttonChange::before {
     content:'';
     position: absolute;
-    top: 0;
+    top: -4px;
+    right: -8px;
     bottom: 0;
     width: 18px;
     background: #b7b28d;
-    right: -5px;
+    border-right: 4px solid #fff;
+    border-top: 4px solid #fff;
+    border-top-right-radius: 4px;
     -webkit-transform: skewX(10deg);
     -ms-transform: skewX(10deg);
     transform: skewX(10deg);
     border-left: none;
     border-bottom: none;
+}
+#buttonChangeOn .after {
+    content:'';
+    position: absolute;
+    bottom: -4px;
+    height: 4px;
+    background: #e8e2b3;
+}
+#buttonChangeOn .after:first-child {
+    left: 0;
+    width: calc(100% + 13px);
+    
+}
+#buttonChangeOn .after:not(:first-child) {
+    left: -4px;
+    width: calc(100% + 17px);
+}
+#buttonChangeOn .after::after {
+    content:'';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+      height: 4px;
+      width: 4px;
+      border-bottom-left-radius: 100%;  
+      z-index: 5;
+}
+#buttonChangeOn .after::before {
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+      height: 4px;
+      width: 4px;
+      border-bottom-right-radius: 100%;  
+      z-index: 5;
 }
 .buttonChange img {
    z-index: 3;
@@ -196,6 +244,7 @@ main {
 #buttonChangeOn {
     border-bottom: 0px solid;
     background: #e8e2b3;
+    z-index: 4;
 }
 #buttonChangeOn::before {
     background: #e8e2b3;
@@ -204,8 +253,8 @@ main {
     flex-direction: column;
 	
 }
-.status .status-block  p {
-margin-right: 12px;	
+#study,#rest {
+     padding: 13px;
 }
 #laboratory, #research, #rest,#training,#work,#cooperation{
     display: none;
@@ -214,10 +263,21 @@ margin-right: 12px;
     width: 610px;
     height: 557px;
     background: #e8e2b3;
-    padding: 16px;
+   
+    border: 4px solid #fff;
     border-radius: 4px;
     border-top-left-radius: 0;
     overflow: hidden;
+}
+.room::before {
+    content: '';
+    position: absolute;
+    width: 605px;
+    height: 1px;
+    background: rgba(121,121,121,0.5);
+    top: 61px;
+    
+    z-index: 3;
 }
 .room-header {
     display: flex;
@@ -310,6 +370,7 @@ margin-right: 12px;
 .room .about-persons {
     display: none;
     position: absolute;
+     border: 4px solid #fff;
     height: 325px;
     width: 260px;
     background: #e8e2b3;
@@ -416,12 +477,14 @@ margin-right: 12px;
 
 ////////
 .main-avatarImg {
-    
+position: absolute;
+   
 }
 .scarf {
     display: none;
     position: absolute;
-    top:72px;   
+    top:67px;
+    width:30px;  
 }
 .temp {
   position: absolute;
@@ -431,25 +494,24 @@ margin-right: 12px;
 #tempH, #tempM {
     display: none;
 }
+
 .eyebrows {
-	position: absolute;
-	top:45px;
-	width: 33px;
 	
+	top:41px;
+	width: 31px;	
+     position: absolute;
 }
 .eye {
 	position: absolute;
-	width: 33px;
-	top:50px;
+	width: 31px;
+	top:45px;
 	
 }
 .mouth {
 	position: absolute;
-	top:65px;
-	width: 14px;
+	top:59px;
+	width: 15px;
 }
-////////
-
 
 
 

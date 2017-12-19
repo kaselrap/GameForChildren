@@ -1,0 +1,176 @@
+#laboratory {
+  
+    width: 100%;
+    height: 100%;
+    position: relative;
+/*    background: url(/img/bg11.png) center center; */
+}
+/*
+.S1_part_01_r, .S1_part_02_r, .S1_part_03_r, .S1_part_04_r, .S1_part_05_r, .S1_part_06_r, .S1_part_07_r, .S1_part_08_r, .S1_part_09_r {
+    display: none;
+}
+.S1_part_01, .S1_part_02, .S1_part_03, .S1_part_04, .S1_part_05, .S1_part_06, .S1_part_07, .S1_part_08, .S1_part_09 {
+    display: none;
+}
+*/
+#laboratory img {
+    position: absolute;
+}
+.S1_part_01img {
+  width: 566px;
+    bottom: 0px;
+    left: 18px;
+    z-index: 1;
+}
+.S1_part_02img {
+  width: 184px;
+    bottom: 80px;
+    left: 85px  
+}
+.S1_part_03img {
+  width: 50px;
+    top: 10px;
+    right: 200px  
+}
+.S1_part_04img {
+  width: 86px;
+    top: 60px;
+    right: 244px;
+    z-index: 2;
+}
+.S1_part_05img {
+  width: 163px;
+    top: 184px;
+    right: 205px;
+    z-index: 3;  
+}
+.S1_part_06img {
+  width: 176px;
+    top: 283px;
+    right: 196px ;
+    z-index: 3;
+}
+.S1_part_07img {
+  width: 13px;
+    top: 126px;
+    right: 320px;
+    z-index: 3;  
+}
+.S1_part_08img {
+  width: 50px;
+    top: 116px;
+    right: 261px;
+    z-index: 3;  
+}
+.S1_part_09img {
+  width: 72px;
+    top: 15px;
+    right: 251px;
+    z-index: 3;  
+}
+.divButtonLaboratory {
+    position: absolute;
+    z-index: 10;
+    left: 10px;
+    bottom: 10px;
+}
+.buttonLaboratoryMenu {
+    position: absolute;
+    z-index: 10;
+   
+    bottom: 10px;
+}
+.buttonLaboratory {
+   margin-top: 10px; 
+}
+.buttonLaboratoryActive p{
+    color: white;
+    box-shadow: none;
+      margin-top: 0px; 
+}
+.room .about-rocket {
+    display: none;
+     border: 4px solid #fff;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    height: 325px;
+    width: 260px;
+    background: #e8e2b3;
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    box-shadow: 7px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    z-index: 5;
+}
+.room .about-rocket span {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 10px;
+}
+.room .about-rocket:before,
+.room .about-rocket:after {
+    content: '';
+    display: none;
+    position: absolute;
+    right: -30px;
+}
+.room .about-rocket:before {
+    top: 0;
+    border-bottom: 23px solid transparent;
+    border-left: 30px solid #e8e2b3;
+}
+.room .about-rocket:after {
+    bottom: 0;
+    border-top: 23px solid transparent;
+    border-left: 30px solid #e8e2b3;
+}
+#S2a_part_01 {
+     width: 173px;
+    top: 251px;
+    right: 198px ;
+      z-index: 3;
+}
+#S2a_part_02 {
+     width: 110px;
+    top: 15px;
+    right: 228px ;
+      z-index: 3;
+}
+#S2a_part_03 {
+     width: 163px;
+    top: 15px;
+    right: 205px ;
+    z-index: 4;
+}
+#S2a_part_04 {
+     width: 72px;
+    top: 63px;
+    right: 250px ;
+    z-index: 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

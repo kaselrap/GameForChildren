@@ -1,13 +1,11 @@
 $(window).on('load', function() {
-	
-	 setTimeout(function(){
        $("#preload").animate({
         opacity:'0',   
     },1000); 
-    },2300);
+  
 	setTimeout(function(){
       $("#preload").css('display','none');
-    },3300);
+    },1000);
     
 
    
@@ -86,7 +84,7 @@ $('.person').on('contextmenu',function(e){
     let y = e.pageY;
 	let topMain = $('.main').offset().top,
 		leftMain = $('.main').offset().left;
-	console.log(x,y);
+	
 	if(x+260>=leftMain+624) {
 		x=x-240;
 	}

@@ -24,34 +24,36 @@ function Rocket() {
     }   
     this.buyItemRocket = function() {
         var id = $('#buyButton').attr('href');
-        var redItem = id.slice(0,11),
-            mainItem =id.slice(0,10);
-        if(id.length === 13) {
-           var redItem = id.slice(0,12),
-            mainItem =id.slice(0,11);
+
+        if( level === 1) {
+            var redItem = id.slice(0,12),
+                mainItem =id.slice(0,11);
         }
-        else {
+        if(level === 2 || level == 0){
             var redItem = id.slice(0,11),
-            mainItem =id.slice(0,10);  
+                mainItem =id.slice(0,10);  
         }
         $('#'+redItem+'r').remove();
         $('#'+id).remove();
         $('#'+mainItem).css('display','block');
-            if(id.length === 13) {
+        if(level === 1) {
             self.arrayElementsLevel2[mainItem] = 1;
         }
-        else {
-              self.arrayElements[mainItem] = 1;
+        if(level === 0) {
+            self.arrayElements[mainItem] = 1;
         }
-      
+        if(level === 2) {
+            self.arrayElementsLevel3[mainItem] = 1;
+        }
         self.mouseLeave();
     } 
 
     this.toLevel2 = function() {
-        if(self.scanItem(self)){
+        if(self.scanItem(self,self.arrayElements)){
             $('#Level2').off('click',self.toLevel2);
-             $('#Level1').removeClass('buttonLaboratoryActive');
-            $('#Level2').addClass('buttonLaboratoryActive');
+            $('#Level1').parent(".buttonRun").removeClass('buttonLaboratoryActive');
+            $('#Level2').parent(".buttonRun").addClass('buttonLaboratoryActive');
+            $('#Level3').on('click',rocket.toLevel3);
             level = 1;
             self.animateRocket(self).then(function(){
                 self.getElementsConditionLevel2(); 
@@ -64,6 +66,26 @@ function Rocket() {
                     $(document).on('click','#laboratory img',self.clickImgRoket);
                     $('.room .about-rocket').on('mouseleave',self.mouseLeave);
                 },14000);
+            });
+        }
+    }
+
+    this.toLevel3 = function() {
+        if(self.scanItem(self,self.arrayElementsLevel2)){
+            $('#Level3').off('click',self.toLevel3);
+            $('#Level2').parent(".buttonRun").removeClass('buttonLaboratoryActive');
+            $('#Level3').parent(".buttonRun").addClass('buttonLaboratoryActive');
+            level = 2;
+
+            self.getElementsConditionLevel3() 
+                .then(function(){
+
+
+
+                self.outputImgRoket('/img/Stages/Stage 3/',self.arrayElementsLevel3);
+                self.removeItemOfRocket(self.arrayElementsLevel2);
+                $(document).on('click','#laboratory img',self.clickImgRoket);
+                $('.room .about-rocket').on('mouseleave',self.mouseLeave);
             });
         }
     }
@@ -98,11 +120,17 @@ Rocket.prototype.level2 = function() {
     self.getElementsConditionLevel2().then(function() {
         self.outputImgRoket('/img/Stages/Stage 2b/',self.arrayElementsLevel2);
     });
-
 }
-Rocket.prototype.scanItem = function(self) {
-    for(var key in self.arrayElements){
-        if(self.arrayElements[key] === 0){
+Rocket.prototype.level3 = function() {
+    var self =this;
+    self.offButton();
+    self.getElementsConditionLevel3().then(function() {
+        self.outputImgRoket('/img/Stages/Stage 3/',self.arrayElementsLevel3);
+    });
+}
+Rocket.prototype.scanItem = function(self,arr) {
+    for(var key in arr){
+        if(arr[key] === 0){
             return 0; 
         }
     }
@@ -125,13 +153,15 @@ Rocket.prototype.contextMenu = function(e,text,id) {
     if(y+325>=topMain+636) {
         y=y-305;
     }
-    if(id.length === 13) {
-        var redItem = id.slice(0,12); 
-    }
-    else {
-        var redItem = id.slice(0,11);   
-    }
+    if( level === 1) {
+        var redItem = id.slice(0,12);
 
+    }
+    if(level === 2 || level == 0){
+        var redItem = id.slice(0,11);
+
+    }
+ 
     $('#buyButton').attr('href',id);
     $('#'+id).css('display','none');
     $('#'+redItem+'r').css('display','block');
@@ -145,11 +175,13 @@ Rocket.prototype.contextMenu = function(e,text,id) {
 }
 Rocket.prototype.mouseLeave = function() {
     var id = $('#buyButton').attr('href');
-    if(id.length === 13) {
-        var redItem = id.slice(0,12); 
+    if(level === 1) {
+        var redItem = id.slice(0,12);
+
     }
-    else {
-        var redItem = id.slice(0,11);   
+    if(level === 2 || level == 0){
+        var redItem = id.slice(0,11);
+
     }
     $('#'+id).css('display','block');
 
@@ -181,10 +213,10 @@ Rocket.prototype.getElementsCondition = function() {
             S1_part_03: 1,
             S1_part_04: 0,
             S1_part_05: 1,
-            S1_part_06: 1,
+            S1_part_06: 0,
             S1_part_07: 1,
-            S1_part_08: 1,
-            S1_part_09: 1,     
+            S1_part_08: 0,
+            S1_part_09: 0,     
         };
         return resolve();
     });
@@ -197,15 +229,44 @@ Rocket.prototype.getElementsConditionLevel2 = function() {
             S2b_part_02: 0,
             S2b_part_03: 0,
             S2b_part_04: 0,
-            S2b_part_05: 0,
+            S2b_part_05: 1,
             S2b_part_06: 0,
             S2b_part_07: 0,
             S2b_part_08: 0,
-            S2b_part_09: 0,
+            S2b_part_09: 1,
             S2b_part_10: 0,     
         };
         return resolve();
     });
+}
+Rocket.prototype.getElementsConditionLevel3 = function() {
+    var self = this;
+    return new Promise(function(resolve){
+        self.level = 0;
+        self.arrayElementsLevel3 = {
+            S3_part_01: 0, 
+            S3_part_02: 0,
+            S3_part_03: 0,
+            S3_part_04: 0,
+            S3_part_05: 0,
+            S3_part_06: 0,
+            S3_part_07: 0,
+            S3_part_08: 0,
+            S3_part_09: 0,
+            S3_part_10: 0,   
+            S3_part_11: 0,   
+            S3_part_12: 0,   
+            S3_part_13: 0,   
+            S3_part_14: 0, 
+            S3_part_15: 0,  
+        };
+        return resolve();
+    });
+}
+Rocket.prototype.removeItemOfRocket = function(arr) {
+    for(var key in arr) {
+        $('#'+key).remove();
+    }
 }
 Rocket.prototype.outputImgRoket = function(string,arrayElements) {
     var src = string;
@@ -260,7 +321,6 @@ Rocket.prototype.animateRocket = function(self) {
             $('#S1_part_03').animate({
                 top:'+600px'
             },10000);
-
             return resolve();
 
         })
@@ -295,7 +355,7 @@ Rocket.prototype.animateRocket = function(self) {
 
 
 
-var level = 1;
+var level = 0;
 
 var rocket = new Rocket();
 if(level === 0) {
@@ -311,8 +371,17 @@ if(level === 1) {
     $(document).on('click','#laboratory img',rocket.clickImgRoket);
     $('#buyButton').on('click',rocket.buyItemRocket);
     $('.room .about-rocket').on('mouseleave',rocket.mouseLeave);
-      $('#Level1').parent.removeattr('buttonLaboratoryActive');
-            $('#Level2').parent().addClass('buttonLaboratoryActive');
+    $('#Level1').parent(".buttonRun").removeClass('buttonLaboratoryActive');
+    $('#Level2').parent(".buttonRun").addClass('buttonLaboratoryActive');
+    $('#Level3').on('click',rocket.toLevel3);
+}
+if(level === 2) {
+    rocket.level3();
+    $(document).on('click','#laboratory img',rocket.clickImgRoket);
+    $('#buyButton').on('click',rocket.buyItemRocket);
+    $('.room .about-rocket').on('mouseleave',rocket.mouseLeave);
+    $('#Level1').parent(".buttonRun").removeClass('buttonLaboratoryActive');
+    $('#Level3').parent(".buttonRun").addClass('buttonLaboratoryActive');
 }
 
 

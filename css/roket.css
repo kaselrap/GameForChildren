@@ -5,14 +5,7 @@
     position: relative;
 /*    background: url(/img/bg11.png) center center; */
 }
-/*
-.S1_part_01_r, .S1_part_02_r, .S1_part_03_r, .S1_part_04_r, .S1_part_05_r, .S1_part_06_r, .S1_part_07_r, .S1_part_08_r, .S1_part_09_r {
-    display: none;
-}
-.S1_part_01, .S1_part_02, .S1_part_03, .S1_part_04, .S1_part_05, .S1_part_06, .S1_part_07, .S1_part_08, .S1_part_09 {
-    display: none;
-}
-*/
+
 #laboratory img {
     position: absolute;
 }
@@ -29,8 +22,8 @@
 }
 .S1_part_03img {
   width: 50px;
-    top: 10px;
-    right: 200px  
+    top: 6px;
+    right: 201px  
 }
 .S1_part_04img {
   width: 86px;
@@ -216,6 +209,111 @@
 
 
 
+
+.S3_part_01img {
+     width: 124px;
+    top: 402px;
+    right: 242px ;
+      z-index: 4;
+}
+.S3_part_02img {
+     width: 89px;
+    top: 370px;
+    right: 259px ;
+      z-index: 4;
+}
+
+.S3_part_03img {
+     width: 119px;
+    top: 357px;
+    right: 244px ;
+      z-index: 4;
+}
+
+
+.S3_part_04img {
+     width: 39px;
+    top: 300px;
+    right: 313px ;
+      z-index: 4;
+}
+
+.S3_part_05img {
+     width: 61px;
+    top: 301px;
+    right: 255px ;
+      z-index: 4;
+}
+.S3_part_06img {
+     width: 596px;
+    top: 305px;
+    right: 4px ;
+      z-index: 4;
+}
+
+.S3_part_07img {
+     width: 50px;
+    top: 229px;
+    right: 328px ;
+      z-index: 4;
+}
+
+.S3_part_08img {
+     width: 84px;
+    top:231px;
+    right: 255px ;
+      z-index: 4;
+}
+
+.S3_part_09img {
+     width: 54px;
+    top: 220px;
+    right: 276px ;
+      z-index: 4;
+}
+
+.S3_part_10img {
+     width: 93px;
+    top: 112px;
+    right: 234px ;
+      z-index: 4;
+}
+
+.S3_part_11img {
+     width: 49px;
+    top: 112px;
+    right: 315px;
+      z-index: 4;
+}
+
+.S3_part_12img {
+     width: 22px;
+    top: 100px;
+    right: 251px ;
+      z-index: 4;
+}
+
+
+.S3_part_13img {
+     width: 150px;
+    top: 99px;
+    right: 228px ;
+      z-index: 3;
+}
+
+.S3_part_14img {
+     width: 60px;
+    top: 156px;
+    right: 257px ;
+      z-index: 4;
+}
+
+.S3_part_15img {
+     width: 70px;
+    top: 49px;
+    right: 268px ;
+      z-index: 4;
+}
 
 
 

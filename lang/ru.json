@@ -13,13 +13,23 @@
     "distance":"Distance",
     "yourself":"Yourself",
     "S1_part_05_w": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-   "S1_part_06_w":" ipsum dolor sit amet, consectetur adipisicing elit.",
+    "S1_part_06_w":" ipsum dolor sit amet, consectetur adipisicing elit.",
     "S1_part_01_w": "  dolor sit amet, consectetur adipisicing elit.", 
     "S1_part_02_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
     "S1_part_03_w": "  sit amet, consectetur adipisicing elit.",
     "S1_part_04_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
     "S1_part_07_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
     "S1_part_08_w": " i amet, consectetur adipisicing elit.",
-    "S1_part_09_w": " ipsum dolor sit amet, consectetur adipisicing elit."       
-    
+    "S1_part_09_w": " ipsum dolor sit amet, consectetur adipisicing elit." ,
+    "S2b_part_01_w": " ipsum dolor sit amet, consectetur adipisicing elit.", 
+    "S2b_part_02_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
+    "S2b_part_03_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
+    "S2b_part_04_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
+    "S2b_part_05_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
+    "S2b_part_06_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
+    "S2b_part_07_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
+    "S2b_part_08_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
+    "S2b_part_09_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
+    "S2b_part_10_w": " ipsum dolor sit amet, consectetur adipisicing elit."   
+
 }

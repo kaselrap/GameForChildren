@@ -1,11 +1,12 @@
 function Rocket() {
 
     var self = this;
-    this.src = '/img/Stages/Stage 1/';
     this.lang = 'ru';
 
     this.clickImgRoket = function(event) {
+
         var href = this.href;
+
         if(href === 1) {
             return;
         } else {
@@ -24,21 +25,45 @@ function Rocket() {
     this.buyItemRocket = function() {
         var id = $('#buyButton').attr('href');
         var redItem = id.slice(0,11),
-            mainItem =id.slice(0,10) ;
+            mainItem =id.slice(0,10);
+        if(id.length === 13) {
+           var redItem = id.slice(0,12),
+            mainItem =id.slice(0,11);
+        }
+        else {
+            var redItem = id.slice(0,11),
+            mainItem =id.slice(0,10);  
+        }
         $('#'+redItem+'r').remove();
         $('#'+id).remove();
         $('#'+mainItem).css('display','block');
-
-        self.arrayElements[mainItem] = 1;
+            if(id.length === 13) {
+            self.arrayElementsLevel2[mainItem] = 1;
+        }
+        else {
+              self.arrayElements[mainItem] = 1;
+        }
+      
         self.mouseLeave();
     } 
 
     this.toLevel2 = function() {
         if(self.scanItem(self)){
             $('#Level2').off('click',self.toLevel2);
-            self.level = 1;
+             $('#Level1').removeClass('buttonLaboratoryActive');
+            $('#Level2').addClass('buttonLaboratoryActive');
+            level = 1;
             self.animateRocket(self).then(function(){
-               self.getElementsConditionLevel2(); 
+                self.getElementsConditionLevel2(); 
+                return;
+            }).then(function(){
+                setTimeout(function(){
+
+                    $('#S2a_part_04').remove();
+                    self.outputImgRoket('/img/Stages/Stage 2b/',self.arrayElementsLevel2);
+                    $(document).on('click','#laboratory img',self.clickImgRoket);
+                    $('.room .about-rocket').on('mouseleave',self.mouseLeave);
+                },14000);
             });
         }
     }
@@ -67,6 +92,14 @@ Rocket.prototype.removeItemAddbigItem = function(self) {
         return resolve();
     });
 }
+Rocket.prototype.level2 = function() {
+    var self =this;
+    self.offButton();
+    self.getElementsConditionLevel2().then(function() {
+        self.outputImgRoket('/img/Stages/Stage 2b/',self.arrayElementsLevel2);
+    });
+
+}
 Rocket.prototype.scanItem = function(self) {
     for(var key in self.arrayElements){
         if(self.arrayElements[key] === 0){
@@ -92,7 +125,13 @@ Rocket.prototype.contextMenu = function(e,text,id) {
     if(y+325>=topMain+636) {
         y=y-305;
     }
-    var redItem = id.slice(0,11);
+    if(id.length === 13) {
+        var redItem = id.slice(0,12); 
+    }
+    else {
+        var redItem = id.slice(0,11);   
+    }
+
     $('#buyButton').attr('href',id);
     $('#'+id).css('display','none');
     $('#'+redItem+'r').css('display','block');
@@ -106,7 +145,12 @@ Rocket.prototype.contextMenu = function(e,text,id) {
 }
 Rocket.prototype.mouseLeave = function() {
     var id = $('#buyButton').attr('href');
-    var redItem = id.slice(0,11);
+    if(id.length === 13) {
+        var redItem = id.slice(0,12); 
+    }
+    else {
+        var redItem = id.slice(0,11);   
+    }
     $('#'+id).css('display','block');
 
     $('#'+redItem+'r').css('display','none');
@@ -135,7 +179,7 @@ Rocket.prototype.getElementsCondition = function() {
             S1_part_01: 1, 
             S1_part_02: 1,
             S1_part_03: 1,
-            S1_part_04: 1,
+            S1_part_04: 0,
             S1_part_05: 1,
             S1_part_06: 1,
             S1_part_07: 1,
@@ -148,9 +192,7 @@ Rocket.prototype.getElementsCondition = function() {
 Rocket.prototype.getElementsConditionLevel2 = function() {
     var self = this;
     return new Promise(function(resolve){
-
-        self.level = 0;
-        self.arrayElements = {
+        self.arrayElementsLevel2 = {
             S2b_part_01: 0, 
             S2b_part_02: 0,
             S2b_part_03: 0,
@@ -165,11 +207,11 @@ Rocket.prototype.getElementsConditionLevel2 = function() {
         return resolve();
     });
 }
-Rocket.prototype.outputImgRoket = function() {
-    var src = this.src;
+Rocket.prototype.outputImgRoket = function(string,arrayElements) {
+    var src = string;
     var self = this;
     return new Promise(function(resolve){
-        var arr = self.arrayElements;
+        var arr = arrayElements;
         for(var key in arr) {
             if(arr[key] === 1) {
                 var element =  document.createElement('img');
@@ -253,16 +295,25 @@ Rocket.prototype.animateRocket = function(self) {
 
 
 
+var level = 1;
 
 var rocket = new Rocket();
-rocket.getElementsCondition()
-    .then(rocket.outputImgRoket());
-$(document).on('click','#laboratory img',rocket.clickImgRoket);
-
-$('.room .about-rocket').on('mouseleave',rocket.mouseLeave);
-$('#buyButton').on('click',rocket.buyItemRocket);
-$('#Level2').on('click',rocket.toLevel2);
-
+if(level === 0) {
+    rocket.getElementsCondition()
+        .then(rocket.outputImgRoket('/img/Stages/Stage 1/',rocket.arrayElements));
+    $(document).on('click','#laboratory img',rocket.clickImgRoket);
+    $('.room .about-rocket').on('mouseleave',rocket.mouseLeave);
+    $('#buyButton').on('click',rocket.buyItemRocket);
+    $('#Level2').on('click',rocket.toLevel2);
+}
+if(level === 1) {
+    rocket.level2();
+    $(document).on('click','#laboratory img',rocket.clickImgRoket);
+    $('#buyButton').on('click',rocket.buyItemRocket);
+    $('.room .about-rocket').on('mouseleave',rocket.mouseLeave);
+      $('#Level1').parent.removeattr('buttonLaboratoryActive');
+            $('#Level2').parent().addClass('buttonLaboratoryActive');
+}
 
 
 

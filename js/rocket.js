@@ -38,13 +38,20 @@ function Rocket() {
         $('#'+mainItem).css('display','block');
         if(level === 1) {
             self.arrayElementsLevel2[mainItem] = 1;
+			if(self.scanItem(self,self.arrayElementsLevel2)){
+				$('#Level3').removeClass('buttonBlok');
+			}
         }
         if(level === 0) {
             self.arrayElements[mainItem] = 1;
+			if(self.scanItem(self,self.arrayElements)){
+				$('#Level2').removeClass('buttonBlok');
+		}
         }
         if(level === 2) {
             self.arrayElementsLevel3[mainItem] = 1;
         }
+		
         self.mouseLeave();
     } 
 
@@ -54,6 +61,8 @@ function Rocket() {
             $('#Level1').parent(".buttonRun").removeClass('buttonLaboratoryActive');
             $('#Level2').parent(".buttonRun").addClass('buttonLaboratoryActive');
             $('#Level3').on('click',rocket.toLevel3);
+			$('#Level1').addClass('buttonBlok');
+	
             level = 1;
             self.animateRocket(self).then(function(){
                 self.getElementsConditionLevel2(); 
@@ -75,6 +84,8 @@ function Rocket() {
             $('#Level3').off('click',self.toLevel3);
             $('#Level2').parent(".buttonRun").removeClass('buttonLaboratoryActive');
             $('#Level3').parent(".buttonRun").addClass('buttonLaboratoryActive');
+			$('#Level2').addClass('buttonBlok');
+			$('#Level3').removeClass('buttonBlok');
             level = 2;
 
             self.getElementsConditionLevel3() 
@@ -229,11 +240,11 @@ Rocket.prototype.getElementsConditionLevel2 = function() {
             S2b_part_02: 0,
             S2b_part_03: 0,
             S2b_part_04: 0,
-            S2b_part_05: 1,
+            S2b_part_05: 0,
             S2b_part_06: 0,
             S2b_part_07: 0,
             S2b_part_08: 0,
-            S2b_part_09: 1,
+            S2b_part_09: 0,
             S2b_part_10: 0,     
         };
         return resolve();
@@ -365,6 +376,9 @@ if(level === 0) {
     $('.room .about-rocket').on('mouseleave',rocket.mouseLeave);
     $('#buyButton').on('click',rocket.buyItemRocket);
     $('#Level2').on('click',rocket.toLevel2);
+	$('#Level2').addClass('buttonBlok');
+	$('#Level3').addClass('buttonBlok');
+	
 }
 if(level === 1) {
     rocket.level2();
@@ -374,6 +388,8 @@ if(level === 1) {
     $('#Level1').parent(".buttonRun").removeClass('buttonLaboratoryActive');
     $('#Level2').parent(".buttonRun").addClass('buttonLaboratoryActive');
     $('#Level3').on('click',rocket.toLevel3);
+	$('#Level3').addClass('buttonBlok');
+	$('#Level1').addClass('buttonBlok');
 }
 if(level === 2) {
     rocket.level3();
@@ -382,6 +398,8 @@ if(level === 2) {
     $('.room .about-rocket').on('mouseleave',rocket.mouseLeave);
     $('#Level1').parent(".buttonRun").removeClass('buttonLaboratoryActive');
     $('#Level3').parent(".buttonRun").addClass('buttonLaboratoryActive');
+	$('#Level2').addClass('buttonBlok');
+	$('#Level1').addClass('buttonBlok');
 }
 
 

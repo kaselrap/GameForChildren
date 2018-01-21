@@ -139,20 +139,20 @@
                         </div>
                         <div class="contentPersons content-articles">
                             <div class="persons articles">
-                                <div class="person article">
-                                    <img id="person article-opened" src="/img/person1-girl.png" alt="">
+                                <div class="person article" id="person0" >
+                                    <img src="/img/person1-girl.png" alt="">
                                 </div>
-                                <div class="person article">
-                                    <img id="person article-opened" src="/img/person2-girl.png" alt="">
+                                <div class="person article" id="person1">
+                                    <img  src="/img/person2-girl.png" alt="">
                                 </div>
-                                <div class="person article closed">
-                                    <img id="person article-closed" src="/img/person3-girl.png" alt="">
+                                <div class="person article " id="person2" >
+                                    <img src="/img/person3-girl.png" alt="">
                                 </div>
-                                <div class="person article closed">
-                                    <img id="person article-closed" src="/img/person4-girl.png" alt="">
+                                <div class="person article " id="person3">
+                                    <img  src="/img/person4-girl.png" alt="">
                                 </div>
-                                <div class="person article closed">
-                                    <img id="person article-closed" src="/img/person5-girl.png" alt="">
+                                <div class="person article " id="person4">
+                                    <img  src="/img/person5-girl.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -170,20 +170,20 @@
                         </div>
                         <div class="content-work content-articles">
                             <div class="works articles">
-                                <div class="work article">
-                                    <img id="work article-opened" src="/img/person1-girl.png" alt="">
+                                <div class="work article" id="work0">
+                                    <img src="/img/person1-girl.png" alt="">
                                 </div>
-                                <div class="work article">
-                                    <img id="work article-opened" src="/img/person1-girl.png" alt="">
+                                <div class="work article" id="work1">
+                                    <img  src="/img/person1-girl.png" alt="">
                                 </div>
-                                <div class="work article closed">
-                                    <img id="work article-closed" src="/img/person3-girl.png" alt="">
+                                <div class="work article" id="work2">
+                                    <img  src="/img/person3-girl.png" alt="">
                                 </div>
-                                <div class="work article closed">
-                                    <img id="work article-closed" src="/img/person4-girl.png" alt="">
+                                <div class="work article " id="work3">
+                                    <img  src="/img/person4-girl.png" alt="">
                                 </div>
-                                <div class="work article closed">
-                                    <img id="work article-closed" src="/img/person5-girl.png" alt="">
+                                <div class="work article " id="work4">
+                                    <img  src="/img/person5-girl.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -335,10 +335,11 @@
         <script src="/js/circle-progress.js"></script>
         <script src="/js/examples.js"></script>
         <script src="/js/profile.js"></script>
+        <script src="/js/mainLogic.js"></script>
         <script src="/js/change.js"></script>
         <script src="/js/rocket.js"></script>
         <script src="/js/ava.js"></script>
-        <script src="/js/move.js"></script>
+<!--        <script src="/js/move.js"></script>-->
         <script src="js/level2.js"></script>
     </body>
 </html>

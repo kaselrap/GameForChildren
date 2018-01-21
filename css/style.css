@@ -357,7 +357,7 @@ main {
     background: #b7b28d;
     overflow: hidden;
 }
-.content-articles .articles .article.closed {
+.closed {
     filter: grayscale(100%);
 }
 .content-articles .articles .article img {

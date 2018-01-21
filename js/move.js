@@ -2,7 +2,7 @@
 function addImg(id,src) {
 $.ajax({
 	type: "POST",
-	url: "http://Stimey/getCoordinats.php",
+	url: "http://GameForChildren/getCoordinats.php",
 	data:({
 		id :id,
 	}),

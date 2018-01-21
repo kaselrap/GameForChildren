@@ -339,7 +339,10 @@
         <script src="/js/change.js"></script>
         <script src="/js/rocket.js"></script>
         <script src="/js/ava.js"></script>
-<!--        <script src="/js/move.js"></script>-->
-        <script src="js/level2.js"></script>
+
+        <script src="/js/move.js"></script>
+        <script src="/js/level2.js"></script>
+        <script src="/js/requests.js"></script>
+
     </body>
 </html>

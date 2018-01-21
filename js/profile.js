@@ -79,20 +79,3 @@ $(document).on("click",'.select p',function(){
 //    $(this).attr('id','researchSelected');
 //    }
 //});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

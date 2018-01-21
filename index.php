@@ -140,19 +140,19 @@
                         <div class="contentPersons content-articles">
                             <div class="persons articles">
                                 <div class="person article" id="person0" >
-                                    <img src="/img/person1-girl.png" alt="">
+                                    <img class="person0"src="/img/person1-girl.png" alt="">
                                 </div>
                                 <div class="person article" id="person1">
-                                    <img  src="/img/person2-girl.png" alt="">
+                                    <img class="person1"  src="/img/person2-girl.png" alt="">
                                 </div>
                                 <div class="person article " id="person2" >
-                                    <img src="/img/person3-girl.png" alt="">
+                                    <img class="person2" src="/img/person3-girl.png" alt="">
                                 </div>
                                 <div class="person article " id="person3">
-                                    <img  src="/img/person4-girl.png" alt="">
+                                    <img class="person3"  src="/img/person4-girl.png" alt="">
                                 </div>
                                 <div class="person article " id="person4">
-                                    <img  src="/img/person5-girl.png" alt="">
+                                    <img class="person4"  src="/img/person5-girl.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -171,19 +171,19 @@
                         <div class="content-work content-articles">
                             <div class="works articles">
                                 <div class="work article" id="work0">
-                                    <img src="/img/person1-girl.png" alt="">
+                                    <img class="work0"src="/img/person1-girl.png" alt="">
                                 </div>
                                 <div class="work article" id="work1">
-                                    <img  src="/img/person1-girl.png" alt="">
+                                    <img class="work1"  src="/img/person1-girl.png" alt="">
                                 </div>
                                 <div class="work article" id="work2">
-                                    <img  src="/img/person3-girl.png" alt="">
+                                    <img class="work2"  src="/img/person3-girl.png" alt="">
                                 </div>
                                 <div class="work article " id="work3">
-                                    <img  src="/img/person4-girl.png" alt="">
+                                    <img class="work3"  src="/img/person4-girl.png" alt="">
                                 </div>
                                 <div class="work article " id="work4">
-                                    <img  src="/img/person5-girl.png" alt="">
+                                    <img class="work4" src="/img/person5-girl.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -201,10 +201,10 @@
                         </div>
                         <div class="content-articles free-time">
                             <div class="articles">
-                                <div class="relax article">
+                                <div class="relaxOpen article">
                                     <img id="relax article-opened" src="/img/freetime/free_time_1.png" alt="">
                                 </div>
-                                <div class="relax article">
+                                <div class="relaxOpen article">
                                     <img id="relax article-opened" src="/img/freetime/free_time_2.png" alt="">
                                 </div>
                                 <div class="relax article closed">

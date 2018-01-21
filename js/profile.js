@@ -80,17 +80,19 @@ $(document).on("click",'.select p',function(){
 //    }
 //});
 function contexmenuArticle(clickedClass, hiddenClass) {
-    $('.'+ clickedClass +'').on('contextmenu',function(e){
+    $('.'+ clickedClass).on('contextmenu',function(e){
         let x = e.pageX;
         let y = e.pageY;
         let topMain = $('.main').offset().top,
             leftMain = $('.main').offset().left;
+        let heightElem = $('.about-'+ hiddenClass).outerHeight();
+        console.log(heightElem);
         
         if(x+260>=leftMain+624) {
             x=x-240;
         }
-        if(y+325>=topMain+636) {
-            y=y-305;
+        if(y+heightElem>=topMain+636) {
+            y=y-heightElem + 20;
         }
 
         $('.room .about-'+ hiddenClass).css({

@@ -79,28 +79,33 @@ $(document).on("click",'.select p',function(){
 //    $(this).attr('id','researchSelected');
 //    }
 //});
-$('.person').on('contextmenu',function(e){
-    let x = e.pageX;
-    let y = e.pageY;
-	let topMain = $('.main').offset().top,
-		leftMain = $('.main').offset().left;
-	
-	if(x+260>=leftMain+624) {
-		x=x-240;
-	}
-	if(y+325>=topMain+636) {
-		y=y-305;
-	}
+function contexmenuArticle(clickedClass, hiddenClass) {
+    $('.'+ clickedClass +'').on('contextmenu',function(e){
+        let x = e.pageX;
+        let y = e.pageY;
+        let topMain = $('.main').offset().top,
+            leftMain = $('.main').offset().left;
+        
+        if(x+260>=leftMain+624) {
+            x=x-240;
+        }
+        if(y+325>=topMain+636) {
+            y=y-305;
+        }
 
-    $('.room .about-persons').css({
-        'top':y-10,
-        'left':x-10,
-        'display':'block'
-    })
-});
-$('.room .about-persons ').on('mouseleave',function(){
-    $('.room .about-persons').css('display','none');
-});
+        $('.room .about-'+ hiddenClass).css({
+            'top':y-10,
+            'left':x-10,
+            'display':'block'
+        })
+    });
+    $('.room .about-'+ hiddenClass).on('mouseleave',function(){
+        $('.room .about-'+ hiddenClass).css('display','none');
+    });
+}
+contexmenuArticle('person', 'persons');
+contexmenuArticle('relax', 'relaxs');
+contexmenuArticle('work', 'works');
 $(document).on('contextmenu',function(e){
     e.preventDefault();
 });

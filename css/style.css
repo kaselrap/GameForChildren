@@ -251,9 +251,6 @@ main {
 }
 #study, #laboratory, #research,#rest,#training,#work,#cooperation{
     flex-direction: column;
-	
-}
-#study,#rest {
      padding: 13px;
 }
 #laboratory, #research, #rest,#training,#work,#cooperation{
@@ -344,11 +341,11 @@ main {
 	position:absolute;
 	cursor:pointer;
 }
-.contentPersons .persons {
+.content-articles .articles {
     height: 418px;
     overflow-y: auto;
 }
-.contentPersons .persons .person {
+.content-articles .articles .article {
     position: relative;
     width: 168px;
     height: 234px;
@@ -358,20 +355,28 @@ main {
     margin-left: 18px;
     margin-bottom: 24px;
     background: #b7b28d;
+    overflow: hidden;
 }
-.contentPersons .persons .person.closed {
+.content-articles .articles .article.closed {
     filter: grayscale(100%);
 }
-.contentPersons .persons .person img {
+.content-articles .articles .article img {
     position: absolute;
     bottom: 0;
     left: 0;
 }
-.room .about-persons {
+.free-time .articles .article {
+    height: 184px;
+}
+.free-time .articles .article img {
+    width: 100%;
+    height: auto;
+}
+.room .about-articles {
     display: none;
     position: absolute;
      border: 4px solid #fff;
-    height: 325px;
+    height: auto;
     width: 260px;
     background: #e8e2b3;
     border-radius: 4px;
@@ -379,40 +384,40 @@ main {
     box-shadow: 7px 5px 10px 0px rgba(0, 0, 0, 0.25);
     z-index: 5;
 }
-.room .about-persons:before,
-.room .about-persons:after {
+.room .about-articles:before,
+.room .about-articles:after {
     content: '';
     display: none;
     position: absolute;
     right: -30px;
 }
-.room .about-persons:before {
+.room .about-articles:before {
     top: 0;
     border-bottom: 23px solid transparent;
     border-left: 30px solid #e8e2b3;
 }
-.room .about-persons:after {
+.room .about-articles:after {
     bottom: 0;
     border-top: 23px solid transparent;
     border-left: 30px solid #e8e2b3;
 }
-.room .about-persons .about-description {
+.room .about-articles .about-description {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px;
 }
-.room .about-persons .about-description h2.type {
+.room .about-articles .about-description h2.type {
     font-size: 38px;
 }
-.room .about-persons .about-description .study-type {
+.room .about-articles .about-description .study-type {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     padding-top: 15px;
 }
-.room .about-persons .about-description .study-type .choose-radio-button {
+.room .about-articles .about-description .study-type .choose-radio-button {
     position: relative;
     display: flex;
     align-items: center;
@@ -421,7 +426,17 @@ main {
     border-radius: 50%;
     box-shadow: 0 4px 6px 0 rgba(76, 50, 0, 0.42);
 }
-.room .about-persons .about-description .study-type .choose-radio-button .active-rbtn {
+.room .about-articles .about-description .study-type .choose-plus,
+.room .about-articles .about-description .study-type .choose-minus {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+}
+.room .about-articles .about-description .study-type .choose-radio-button .active-rbtn {
     position: absolute;
     top: 5px;
     left: 5px;
@@ -434,13 +449,17 @@ main {
     background: linear-gradient(to bottom, rgba(240,250,24,1) 0%,rgba(120,218,21,1) 100%); 
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0fa18', endColorstr='#78da15',GradientType=0 ); 
 }
-.room .about-persons .about-description .study-type h3 {
+.room .about-articles .about-description .study-type h3 {
     font-size: 24px;
 }
-.room .about-persons .about-description .study-type span {
+.room .about-articles .about-description .study-type span {
     font-size: 16px;
 }
-.room .about-persons .buttonStudy {
+.room .about-articles .about-description .study-type span.description {
+    display: block;
+    padding: 0 15px;
+}
+.room .about-articles .buttonStudy {
     margin: 0;
     margin-top: 15px;
 }

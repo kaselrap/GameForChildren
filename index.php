@@ -110,7 +110,6 @@
                                 <p id="Level1">Level 1</p>
                             </div>
                        </div>
-
                     </div>
                     <div id="research">c</div>
                     <div id="rest">
@@ -138,28 +137,88 @@
                                 <h1><?php if ( isset ( $lang['study'] ) ) echo $lang['study']; ?></h1>
                             </div>
                         </div>
-                        <div class="contentPersons">
-                            <div class="persons">
-                                <div class="person">
-                                    <img id="person-opened" src="/img/person1-girl.png" alt="">
+                        <div class="contentPersons content-articles">
+                            <div class="persons articles">
+                                <div class="person article">
+                                    <img id="person article-opened" src="/img/person1-girl.png" alt="">
                                 </div>
-                                <div class="person">
-                                    <img id="person-opened" src="/img/person2-girl.png" alt="">
+                                <div class="person article">
+                                    <img id="person article-opened" src="/img/person2-girl.png" alt="">
                                 </div>
-                                <div class="person closed">
-                                    <img id="person-closed" src="/img/person3-girl.png" alt="">
+                                <div class="person article closed">
+                                    <img id="person article-closed" src="/img/person3-girl.png" alt="">
                                 </div>
-                                <div class="person closed">
-                                    <img id="person-closed" src="/img/person4-girl.png" alt="">
+                                <div class="person article closed">
+                                    <img id="person article-closed" src="/img/person4-girl.png" alt="">
                                 </div>
-                                <div class="person closed">
-                                    <img id="person-closed" src="/img/person5-girl.png" alt="">
+                                <div class="person article closed">
+                                    <img id="person article-closed" src="/img/person5-girl.png" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="training">e</div>
-                    <div id="work">i</div>
+                    <div id="training">
+                        <div class="room-header">
+                            <div class="room-about">
+                                <div class="second circle">
+                                    <strong></strong>
+                                </div>
+                            </div>
+                            <div class="room-title">
+                                <h1><?php if ( isset ( $lang['work'] ) ) echo $lang['work']; ?></h1>
+                            </div>
+                        </div>
+                        <div class="content-work content-articles">
+                            <div class="works articles">
+                                <div class="work article">
+                                    <img id="work article-opened" src="/img/person1-girl.png" alt="">
+                                </div>
+                                <div class="work article">
+                                    <img id="work article-opened" src="/img/person1-girl.png" alt="">
+                                </div>
+                                <div class="work article closed">
+                                    <img id="work article-closed" src="/img/person3-girl.png" alt="">
+                                </div>
+                                <div class="work article closed">
+                                    <img id="work article-closed" src="/img/person4-girl.png" alt="">
+                                </div>
+                                <div class="work article closed">
+                                    <img id="work article-closed" src="/img/person5-girl.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="work">
+                        <div class="room-header">
+                            <div class="room-about">
+                                <div class="second circle">
+                                    <strong></strong>
+                                </div>
+                            </div>
+                            <div class="room-title">
+                                <h1><?php if ( isset ( $lang['freeTime'] ) ) echo $lang['freeTime']; ?></h1>
+                            </div>
+                        </div>
+                        <div class="content-articles free-time">
+                            <div class="articles">
+                                <div class="relax article">
+                                    <img id="relax article-opened" src="/img/freetime/free_time_1.png" alt="">
+                                </div>
+                                <div class="relax article">
+                                    <img id="relax article-opened" src="/img/freetime/free_time_2.png" alt="">
+                                </div>
+                                <div class="relax article closed">
+                                    <img id="relax article-closed" src="/img/freetime/free_time_3.png" alt="">
+                                </div>
+                                <div class="relax article closed">
+                                    <img id="relax article-closed" src="/img/freetime/free_time_4.png" alt="">
+                                </div>
+                                <div class="relax article closed">
+                                    <img id="relax article-closed" src="/img/freetime/free_time_5.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div id="cooperation">f</div>
                     <div class="about-rocket">
                         <span></span>
@@ -167,7 +226,7 @@
                                 <p id="buyButton">Buy</p>
                             </div>
                     </div>
-                    <div class="about-persons">
+                    <div class="about-persons about-articles">
                         <div class="about-description">
                             <h2 class="type"><?php if ( isset ( $lang['university'] ) ) echo $lang['university']; ?></h2>
                             <div class="study-type">
@@ -216,6 +275,54 @@
                             </div>
                             <div class="buttonRun buttonStudy"> 
                                 <p id="study"><?php if ( isset ( $lang['study'] ) ) echo $lang['study']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-relaxs about-articles">
+                        <div class="about-description">
+                            <h2 class="type"><?php if ( isset ( $lang['tRelax'] ) ) echo $lang['tRelax']; ?></h2>
+                            
+                            <div class="relax-type study-type">
+                                <div class="choose-plus">+</div>
+                                <div class="type-description">
+                                    <h3><?php if ( isset ( $lang['yourself'] ) ) echo $lang['yourself']; ?>:</h3>
+                                    <div class="type-full-desctription">
+                                        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla excepturi perferendis quaerat temporibus ipsum debitis accusantium,</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relax-type study-type">
+                                <div class="choose-plus study-type">-</div>
+                                <div class="type-description">
+                                    <h3><?php if ( isset ( $lang['yourself'] ) ) echo $lang['yourself']; ?>:</h3>
+                                    <div class="type-full-desctription">
+                                        <span class="amount">0</span>
+                                        <span class="currency"><?php if ( isset ( $lang['euro'] ) ) echo $lang['euro']; ?></span>
+                                        <span class="slash">/</span>
+                                        <span class="time"><?php if ( isset ( $lang['hour'] ) ) echo $lang['hour']; ?></span>
+                                        <span class="comma">,</span>
+                                        <span class="amount-hours">1600 <span><?php if ( isset ( $lang['hours'] ) ) echo $lang['hours']; ?></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttonRun buttonRelax"> 
+                                <p id="relax"><?php if ( isset ( $lang['relax'] ) ) echo $lang['relax']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-works about-articles">
+                        <div class="about-description">
+                            <h2 class="type"><?php if ( isset ( $lang['tWork'] ) ) echo $lang['tWork']; ?></h2>
+                            
+                            <div class="work-type study-type">
+                                <div class="type-description">
+                                    <div class="type-full-desctription">
+                                        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla excepturi perferendis quaerat temporibus ipsum debitis accusantium,</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttonRun buttonWork"> 
+                                <p id="btn-work"><?php if ( isset ( $lang['work'] ) ) echo $lang['work']; ?></p>
                             </div>
                         </div>
                     </div>

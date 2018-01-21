@@ -8,14 +8,20 @@ function Rocket() {
         var href = this.href;
 
         if(href === 1) {
-            return;
+
+            var id = this.id;
+            //                self.textForItemRocket(id).then(function(text){
+
+            self.contextMenu(event,"text",id,1);
+            //                });
+
         } else {
             if(href === 0) {
 
                 var id = this.id;
                 self.textForItemRocket(id).then(function(text){
 
-                    self.contextMenu(event,text,id);
+                    self.contextMenu(event,text,id,0);
                 });
 
             }
@@ -38,13 +44,20 @@ function Rocket() {
         $('#'+mainItem).css('display','block');
         if(level === 1) {
             self.arrayElementsLevel2[mainItem] = 1;
+            if(self.scanItem(self,self.arrayElementsLevel2)){
+                $('#Level3').removeClass('buttonBlok');
+            }
         }
         if(level === 0) {
             self.arrayElements[mainItem] = 1;
+            if(self.scanItem(self,self.arrayElements)){
+                $('#Level2').removeClass('buttonBlok');
+            }
         }
         if(level === 2) {
             self.arrayElementsLevel3[mainItem] = 1;
         }
+
         self.mouseLeave();
     } 
 
@@ -54,6 +67,9 @@ function Rocket() {
             $('#Level1').parent(".buttonRun").removeClass('buttonLaboratoryActive');
             $('#Level2').parent(".buttonRun").addClass('buttonLaboratoryActive');
             $('#Level3').on('click',rocket.toLevel3);
+            $('#Level1').addClass('buttonBlok');
+            $('#Level2').removeClass('buttonBlok');
+
             level = 1;
             self.animateRocket(self).then(function(){
                 self.getElementsConditionLevel2(); 
@@ -75,6 +91,8 @@ function Rocket() {
             $('#Level3').off('click',self.toLevel3);
             $('#Level2').parent(".buttonRun").removeClass('buttonLaboratoryActive');
             $('#Level3').parent(".buttonRun").addClass('buttonLaboratoryActive');
+            $('#Level2').addClass('buttonBlok');
+            $('#Level3').removeClass('buttonBlok');
             level = 2;
 
             self.getElementsConditionLevel3() 
@@ -141,7 +159,7 @@ Rocket.prototype.offButton = function() {
         $('#Level2').off('click',toLevel2);
     }
 }
-Rocket.prototype.contextMenu = function(e,text,id) {
+Rocket.prototype.contextMenu = function(e,text,id,flag) {
 
     let x = e.pageX;
     let y = e.pageY;
@@ -161,17 +179,29 @@ Rocket.prototype.contextMenu = function(e,text,id) {
         var redItem = id.slice(0,11);
 
     }
- 
-    $('#buyButton').attr('href',id);
-    $('#'+id).css('display','none');
-    $('#'+redItem+'r').css('display','block');
-    $('.room .about-rocket span').text(text);
-    $('.room .about-rocket').css({
-        'top':y-10,
-        'left':x-10,
-        'display':'flex',
+    if(flag ===0) {
+        $('#buttonLaboratoryMenu').css('display','flex')
+        $('#buyButton').attr('href',id);
+        $('#'+id).css('display','none');
+        $('#'+redItem+'r').css('display','block');
+        $('.room .about-rocket span').text(text);
+        $('.room .about-rocket').css({
+            'top':y-10,
+            'left':x-10,
+            'display':'flex',
 
-    });
+        });
+    }
+    if(flag===1) {
+         $('.room .about-rocket span').text(text);
+        $('.room .about-rocket').css({
+            'top':y-10,
+            'left':x-10,
+            'display':'flex',
+
+        });
+          $('#buttonLaboratoryMenu').css('display','none')
+    }
 }
 Rocket.prototype.mouseLeave = function() {
     var id = $('#buyButton').attr('href');
@@ -209,14 +239,14 @@ Rocket.prototype.getElementsCondition = function() {
         self.level = 0;
         self.arrayElements = {
             S1_part_01: 1, 
-            S1_part_02: 1,
+            S1_part_02: 0,
             S1_part_03: 1,
             S1_part_04: 0,
             S1_part_05: 1,
-            S1_part_06: 0,
-            S1_part_07: 1,
-            S1_part_08: 0,
-            S1_part_09: 0,     
+            S1_part_06: 1,
+            S1_part_07: 0,
+            S1_part_08: 1,
+            S1_part_09: 1,     
         };
         return resolve();
     });
@@ -229,11 +259,11 @@ Rocket.prototype.getElementsConditionLevel2 = function() {
             S2b_part_02: 0,
             S2b_part_03: 0,
             S2b_part_04: 0,
-            S2b_part_05: 1,
+            S2b_part_05: 0,
             S2b_part_06: 0,
             S2b_part_07: 0,
             S2b_part_08: 0,
-            S2b_part_09: 1,
+            S2b_part_09: 0,
             S2b_part_10: 0,     
         };
         return resolve();
@@ -318,6 +348,9 @@ Rocket.prototype.animateRocket = function(self) {
             $('#S1_part_02').animate({
                 bottom:'-520px'
             },10000);
+            $('#laboratory').animate({
+                backgroundPositionY:'0%'
+            },10000);
             $('#S1_part_03').animate({
                 top:'+600px'
             },10000);
@@ -365,6 +398,9 @@ if(level === 0) {
     $('.room .about-rocket').on('mouseleave',rocket.mouseLeave);
     $('#buyButton').on('click',rocket.buyItemRocket);
     $('#Level2').on('click',rocket.toLevel2);
+    $('#Level2').addClass('buttonBlok');
+    $('#Level3').addClass('buttonBlok');
+
 }
 if(level === 1) {
     rocket.level2();
@@ -374,6 +410,8 @@ if(level === 1) {
     $('#Level1').parent(".buttonRun").removeClass('buttonLaboratoryActive');
     $('#Level2').parent(".buttonRun").addClass('buttonLaboratoryActive');
     $('#Level3').on('click',rocket.toLevel3);
+    $('#Level3').addClass('buttonBlok');
+    $('#Level1').addClass('buttonBlok');
 }
 if(level === 2) {
     rocket.level3();
@@ -382,6 +420,8 @@ if(level === 2) {
     $('.room .about-rocket').on('mouseleave',rocket.mouseLeave);
     $('#Level1').parent(".buttonRun").removeClass('buttonLaboratoryActive');
     $('#Level3').parent(".buttonRun").addClass('buttonLaboratoryActive');
+    $('#Level2').addClass('buttonBlok');
+    $('#Level1').addClass('buttonBlok');
 }
 
 

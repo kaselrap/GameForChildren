@@ -40,7 +40,7 @@ var aboutStudyWindow = function () {
 //    	}
 //    	$('.overlay').css({'display':'block'});
 //    });
-    $(document).on('click', '.overlay, .buttonStudy', function () {
+$(document).on('click', '.overlay, .buttonStudy', function () {
 		$('.about-persons').css({"display":"none", 'top' : 'inherit', 'bottom' : 'inherit', 'left': 'inherit'});
     	$('.overlay').css({'display':'none'});
     	$('.about-persons').removeClass('block-after');

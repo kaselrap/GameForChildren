@@ -140,7 +140,7 @@
                         <div class="contentPersons content-articles">
                             <div class="persons articles">
                                 <div class="person article" id="person0" >
-                                    <img class="person0"src="/img/person1-girl.png" alt="">
+                                    <img class="person0" src="/img/person1-girl.png" alt="">
                                 </div>
                                 <div class="person article" id="person1">
                                     <img class="person1"  src="/img/person2-girl.png" alt="">

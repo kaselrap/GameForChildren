@@ -47,14 +47,5 @@ $(document).on('click', '.overlay, .buttonStudy', function () {
 		$('.about-persons').removeClass('block-before');
     });
 }
-var activeRadioButton = function () {
-	$(document).on('click', '.choose-radio-button', function () {
-		var activeBtn = $('.about-persons').find('div[data-active=1]');
-		activeBtn.children().remove();
-		activeBtn.attr('data-active', '0');
-		$(this).prepend('<div class="active-rbtn"></div>');
-		$(this).attr('data-active', 1);
-	});
-}
-activeRadioButton();
+
 aboutStudyWindow();

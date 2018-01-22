@@ -16,7 +16,7 @@
     "study":"Study",
     "fullTime":"Full Time",
     "distance":"Distance",
-    "yourself":"Yourself"
+    "yourself":"Yourself",
     "S1_part_05_w": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     "S1_part_06_w":" ipsum dolor sit amet, consectetur adipisicing elit.",
     "S1_part_01_w": "  dolor sit amet, consectetur adipisicing elit.", 
@@ -51,7 +51,7 @@
     "S3_part_13_w": " ipsum dolor sit amet, consectetur adipisicing elit.",   
     "S3_part_14_w": " ipsum dolor sit amet, consectetur adipisicing elit.", 
     "S3_part_15_w": " ipsum dolor sit amet, consectetur adipisicing elit." , 
-     "person0":[
+     "person0":{
          "name":"School",
          "fullCost":"0",
          "distanceCost":"0",
@@ -59,8 +59,8 @@
          "fullDay":"0",
          "distanceDay":"0",
          "yourselfDay":"0"
-     ],
-     "person1":[
+     },
+     "person1":{
          "name":"College",
          "fullCost":"2",
          "distanceCost":"1",
@@ -68,8 +68,8 @@
          "fullDay":"600",
          "distanceDay":"750",
          "yourselfDay":"900"
-     ],
-     "person2":[
+     },
+     "person2":{
          "name":"University",
          "fullCost":"4",
          "distanceCost":"2",
@@ -77,8 +77,8 @@
          "fullDay":"400",
          "distanceDay":"600",
          "yourselfDay":"800"
-     ],
-     "person3":[
+     },
+     "person3":{
          "name":"Magistracy",
          "fullCost":"8",
          "distanceCost":"4",
@@ -86,8 +86,8 @@
          "fullDay":"300",
          "distanceDay":"600",
          "yourselfDay":"900"
-     ],
-     "person4":[
+     },
+     "person4":{
          "name":"Doctoral studies",
          "fullCost":"20",
          "distanceCost":"5",
@@ -95,5 +95,5 @@
          "fullDay":"200",
          "distanceDay":"600",
          "yourselfDay":"800"
-     ]
+     }
 }

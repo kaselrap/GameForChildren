@@ -51,7 +51,7 @@
     "S3_part_13_w": " ipsum dolor sit amet, consectetur adipisicing elit.",   
     "S3_part_14_w": " ipsum dolor sit amet, consectetur adipisicing elit.", 
     "S3_part_15_w": " ipsum dolor sit amet, consectetur adipisicing elit." , 
-     "person0":[
+     "person0":{
          "name":"Школа",
          "fullCost":"0",
          "distanceCost":"0",
@@ -59,8 +59,8 @@
          "fullDay":"0",
          "distanceDay":"0",
          "yourselfDay":"0"
-     ],
-     "person1":[
+     },
+     "person1":{
          "name":"Колледж",
          "fullCost":"2",
          "distanceCost":"1",
@@ -68,8 +68,8 @@
          "fullDay":"600",
          "distanceDay":"750",
          "yourselfDay":"900"
-     ],
-     "person2":[
+     },
+     "person2":{
          "name":"Университет",
          "fullCost":"4",
          "distanceCost":"2",
@@ -77,8 +77,8 @@
          "fullDay":"400",
          "distanceDay":"600",
          "yourselfDay":"800"
-     ],
-     "person3":[
+     },
+     "person3":{
          "name":"Магистратура",
          "fullCost":"8",
          "distanceCost":"4",
@@ -86,8 +86,8 @@
          "fullDay":"300",
          "distanceDay":"600",
          "yourselfDay":"900"
-     ],
-     "person4":[
+     },
+     "person4":{
          "name":"Докторантура",
          "fullCost":"20",
          "distanceCost":"5",
@@ -95,5 +95,68 @@
          "fullDay":"200",
          "distanceDay":"600",
          "yourselfDay":"800"
-     ]
+     },
+     "work0":{
+        "name":"Курьер",
+        "level":"Школа",
+        "salaryInOur":"2",
+        "hoursAtWork": "4",
+        "100daySalary": "800"
+     },
+     "work1":{
+        "name":"Рабочий",
+        "level":"Колледж",
+        "salaryInOur":"2",
+        "hoursAtWork": "4",
+        "100daySalary": "2000"
+     },
+     "work2":{
+        "name":"Инженер",
+        "level":"Колледж",
+        "salaryInOur":"6",
+        "hoursAtWork": "6",
+        "100daySalary": "3600"
+     },
+     "work3":{
+        "name":"Инженер",
+        "level":"Университет",
+        "salaryInOur":"7",
+        "hoursAtWork": "7",
+        "100daySalary": "4900"
+     },
+     "work4":{
+        "name":"Начальник",
+        "level":"Университет",
+        "salaryInOur":"13",
+        "hoursAtWork": "6",
+        "100daySalary": "7800"
+     },
+     "work5":{
+        "name":"Начальник",
+        "level":"Университет",
+        "salaryInOur":"16",
+        "hoursAtWork": "6",
+        "100daySalary": "9600"
+     },
+     "work6":{
+        "name":"Менеджер",
+        "level":"Магистратура",
+        "salaryInOur":"20",
+        "hoursAtWork": "4",
+        "100daySalary": "8000"
+     },
+     "work7":{
+        "name":"Менеджер",
+        "level":"Магистратура",
+        "salaryInOur":"30",
+        "hoursAtWork": "4",
+        "100daySalary": "12000"
+     },
+     "work8":{
+        "name":"Владелец",
+        "level":"Докторантура",
+        "salaryInOur":"100",
+        "hoursAtWork": "2",
+        "100daySalary": "20000"
+     },
 }

@@ -95,5 +95,19 @@
          "fullDay":"200",
          "distanceDay":"600",
          "yourselfDay":"800"
+     },
+     "work0":{
+        "name":"Courier",
+        "level":"School",
+        "salaryInOur":"2",
+        "hoursAtWork": "4",
+        "100daySalary": "800"
+     },
+     "work1":{
+        "name":"Worker",
+        "level":"College",
+        "salaryInOur":"2",
+        "hoursAtWork": "4",
+        "100daySalary": "800"
      }
 }

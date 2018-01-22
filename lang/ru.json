@@ -51,6 +51,7 @@
     "S3_part_13_w": " ipsum dolor sit amet, consectetur adipisicing elit.",   
     "S3_part_14_w": " ipsum dolor sit amet, consectetur adipisicing elit.", 
     "S3_part_15_w": " ipsum dolor sit amet, consectetur adipisicing elit." , 
+
      "person0":{
          "name":"Школа",
          "fullCost":"0",
@@ -59,7 +60,11 @@
          "fullDay":"0",
          "distanceDay":"0",
          "yourselfDay":"0"
+
      },
+
+      
+
      "person1":{
          "name":"Колледж",
          "fullCost":"2",
@@ -68,6 +73,7 @@
          "fullDay":"600",
          "distanceDay":"750",
          "yourselfDay":"900"
+
      },
      "person2":{
          "name":"Университет",
@@ -221,5 +227,5 @@
         "hourWorking":"2",
         "hourStudying":"11",
         "hourRest":"4"
+
      }
-}

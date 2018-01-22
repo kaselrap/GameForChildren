@@ -119,15 +119,15 @@
                                     <strong></strong>
                                 </div>
                                 <div class="room-description">
-                                    <h3 class="type"><?php if ( isset ( $lang['university'] ) ) echo $lang['university']; ?></h3>
+                                    <h3 class="type"></h3>
                                     <div class="cost">
-                                        <span class="amount">4</span>
+                                        <span class="amount"></span>
                                         <span class="currency"><?php if ( isset ( $lang['euro'] ) ) echo $lang['euro']; ?></span>
                                         <span class="slash">/</span>
                                         <span class="time"><?php if ( isset ( $lang['hour'] ) ) echo $lang['hour']; ?></span>
                                     </div>
                                     <div class="hours-left">
-                                        <span class="count-hours">160</span>
+                                        <span class="count-hours"></span>
                                         <span class="time"><?php if ( isset ( $lang['hours'] ) ) echo $lang['hours']; ?></span>
                                         <span class="left"><?php if ( isset ( $lang['left'] ) ) echo $lang['left']; ?></span>
                                     </div>
@@ -228,7 +228,7 @@
                     </div>
                     <div class="about-persons about-articles">
                         <div class="about-description">
-                            <h2 class="type"><?php if ( isset ( $lang['university'] ) ) echo $lang['university']; ?></h2>
+                            <h2 class="type"></h2>
                             <div class="study-type">
                                 <div class="choose-radio-button" data-active="1">
                                     <div class="active-rbtn"></div>
@@ -236,12 +236,12 @@
                                 <div class="type-description">
                                     <h3 class="title"><?php if ( isset ( $lang['fullTime'] ) ) echo $lang['fullTime']; ?>:</h3>
                                     <div class="type-full-desctription">
-                                        <span class="amount">4</span>
+                                        <span class="amount"></span>
                                         <span class="currency"><?php if ( isset ( $lang['euro'] ) ) echo $lang['euro']; ?></span>
                                         <span class="slash">/</span>
                                         <span class="time"><?php if ( isset ( $lang['hour'] ) ) echo $lang['hour']; ?></span>
                                         <span class="comma">,</span>
-                                        <span class="amount-hours">800 <span><?php if ( isset ( $lang['hours'] ) ) echo $lang['hours']; ?></span></span>
+                                        <span class="amount-hours"><span><?php if ( isset ( $lang['hours'] ) ) echo $lang['hours']; ?></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -250,18 +250,18 @@
                                 <div class="type-description">
                                     <h3><?php if ( isset ( $lang['distance'] ) ) echo $lang['distance']; ?>:</h3>
                                     <div class="type-full-desctription">
-                                        <span class="amount">2</span>
+                                        <span class="amount"></span>
                                         <span class="currency"><?php if ( isset ( $lang['euro'] ) ) echo $lang['euro']; ?></span>
                                         <span class="slash">/</span>
                                         <span class="time"><?php if ( isset ( $lang['hour'] ) ) echo $lang['hour']; ?></span>
                                         <span class="comma">,</span>
-                                        <span class="amount-hours">1200 <span><?php if ( isset ( $lang['hours'] ) ) echo $lang['hours']; ?></span></span>
+                                        <span class="amount-hours"><span><?php if ( isset ( $lang['hours'] ) ) echo $lang['hours']; ?></span></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="study-type">
                                 <div class="choose-radio-button" data-active="0"></div>
-                                <div class="type-description">
+                                <div class="type-description-low">
                                     <h3><?php if ( isset ( $lang['yourself'] ) ) echo $lang['yourself']; ?>:</h3>
                                     <div class="type-full-desctription">
                                         <span class="amount">0</span>
@@ -339,7 +339,7 @@
         <script src="/js/change.js"></script>
         <script src="/js/rocket.js"></script>
         <script src="/js/ava.js"></script>
-
+        
         <script src="/js/move.js"></script>
         <script src="/js/level2.js"></script>
         <script src="/js/requests.js"></script>

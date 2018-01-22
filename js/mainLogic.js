@@ -1,5 +1,5 @@
 class Logic {
-    constructor(user,day,money,work,study,stadyFull,stadyDist,stadyYor) {
+    constructor(user,day,money,work,study,stadyFull,stadyDist,stadyYor,lang) {
         this.user=user; 
         this.day=day;
         this.money=money;
@@ -8,7 +8,7 @@ class Logic {
         this.stadyFull =stadyFull;
         this.stadyDist = stadyDist;
         this.stadyYor =stadyYor;
-
+        this.lang = lang;
 
     }
 
@@ -39,12 +39,13 @@ class Logic {
     }
 
     contexmenuArticle(clickedClass, hiddenClass) {
-
+let self = this;
         $('.'+ clickedClass +'').on('contextmenu',function(e){
+             let x = e.pageX;
+                let y = e.pageY;
             Promise.resolve()
                 .then(()=>{
-                let x = e.pageX;
-                let y = e.pageY;
+               
 
                 let topMain = $('.main').offset().top,
                     leftMain = $('.main').offset().left,
@@ -62,16 +63,16 @@ class Logic {
                 } else {
                     id =e.target.id;
                 }
-                $.getJSON('lang/'+lang+'.json', function(data) {
+                $.getJSON('lang/'+self.lang+'.json', function(data) {
                     $.each(data, function(key, val) {
                         if(key == id) {
-                            return resolve(val);
+                            return val;
                         } 
 
                     });
                 });
             })
-                .then(()=>{
+                .then((val)=>{
                 $('.room .about-'+ hiddenClass).css({
                     'top':y-10,
                     'left':x-10,
@@ -94,7 +95,7 @@ class Logic {
 }
 
 
-let logic = new Logic('admin',0,0,1,1,100,0,0);
+let logic = new Logic('admin',0,0,1,1,100,0,0,'ru');
 logic.startGame();
 
 logic.contexmenuArticle('personOpen', 'persons');

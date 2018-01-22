@@ -52,55 +52,46 @@
     "S3_part_14_w": " ipsum dolor sit amet, consectetur adipisicing elit.", 
     "S3_part_15_w": " ipsum dolor sit amet, consectetur adipisicing elit." , 
 
-     "person0":{
-         "name":"Школа",
-         "fullCost":"0",
-         "distanceCost":"0",
-         "yourselfCost":"0",
-         "fullDay":"0",
-         "distanceDay":"0",
-         "yourselfDay":"0"
-
-     },
+   
 
       
 
-     "person1":{
+     "person0":{
          "name":"Колледж",
          "fullCost":"2",
          "distanceCost":"1",
          "yourselfCost":"0",
          "fullDay":"600",
          "distanceDay":"750",
-         "yourselfDay":"900"
+         "yourselfDay":"90"
 
      },
-     "person2":{
+     "person1":{
          "name":"Университет",
          "fullCost":"4",
          "distanceCost":"2",
          "yourselfCost":"0",
          "fullDay":"400",
          "distanceDay":"600",
-         "yourselfDay":"800"
+         "yourselfDay":"80"
      },
-     "person3":{
+     "person2":{
          "name":"Магистратура",
          "fullCost":"8",
          "distanceCost":"4",
          "yourselfCost":"0",
          "fullDay":"300",
          "distanceDay":"600",
-         "yourselfDay":"900"
+         "yourselfDay":"90"
      },
-     "person4":{
+     "person3":{
          "name":"Докторантура",
          "fullCost":"20",
          "distanceCost":"5",
          "yourselfCost":"0",
          "fullDay":"200",
          "distanceDay":"600",
-         "yourselfDay":"800"
+         "yourselfDay":"80"
      },
      "work0":{
         "name":"Курьер",

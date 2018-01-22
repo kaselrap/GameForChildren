@@ -37,7 +37,7 @@
 					<img src="img/export/36w/eyes_upldpi.png" alt="" class="eye eyes_up">
                 </div>
                 <div class="status">
-                    <div class="status-block"><img src="/img/money.png" alt=""><p>1300</p></div>
+                    <div class="status-block"><img src="/img/money.png" alt=""><p class="money-block"></p></div>
                     <div class="status-block"><img src="/img/Rocket-Progress.png" alt=""><p>13%</p></div>
                     <div class="status-block"><img src="/img/health.png" alt=""><p><?php if ( isset ( $lang['good'] ) ) echo $lang['good']; ?></p></div>
                     <div class="status-block"><img src="/img/mood.png" alt=""><p><?php if ( isset ( $lang['nice'] ) ) echo $lang['nice']; ?></p></div>
@@ -84,7 +84,7 @@
                         <div class="room-header">
                             <div class="room-about">
 
-                                <div class="second circle">
+                                <div class="first circle">
                                     <strong></strong>
                                   
                                 </div>
@@ -139,20 +139,17 @@
                         </div>
                         <div class="contentPersons content-articles">
                             <div class="persons articles">
-                                <div class="person article" id="person0" >
-                                    <img class="person0" src="/img/person1-girl.png" alt="">
+                                <div class="person article" id="person0">
+                                    <img class="person0"  src="/img/person2-girl.png" alt="">
                                 </div>
-                                <div class="person article" id="person1">
-                                    <img class="person1"  src="/img/person2-girl.png" alt="">
+                                <div class="person article " id="person1" >
+                                    <img class="person1" src="/img/person3-girl.png" alt="">
                                 </div>
-                                <div class="person article " id="person2" >
-                                    <img class="person2" src="/img/person3-girl.png" alt="">
+                                <div class="person article " id="person2">
+                                    <img class="person2"  src="/img/person4-girl.png" alt="">
                                 </div>
                                 <div class="person article " id="person3">
-                                    <img class="person3"  src="/img/person4-girl.png" alt="">
-                                </div>
-                                <div class="person article " id="person4">
-                                    <img class="person4"  src="/img/person5-girl.png" alt="">
+                                    <img class="person3"  src="/img/person5-girl.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -233,7 +230,7 @@
                                 <div class="choose-radio-button" data-active="1">
                                     <div class="active-rbtn"></div>
                                 </div>
-                                <div class="type-description">
+                                <div class="description-full">
                                     <h3 class="title"><?php if ( isset ( $lang['fullTime'] ) ) echo $lang['fullTime']; ?>:</h3>
                                     <div class="type-full-desctription">
                                         <span class="amount"></span>
@@ -247,9 +244,9 @@
                             </div>
                             <div class="study-type">
                                 <div class="choose-radio-button" data-active="0"></div>
-                                <div class="type-description">
+                                <div class="description">
                                     <h3><?php if ( isset ( $lang['distance'] ) ) echo $lang['distance']; ?>:</h3>
-                                    <div class="type-full-desctription">
+                                    <div class="type-desctription">
                                         <span class="amount"></span>
                                         <span class="currency"><?php if ( isset ( $lang['euro'] ) ) echo $lang['euro']; ?></span>
                                         <span class="slash">/</span>
@@ -261,15 +258,15 @@
                             </div>
                             <div class="study-type">
                                 <div class="choose-radio-button" data-active="0"></div>
-                                <div class="type-description-low">
+                                <div class="description-low">
                                     <h3><?php if ( isset ( $lang['yourself'] ) ) echo $lang['yourself']; ?>:</h3>
-                                    <div class="type-full-desctription">
-                                        <span class="amount">0</span>
+                                    <div class="type-description-low">
+                                        <span class="amount"></span>
                                         <span class="currency"><?php if ( isset ( $lang['euro'] ) ) echo $lang['euro']; ?></span>
                                         <span class="slash">/</span>
                                         <span class="time"><?php if ( isset ( $lang['hour'] ) ) echo $lang['hour']; ?></span>
                                         <span class="comma">,</span>
-                                        <span class="amount-hours">1600 <span><?php if ( isset ( $lang['hours'] ) ) echo $lang['hours']; ?></span></span>
+                                        <span class="amount-hours"> <span><?php if ( isset ( $lang['hours'] ) ) echo $lang['hours']; ?></span></span>
                                     </div>
                                 </div>
                             </div>

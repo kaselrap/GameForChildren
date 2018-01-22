@@ -1,3 +1,0 @@
-
-activeRadioButton();
-aboutStudyWindow();

@@ -108,6 +108,17 @@ class Logic {
         $(document).on('contextmenu',function(e){
             e.preventDefault();
         });
+        function activeRadioButton () {
+            
+            $(document).on('click', '.choose-radio-button', function () {
+                var activeBtn = $(this).parent().parent().find('div[data-active=1]');
+                activeBtn.children().remove();
+                activeBtn.attr('data-active', '0');
+                $(this).prepend('<div class="active-rbtn"></div>');
+                $(this).attr('data-active', 1);
+            });
+        }
+        activeRadioButton();
 
     }
     aboutStudyWindow () {

@@ -63,7 +63,7 @@
          "yourselfCost":"0",
          "fullDay":"600",
          "distanceDay":"750",
-         "yourselfDay":"90"
+         "yourselfDay":"900"
 
      },
      "person1":{
@@ -73,7 +73,7 @@
          "yourselfCost":"0",
          "fullDay":"400",
          "distanceDay":"600",
-         "yourselfDay":"80"
+         "yourselfDay":"800"
      },
      "person2":{
          "name":"Магистратура",
@@ -82,7 +82,7 @@
          "yourselfCost":"0",
          "fullDay":"300",
          "distanceDay":"600",
-         "yourselfDay":"90"
+         "yourselfDay":"900"
      },
      "person3":{
          "name":"Докторантура",
@@ -91,7 +91,7 @@
          "yourselfCost":"0",
          "fullDay":"200",
          "distanceDay":"600",
-         "yourselfDay":"80"
+         "yourselfDay":"800"
      },
      "work0":{
         "name":"Курьер",

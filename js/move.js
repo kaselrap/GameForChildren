@@ -1,8 +1,8 @@
-
+var host = "http://"+window.location.hostname;
 function addImg(id,src) {
 $.ajax({
 	type: "POST",
-	url: "http://GameForChildren/getCoordinats.php",
+	url: host+"/getCoordinats.php",
 	data:({
 		id :id,
 	}),
@@ -33,7 +33,7 @@ $(".content").on('mouseup','img', function(){
 
 	$.ajax({
 		type: "POST",
-		url: "http://Stimey/setCoordinats.php",
+		url: host+"/setCoordinats.php",
 		data:({
 			id :id,
 			x:x,

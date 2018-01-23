@@ -23,8 +23,29 @@ class Logic {
         this.aboutStudyWindow();
         this.activeRadioButton();
         this.changeTextStudy(1);
+        this.workActive(this.work);
         $('#newDay').on('click',this.nextDay);
+        $('#btn-work').on('click',this.workChangeActive);
 
+    }
+
+    workActive(i) {
+
+        for(let a = 0;a<5;a++) {
+            $('#work'+a).removeClass('workActive');
+        }
+
+        $('#work'+(i-1)).addClass('workActive');  
+    }
+
+    workChangeActive() {
+        for(let a = 0;a<5;a++) {
+            $('#work'+a).removeClass('workActive');
+        }
+        let num =  parseInt($(this).attr('work'));
+
+        $('#work'+(num)).addClass('workActive');  
+        $('.room .about-works').css('display','none');
     }
     moneyAppend(){
         $('.money-block').text(this.money);
@@ -33,6 +54,7 @@ class Logic {
     nextDayRender() {
         this.moneyAppend();
         this.studyClosedimg();
+        this.workClosedimg();
         this.changeTextStudy(this.stadyNow);
     }
 
@@ -74,6 +96,7 @@ class Logic {
                             this.stadyDist = 0;
                             this.stadyYor =0;
                             this.study++;
+                            this.nextWork(this.study);
                         }
                         break
                         case 2:
@@ -83,6 +106,7 @@ class Logic {
                             this.stadyDist = 0;
                             this.stadyYor =0;
                             this.study++;
+                            this.nextWork(this.study);
                         }
                         break
                         case 3:
@@ -92,10 +116,13 @@ class Logic {
                             this.stadyDist = 0;
                             this.stadyYor =0;
                             this.study++;
+                            this.nextWork(this.study);
                         }
                         break
 
                 }
+
+
             }
         })
             .then(()=>{
@@ -123,6 +150,25 @@ class Logic {
         });
 
 
+    }
+
+    nextWork(i) {
+        if(i===4){
+            this.work=5;
+            return;
+        }
+        if(i===3){
+            this.work=4;
+            return;
+        }
+        if(i===2){
+            this.work=3;
+            return;
+        }
+        if(i===1){
+            this.work=2;
+            return;
+        }     
     }
 
     circleReset(val) {
@@ -172,16 +218,20 @@ class Logic {
             $('#person'+i).removeClass('personOpen');
             $('#person'+i).removeClass('closed');
         }
-        for(let i = 0;i<this.study;i++) {
-            $('#person'+i).addClass('personOpen');
 
-        }
+        $('#person'+(this.study-1)).addClass('personOpen');
+
+
         for(let i = this.study;i<4;i++) {
             $('#person'+i).addClass('closed');
         }
     }
 
     workClosedimg() {
+        for(let i = 0;i<5;i++) {
+            $('#work'+i).removeClass('workOpen');
+            $('#work'+i).removeClass('closed');
+        }
         for(let i = 0;i<this.work;i++) {
             $('#work'+i).addClass('workOpen');
         }
@@ -192,7 +242,7 @@ class Logic {
 
     contexmenuArticle(clickedClass, hiddenClass) {
         let self = this;
-        $('.'+ clickedClass +'').on('contextmenu',function(e){
+        $(document).on('contextmenu','.'+ clickedClass +'',function(e){
             let x = e.pageX;
             let y = e.pageY,
                 id;
@@ -229,6 +279,8 @@ class Logic {
 
                 $('.type-description-low').children('.amount').text(val[id].yourselfCost );
                 $('.type-description-low').children('.amount-hours').text(val[id].yourselfDay );
+                $('.type-full-desctription').children('.amountWork').text(val[id].salaryInOur );
+                $('#btn-work').attr('work',id.substring(4));
                 $('.room .about-'+ hiddenClass).css({
                     'top':y-10,
                     'left':x-10,
@@ -296,7 +348,8 @@ class Logic {
 }
 
 //user,day,money,work,study,stadyFull,stadyDist,stadyYor,lang
-let logic = new Logic('admin',0,100,1,1,1,0,0,'ru',0);
+let logic = new Logic('admin',0,100,2,1,1,0,0,'ru',0);
+
 logic.startGame();
 
 logic.contexmenuArticle('personOpen', 'persons');

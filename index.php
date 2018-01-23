@@ -314,7 +314,7 @@
                             <div class="work-type study-type">
                                 <div class="type-description">
                                     <div class="type-full-desctription">
-                                        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla excepturi perferendis quaerat temporibus ipsum debitis accusantium,</span>
+                                         <span class="amountWork"></span>
                                     </div>
                                 </div>
                             </div>

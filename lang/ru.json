@@ -96,6 +96,8 @@
      "work0":{
         "name":"Курьер",
         "level":"Школа",
+        "eduction":"0",
+        "speciality":"0",
         "salaryInOur":"2",
         "hoursAtWork": "4",
         "100daySalary": "800"
@@ -103,6 +105,8 @@
      "work1":{
         "name":"Рабочий",
         "level":"Колледж",
+        "eduction":"1",
+        "speciality":"1",
         "salaryInOur":"2",
         "hoursAtWork": "4",
         "100daySalary": "2000"
@@ -110,6 +114,8 @@
      "work2":{
         "name":"Инженер",
         "level":"Колледж",
+        "eduction":"1",
+        "speciality":"2",
         "salaryInOur":"6",
         "hoursAtWork": "6",
         "100daySalary": "3600"
@@ -117,6 +123,8 @@
      "work3":{
         "name":"Инженер",
         "level":"Университет",
+        "eduction":"2",
+        "speciality":"2",
         "salaryInOur":"7",
         "hoursAtWork": "7",
         "100daySalary": "4900"
@@ -124,6 +132,8 @@
      "work4":{
         "name":"Начальник",
         "level":"Университет",
+        "eduction":"2",
+        "speciality":"3",
         "salaryInOur":"13",
         "hoursAtWork": "6",
         "100daySalary": "7800"
@@ -131,6 +141,8 @@
      "work5":{
         "name":"Начальник",
         "level":"Университет",
+        "eduction":"3",
+        "speciality":"3",
         "salaryInOur":"16",
         "hoursAtWork": "6",
         "100daySalary": "9600"
@@ -138,6 +150,8 @@
      "work6":{
         "name":"Менеджер",
         "level":"Магистратура",
+        "eduction":"4",
+        "speciality":"4",
         "salaryInOur":"20",
         "hoursAtWork": "4",
         "100daySalary": "8000"
@@ -145,6 +159,8 @@
      "work7":{
         "name":"Менеджер",
         "level":"Магистратура",
+        "eduction":"4",
+        "speciality":"4",
         "salaryInOur":"30",
         "hoursAtWork": "4",
         "100daySalary": "12000"
@@ -152,6 +168,8 @@
      "work8":{
         "name":"Владелец",
         "level":"Докторантура",
+        "eduction":"5",
+        "speciality":"5",
         "salaryInOur":"100",
         "hoursAtWork": "2",
         "100daySalary": "20000"

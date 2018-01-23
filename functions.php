@@ -6,6 +6,7 @@ function add_user ($login) {
 	isUser($login);
 	$user = R::dispense( 'users' );
     $user->login = $login;
+    $user->job = 0;
     $user->education = 0;
     $user->day = 0;
     $user->money = 0;
@@ -54,7 +55,7 @@ function counting_time_salary ( $education, $speciality, $hours ) {
 	$work = json_decode($work_json,true);
 
 	for ($i=0; $i < 8; $i++) { 
-		if( $work['work'.$i]['eduction'] == $education && $work['work'.$i]['speciality'] == $speciality ) {
+		if( ++$work['work'.$i]['eduction'] == $education && ++$work['work'.$i]['speciality'] == $speciality ) {
 			$salary = round((int)$work['work'.$i]['salaryInOur'] * (int)$hours);
 		}
 	}

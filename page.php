@@ -2,7 +2,6 @@
 header('Content-Type: application/json');
 
 include 'functions.php';
-echo counting_time_salary(0,0,8);
 if ( isset ( $_POST ) && !empty( $_POST ) ) {
 	$data = $_POST;
 	$errors = array();

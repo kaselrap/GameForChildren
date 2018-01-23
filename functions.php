@@ -53,9 +53,10 @@ function counting_time_salary ( $education, $speciality, $hours ) {
 	$work_json = file_get_contents('http://' . $_SERVER['HTTP_HOST'] . '/lang/ru.json');
 	$work = json_decode($work_json,true);
 
-
 	for ($i=0; $i < 8; $i++) { 
-		$work['work'.$i];
+		if( $work['work'.$i]['eduction'] == $education && $work['work'.$i]['speciality'] == $speciality ) {
+			$salary = round((int)$work['work'.$i]['salaryInOur'] * (int)$hours);
+		}
 	}
-	// if ( $education == )
+	return $salary;	
 }

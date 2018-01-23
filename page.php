@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 include 'functions.php';
-counting_time_salary(0,0,0);
+echo counting_time_salary(0,0,8);
 if ( isset ( $_POST ) && !empty( $_POST ) ) {
 	$data = $_POST;
 	$errors = array();
@@ -20,7 +20,7 @@ if ( isset ( $_POST ) && !empty( $_POST ) ) {
 			///////////////////////////////////
 			case 'add_user':
 				if ( isset ( $data['params']['login'] ) ) {
-					if ( add_user($data['login']) ) {
+					if ( add_user($data['params']['login']) ) {
 						echo 'User was registered';
 					} 
 					else {

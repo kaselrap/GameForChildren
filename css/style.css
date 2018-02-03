@@ -362,8 +362,37 @@ main {
 }
 .content-articles .articles .article img {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
-    left: 0;
+}
+.content-articles .articles .article img.person-body {
+    z-index: 1;
+}
+.content-articles .articles .article img.person-clothes {
+    z-index: 5;
+}
+.content-articles .articles .article img.person-clothes.person-headdress {
+    width: 100%;
+}
+.content-articles .articles .article img.person-eye-brows,
+.content-articles .articles .article img.person-eye,
+.content-articles .articles .article img.person-mouth {
+    width: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: unset;
+    z-index: 3;
+}
+.content-articles .articles .article img.person-eye-brows {
+    top: 49%;
+}
+.content-articles .articles .article img.person-eye {
+    top: 53%;
+}
+.content-articles .articles .article img.person-mouth {
+    width: 22%;
+    top: 66%;
 }
 .free-time .articles .article {
     height: 184px;
@@ -424,6 +453,7 @@ main {
     height: 30px;
     width: 30px;
     border-radius: 50%;
+    border: 4px solid #fff;
     box-shadow: 0 4px 6px 0 rgba(76, 50, 0, 0.42);
 }
 .room .about-articles .about-description .study-type .choose-plus,
@@ -438,10 +468,10 @@ main {
 }
 .room .about-articles .about-description .study-type .choose-radio-button .active-rbtn {
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 20px;
-    height: 20px;
+    top: 1px;
+    left: 1px;
+    width: 21px;
+    height: 21px;
     border-radius: 50%;
     background: rgb(240,250,24); 
     background: -moz-linear-gradient(top, rgba(240,250,24,1) 0%, rgba(120,218,21,1) 100%); 

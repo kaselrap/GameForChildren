@@ -13,6 +13,7 @@ function add_user ($login) {
     $user->studyDistance = 0;
     $user->studyFull = 0;
     $user->studyYourself = 0;
+    $user->studyDone = 0;
     R::store($user);
     return true;
 }
@@ -48,4 +49,15 @@ function isUser ( $login ) {
 		return false;
 	}
 	return true;
+}
+function counting_time_salary ( $education, $speciality, $hours ) {
+	$work_json = file_get_contents('http://' . $_SERVER['HTTP_HOST'] . '/lang/ru.json');
+	$work = json_decode($work_json,true);
+
+	for ($i=0; $i < 8; $i++) { 
+		if( ++$work['work'.$i]['eduction'] == $education && ++$work['work'.$i]['speciality'] == $speciality ) {
+			$salary = round((int)$work['work'.$i]['salaryInOur'] * (int)$hours);
+		}
+	}
+	return $salary;	
 }

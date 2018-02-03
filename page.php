@@ -19,7 +19,7 @@ if ( isset ( $_POST ) && !empty( $_POST ) ) {
 			///////////////////////////////////
 			case 'add_user':
 				if ( isset ( $data['params']['login'] ) ) {
-					if ( add_user($data['login']) ) {
+					if ( add_user($data['params']['login']) ) {
 						echo 'User was registered';
 					} 
 					else {

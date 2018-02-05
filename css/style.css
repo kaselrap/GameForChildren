@@ -331,6 +331,7 @@ main {
     height: 370px;
 	background: url(../img/lab/lab.png);
 	position: relative;	
+    overflow: hidden;
 }
 .contentPersons {
 	 margin-top:  13px;
@@ -626,45 +627,45 @@ position: absolute;
 	z-index:5;
 }
 .lab_09 {
-	left:0px;
-	top:0px;
+	left:140px;
+	top:119px;
 	position:absolute;
-	width:90px;
+	width:119px;
 	z-index:5;
 }
 .lab_10 {
-	left:0px;
-	top:0px;
+	left:123px;
+	top:177px;
 	position:absolute;
-	width:90px;
+	width:59px;
 	z-index:5;
 }
 .lab_11 {
-	left:0px;
-	top:0px;
+	left:352px;
+	top:138px;
 	position:absolute;
-	width:90px;
+	width:23px;
 	z-index:5;
 }
 .lab_12 {
-	left:0px;
-	top:0px;
+	left:476px;
+	top:65px;
 	position:absolute;
-	width:90px;
+	width:112px;
 	z-index:5;
 }
 .lab_13 {
-	left:0px;
-	top:0px;
+	left:369px;
+	top:154px;
 	position:absolute;
-	width:90px;
+	width:22px;
 	z-index:5;
 }
 .lab_14 {
-	left:0px;
-	top:0px;
+	left:362px;
+	top:90px;
 	position:absolute;
-	width:90px;
+	width:5px;
 	z-index:5;
 }
 .lab_15 {
@@ -672,7 +673,7 @@ position: absolute;
 	top:122px;
 	position:absolute;
 	width:42px;
-	z-index:5;
+	z-index:4;
 }
 .lab_16 {
 	left:217px;

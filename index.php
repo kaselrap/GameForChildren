@@ -93,9 +93,32 @@
 								<h1><?php if ( isset ( $lang['livingRoom'] ) ) echo $lang['livingRoom']; ?></h1>
 							</div>
 						</div>
-						<div class="content">
-
-
+						<div class="content content-room">
+                            <img src="img/room/walls.svg" alt="" class="room-wall">
+                            <img src="img/room/bed.svg" alt="" class="room-svg room-bed closed">
+                            <img src="img/room/books.svg" alt="" class="room-svg room-books closed">
+                            <img src="img/room/cactus.svg" alt="" class="room-svg room-cactus closed">
+                            <img src="img/room/chair.svg" alt="" class="room-svg room-chair closed">
+                            <img src="img/room/curtain.svg" alt="" class="room-svg room-curtain closed">
+                            <img src="img/room/guitar.svg" alt="" class="room-svg room-guitar closed">
+                            <img src="img/room/jetpack.svg" alt="" class="room-svg room-jetpack closed">
+                            <img src="img/room/lamp_table.svg" alt="" class="room-svg room-lamp_table closed">
+                            <img src="img/room/lamp_top.svg" alt="" class="room-svg room-lamp_top closed">
+                            <img src="img/room/paret.svg" alt="" class="room-svg room-paret closed">
+                            <img src="img/room/PC.svg" alt="" class="room-svg room-PC closed">
+                            <img src="img/room/phone.svg" alt="" class="room-svg room-phone closed">
+                            <img src="img/room/planet_system.svg" alt="" class="room-svg room-planet_system closed">
+                            <img src="img/room/plate_and_cup.svg" alt="" class="room-svg room-plate_and_cup closed">
+                            <img src="img/room/poster.svg" alt="" class="room-svg room-poster closed">
+                            <img src="img/room/robot.svg" alt="" class="room-svg room-robot closed">
+                            <img src="img/room/robot_vacuum_cleaner.svg" alt="" class="room-svg room-robot_vacuum_cleaner closed">
+                            <img src="img/room/scooter.svg" alt="" class="room-svg room-scooter closed">
+                            <img src="img/room/sneakers.svg" alt="" class="room-svg room-sneakers closed">
+                            <img src="img/room/table.svg" alt="" class="room-svg room-table closed">
+                            <img src="img/room/table_PC.svg" alt="" class="room-svg room-table_PC closed">
+                            <img src="img/room/TV.svg" alt="" class="room-svg room-TV closed">
+                            <img src="img/room/vibro_plate.svg" alt="" class="room-svg room-vibro_plate closed">
+                            <img src="img/room/wardrobe.svg" alt="" class="room-svg room-wardrobe closed">
 						</div>
 					</div>
 					<div id="laboratory">
@@ -126,31 +149,31 @@
 						</div>
 						<div class="content-lab">
 
-							<img class="lab_01"src="/img/lab/lab_01.svg" alt="">																					<img class="lab_01"src="/img/lab/lab_01.svg" alt="">	
-							<img class="lab_01 closed"src="/img/lab/lab_01.svg" alt="">	
-							<img class="lab_02 closed"src="/img/lab/lab_02.svg" alt="">	
-							<img class="lab_03 closed"src="/img/lab/lab_03.svg" alt="">	
-							<img class="lab_04 closed"src="/img/lab/lab_04.svg" alt="">	
-							<img class="lab_05 closed"src="/img/lab/lab_05.svg" alt="">	
-							<img class="lab_06 closed"src="/img/lab/lab_06.svg" alt="">	
-							<img class="lab_07 closed"src="/img/lab/lab_07.svg" alt="">	
-							<img class="lab_08 closed"src="/img/lab/lab_08.svg" alt="">	
-							<img class="lab_09 closed"src="/img/lab/lab_09.svg" alt="">	
-							<img class="lab_10 closed"src="/img/lab/lab_10.svg" alt="">	
-							<img class="lab_11 closed"src="/img/lab/lab_11.svg" alt="">	
-							<img class="lab_12 closed"src="/img/lab/lab_12.svg" alt="">	
-							<img class="lab_13 closed"src="/img/lab/lab_13.svg" alt="">	
-							<img class="lab_14 closed"src="/img/lab/lab_14.svg" alt="">	
-							<img class="lab_15 closed"src="/img/lab/lab_15.svg" alt="">	
-							<img class="lab_16 closed"src="/img/lab/lab_16.svg" alt="">	
-							<img class="lab_17 closed"src="/img/lab/lab_17.svg" alt="">	
-							<img class="lab_18 closed"src="/img/lab/lab_18.svg" alt="">	
-							<img class="lab_19 closed"src="/img/lab/lab_19.svg" alt="">	
-							<img class="lab_20 closed"src="/img/lab/lab_20.svg" alt="">	
-							<img class="lab_21 closed"src="/img/lab/lab_21.svg" alt="">	
-							<img class="lab_22 closed"src="/img/lab/lab_22.svg" alt="">
-							<img class="lab_23 closed"src="/img/lab/lab_23.svg" alt="">	
-							<img class="lab_24 closed"src="/img/lab/lab_24.svg" alt="">		
+							<img class="lab_01" src="/img/lab/lab_01.svg" alt="">													  <img class="lab_01" src="/img/lab/lab_01.svg" alt="">	
+							<img class="lab_01 closed" src="/img/lab/lab_01.svg" alt="">	
+							<img class="lab_02 closed" src="/img/lab/lab_02.svg" alt="">	
+							<img class="lab_03 closed" src="/img/lab/lab_03.svg" alt="">	
+							<img class="lab_04 closed" src="/img/lab/lab_04.svg" alt="">	
+							<img class="lab_05 closed" src="/img/lab/lab_05.svg" alt="">	
+							<img class="lab_06 closed" src="/img/lab/lab_06.svg" alt="">	
+							<img class="lab_07 closed" src="/img/lab/lab_07.svg" alt="">	
+							<img class="lab_08 closed" src="/img/lab/lab_08.svg" alt="">	
+							<img class="lab_09 closed" src="/img/lab/lab_09.svg" alt="">	
+							<img class="lab_10 closed" src="/img/lab/lab_10.svg" alt="">	
+							<img class="lab_11 closed" src="/img/lab/lab_11.svg" alt="">	
+							<img class="lab_12 closed" src="/img/lab/lab_12.svg" alt="">	
+							<img class="lab_13 closed" src="/img/lab/lab_13.svg" alt="">	
+							<img class="lab_14 closed" src="/img/lab/lab_14.svg" alt="">	
+							<img class="lab_15 closed" src="/img/lab/lab_15.svg" alt="">	
+							<img class="lab_16 closed" src="/img/lab/lab_16.svg" alt="">	
+							<img class="lab_17 closed" src="/img/lab/lab_17.svg" alt="">	
+							<img class="lab_18 closed" src="/img/lab/lab_18.svg" alt="">	
+							<img class="lab_19 closed" src="/img/lab/lab_19.svg" alt="">	
+							<img class="lab_20 closed" src="/img/lab/lab_20.svg" alt="">	
+							<img class="lab_21 closed" src="/img/lab/lab_21.svg" alt="">	
+							<img class="lab_22 closed" src="/img/lab/lab_22.svg" alt="">
+							<img class="lab_23 closed" src="/img/lab/lab_23.svg" alt="">	
+							<img class="lab_24 closed" src="/img/lab/lab_24.svg" alt="">		
 						</div>
 
 

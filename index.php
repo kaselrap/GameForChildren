@@ -138,7 +138,7 @@
 						<div class="room-header">
 							<div class="room-about">
 
-								<div class="first circle">
+								<div class="lab circle">
 									<strong></strong>
 
 								</div>
@@ -148,6 +148,7 @@
 							</div>
 						</div>
 						<div class="content-lab">
+
 
 							<img class="lab_01" src="/img/lab/lab_01.svg" alt="">													  <img class="lab_01" src="/img/lab/lab_01.svg" alt="">	
 							<img class="lab_01 closed" src="/img/lab/lab_01.svg" alt="">	
@@ -174,6 +175,8 @@
 							<img class="lab_22 closed" src="/img/lab/lab_22.svg" alt="">
 							<img class="lab_23 closed" src="/img/lab/lab_23.svg" alt="">	
 							<img class="lab_24 closed" src="/img/lab/lab_24.svg" alt="">		
+
+
 						</div>
 
 
@@ -206,34 +209,34 @@
 						<div class="contentPersons content-articles">
 							<div class="persons articles">
 								<div class="person article" id="person0">
-									<img src="img/avatar/ava_colo3_mxxhdpi.png" alt="" class="person-body">
-									<img src="img/avatar/Study_level1_mxxhdpi.png" alt="" class="person-clothes">
-									<img src="img/avatar/eyebrows_color3_normalxxhdpi.png" alt="" class="person-eye-brows">
-									<img src="img/avatar/eyes_color3_normalxxhdpi.png" alt="" class="person-eye">
-									<img src="img/avatar/mouth_colo3_smilexxhdpi.png" alt="" class="person-mouth">
+									<img src="img/avatar/ava_colo1_fxxhdpi.png" alt="" class="person-body person0">
+									<img src="img/avatar/Study_level1_mxxhdpi.png" alt="" class="person-clothes person0">
+									<img src="img/avatar/eyebrows_color3_normalxxhdpi.png" alt="" class="person-eye-brows person0">
+									<img src="img/avatar/eyes_color3_normalxxhdpi.png" alt="" class="person-eye person0">
+									<img src="img/avatar/mouth_colo3_smilexxhdpi.png" alt="" class="person-mouth person0">
 								</div>
 								<div class="person article " id="person1" >
-									<img src="img/avatar/ava_colo3_mxxhdpi.png" alt="" class="person-body">
-									<img src="img/avatar/Study_level2_mxxhdpi.png" alt="" class="person-clothes">
-									<img src="img/avatar/eyebrows_color3_normalxxhdpi.png" alt="" class="person-eye-brows">
-									<img src="img/avatar/eyes_color3_normalxxhdpi.png" alt="" class="person-eye">
-									<img src="img/avatar/mouth_colo3_smilexxhdpi.png" alt="" class="person-mouth">
+									<img src="img/avatar/ava_colo1_fxxhdpi.png" alt="" class="person-body person1">
+									<img src="img/avatar/Study_level2_mxxhdpi.png" alt="" class="person-clothes person1">
+									<img src="img/avatar/eyebrows_color3_normalxxhdpi.png" alt="" class="person-eye-brows person1">
+									<img src="img/avatar/eyes_color3_normalxxhdpi.png" alt="" class="person-eye person1">
+									<img src="img/avatar/mouth_colo3_smilexxhdpi.png" alt="" class="person-mouth person1">
 								</div>
 								<div class="person article " id="person2">
-									<img src="img/avatar/ava_colo3_mxxhdpi.png" alt="" class="person-body">
-									<img src="img/avatar/Study_level3_mxxhdpi.png" alt="" class="person-clothes person-headdress">
+									<img src="img/avatar/ava_colo1_fxxhdpi.png" alt="" class="person-body person2">
+									<img src="img/avatar/Study_level3_mxxhdpi.png" alt="" class="person-clothes person-headdress person2">
 									<!-- <img src="img/avatar/Study_level3_mxxhdpi.png" alt="" class="person-headdress"> -->
-									<img src="img/avatar/eyebrows_color3_normalxxhdpi.png" alt="" class="person-eye-brows">
-									<img src="img/avatar/eyes_color3_normalxxhdpi.png" alt="" class="person-eye">
-									<img src="img/avatar/mouth_colo3_smilexxhdpi.png" alt="" class="person-mouth">
+									<img src="img/avatar/eyebrows_color3_normalxxhdpi.png" alt="" class="person-eye-brows person2">
+									<img src="img/avatar/eyes_color3_normalxxhdpi.png" alt="" class="person-eye person2">
+									<img src="img/avatar/mouth_colo3_smilexxhdpi.png" alt="" class="person-mouth person2">
 								</div>
 								<div class="person article " id="person3">
-									<img src="img/avatar/ava_colo3_mxxhdpi.png" alt="" class="person-body">
-									<img src="img/avatar/Study_level4_mxxhdpi.png" alt="" class="person-clothes person-headdress">
+									<img src="img/avatar/ava_colo1_fxxhdpi.png" alt="" class="person-body person3">
+									<img src="img/avatar/Study_level4_mxxhdpi.png" alt="" class="person-clothes person-headdress person3">
 									<!-- <img src="img/avatar/Study_level4_mxxhdpi.png" alt="" class="person-headdress"> -->
-									<img src="img/avatar/eyebrows_color3_normalxxhdpi.png" alt="" class="person-eye-brows">
-									<img src="img/avatar/eyes_color3_normalxxhdpi.png" alt="" class="person-eye">
-									<img src="img/avatar/mouth_colo3_smilexxhdpi.png" alt="" class="person-mouth">
+									<img src="img/avatar/eyebrows_color3_normalxxhdpi.png" alt="" class="person-eye-brows person3">
+									<img src="img/avatar/eyes_color3_normalxxhdpi.png" alt="" class="person-eye person3">
+									<img src="img/avatar/mouth_colo3_smilexxhdpi.png" alt="" class="person-mouth person3">
 								</div>
 							</div>
 						</div>
@@ -252,40 +255,40 @@
 						<div class="content-work content-articles">
 							<div class="works articles">
 								<div class="work article" id="work0">
-									<img src="img/avatar/ava_colo2_fxxhdpi.png" alt="" class="person-body">
+									<img src="img/avatar/ava_colo1_fxxhdpi.png" alt="" class="person-body work0">
 									<!-- <img src="img/avatar/ava_color3_hair_f_Topxxhdpi.png" alt="" class="person-hair"> -->
-									<img src="img/avatar/job_level1_fxxhdpi.png" alt="" class="person-clothes">
-									<img src="img/avatar/eyebrows_color2_normalxxhdpi.png" alt="" class="person-eye-brows">
-									<img src="img/avatar/eyes_color2_normalxxhdpi.png" alt="" class="person-eye">
-									<img src="img/avatar/mouth_color2_smilexxhdpi.png" alt="" class="person-mouth">
+									<img src="img/avatar/job_level1_fxxhdpi.png" alt="" class="person-clothes work0">
+									<img src="img/avatar/eyebrows_color2_normalxxhdpi.png" alt="" class="person-eye-brows work0">
+									<img src="img/avatar/eyes_color2_normalxxhdpi.png" alt="" class="person-eye work0">
+									<img src="img/avatar/mouth_color2_smilexxhdpi.png" alt="" class="person-mouth work0">
 								</div>
 								<div class="work article" id="work1">
-									<img src="img/avatar/ava_colo2_fxxhdpi.png" alt="" class="person-body">
-									<img src="img/avatar/job_level2_fxxhdpi.png" alt="" class="person-clothes">
-									<img src="img/avatar/eyebrows_color2_normalxxhdpi.png" alt="" class="person-eye-brows">
-									<img src="img/avatar/eyes_color2_normalxxhdpi.png" alt="" class="person-eye">
-									<img src="img/avatar/mouth_color2_smilexxhdpi.png" alt="" class="person-mouth">
+									<img src="img/avatar/ava_colo1_fxxhdpi.png" alt="" class="person-body work1">
+									<img src="img/avatar/job_level2_fxxhdpi.png" alt="" class="person-clothes work1">
+									<img src="img/avatar/eyebrows_color2_normalxxhdpi.png" alt="" class="person-eye-brows work1">
+									<img src="img/avatar/eyes_color2_normalxxhdpi.png" alt="" class="person-eye work1">
+									<img src="img/avatar/mouth_color2_smilexxhdpi.png" alt="" class="person-mouth work1">
 								</div>
 								<div class="work article" id="work2">
-									<img src="img/avatar/ava_colo2_fxxhdpi.png" alt="" class="person-body">
-									<img src="img/avatar/job_level3_fxxhdpi.png" alt="" class="person-clothes">
-									<img src="img/avatar/eyebrows_color2_normalxxhdpi.png" alt="" class="person-eye-brows">
-									<img src="img/avatar/eyes_color2_normalxxhdpi.png" alt="" class="person-eye">
-									<img src="img/avatar/mouth_color2_smilexxhdpi.png" alt="" class="person-mouth">
+									<img src="img/avatar/ava_colo1_fxxhdpi.png" alt="" class="person-body work2">
+									<img src="img/avatar/job_level3_fxxhdpi.png" alt="" class="person-clothes work2">
+									<img src="img/avatar/eyebrows_color2_normalxxhdpi.png" alt="" class="person-eye-brows work2">
+									<img src="img/avatar/eyes_color2_normalxxhdpi.png" alt="" class="person-eye work2">
+									<img src="img/avatar/mouth_color2_smilexxhdpi.png" alt="" class="person-mouth work2">
 								</div>
 								<div class="work article " id="work3">
-									<img src="img/avatar/ava_colo2_fxxhdpi.png" alt="" class="person-body">
-									<img src="img/avatar/job_level4_fxxhdpi.png" alt="" class="person-clothes">
-									<img src="img/avatar/eyebrows_color2_normalxxhdpi.png" alt="" class="person-eye-brows">
-									<img src="img/avatar/eyes_color2_normalxxhdpi.png" alt="" class="person-eye">
-									<img src="img/avatar/mouth_color2_smilexxhdpi.png" alt="" class="person-mouth">
+									<img src="img/avatar/ava_colo1_fxxhdpi.png" alt="" class="person-body work3">
+									<img src="img/avatar/job_level4_fxxhdpi.png" alt="" class="person-clothes work3">
+									<img src="img/avatar/eyebrows_color2_normalxxhdpi.png" alt="" class="person-eye-brows work3">
+									<img src="img/avatar/eyes_color2_normalxxhdpi.png" alt="" class="person-eye work3">
+									<img src="img/avatar/mouth_color2_smilexxhdpi.png" alt="" class="person-mouth work3">
 								</div>
 								<div class="work article " id="work4">
-									<img src="img/avatar/ava_colo2_fxxhdpi.png" alt="" class="person-body">
-									<img src="img/avatar/job_level5_fxxhdpi.png" alt="" class="person-clothes">
-									<img src="img/avatar/eyebrows_color2_normalxxhdpi.png" alt="" class="person-eye-brows">
-									<img src="img/avatar/eyes_color2_normalxxhdpi.png" alt="" class="person-eye">
-									<img src="img/avatar/mouth_color2_smilexxhdpi.png" alt="" class="person-mouth">
+									<img src="img/avatar/ava_colo1_fxxhdpi.png" alt="" class="person-body work4">
+									<img src="img/avatar/job_level5_fxxhdpi.png" alt="" class="person-clothes work4">
+									<img src="img/avatar/eyebrows_color2_normalxxhdpi.png" alt="" class="person-eye-brows work4">
+									<img src="img/avatar/eyes_color2_normalxxhdpi.png" alt="" class="person-eye work4">
+									<img src="img/avatar/mouth_color2_smilexxhdpi.png" alt="" class="person-mouth work4">
 								</div>
 							</div>
 						</div>
@@ -309,14 +312,14 @@
 								<div class="relaxOpen article">
 									<img id="relax article-opened" src="/img/freetime/free_time_2.png" alt="">
 								</div>
-								<div class="relax article closed">
-									<img id="relax article-closed" src="/img/freetime/free_time_3.png" alt="">
+								<div class="relax article ">
+									<img id="relax " src="/img/freetime/free_time_3.png" alt="">
 								</div>
-								<div class="relax article closed">
-									<img id="relax article-closed" src="/img/freetime/free_time_4.png" alt="">
+								<div class="relax article ">
+									<img id="relax " src="/img/freetime/free_time_4.png" alt="">
 								</div>
-								<div class="relax article closed">
-									<img id="relax article-closed" src="/img/freetime/free_time_5.png" alt="">
+								<div class="relax article ">
+									<img id="relax " src="/img/freetime/free_time_5.png" alt="">
 								</div>
 							</div>
 						</div>
@@ -435,6 +438,19 @@
 							</div>
 						</div>
 					</div>
+					
+						<div class="about-lab about-articles">
+						<div class="about-description">
+							<h2 class="type">Item</h2>
+
+							
+										
+							
+							<div class="buttonRun buttonWork"> 
+								<p id="btnLab">Buy</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="overlay"></div>
@@ -448,9 +464,8 @@
 		<script src="/js/change.js"></script>
 		<script src="/js/rocket.js"></script>
 		<script src="/js/ava.js"></script>
-
+        <script src="/js/lab.js"></script>
 		<!--        <script src="/js/move.js"></script>-->
-		<script src="/js/level2.js"></script>
 		<script src="/js/requests.js"></script>
         <script src="/js/script.js"></script>
 

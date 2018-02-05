@@ -261,7 +261,9 @@ class Logic {
                 }
 
                 if(e.target.tagName ==='IMG'){
-                    id =e.target.className;
+                    
+                    id =e.target.classList[1];
+                    
                 } else {
                     id =e.target.id;
                 }
@@ -355,3 +357,4 @@ logic.startGame();
 logic.contexmenuArticle('personOpen', 'persons');
 logic.contexmenuArticle('relaxOpen', 'relaxs');
 logic.contexmenuArticle('workOpen', 'works');
+logic.contexmenuArticle('labOpen', 'lab');

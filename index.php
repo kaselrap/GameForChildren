@@ -95,30 +95,30 @@
 						</div>
 						<div class="content content-room">
                             <img src="img/room/walls.svg" alt="" class="room-wall">
-                            <img src="img/room/bed.svg" alt="" class="room-svg room-bed closed">
-                            <img src="img/room/books.svg" alt="" class="room-svg room-books closed">
-                            <img src="img/room/cactus.svg" alt="" class="room-svg room-cactus closed">
-                            <img src="img/room/chair.svg" alt="" class="room-svg room-chair closed">
-                            <img src="img/room/curtain.svg" alt="" class="room-svg room-curtain closed">
-                            <img src="img/room/guitar.svg" alt="" class="room-svg room-guitar closed">
-                            <img src="img/room/jetpack.svg" alt="" class="room-svg room-jetpack closed">
-                            <img src="img/room/lamp_table.svg" alt="" class="room-svg room-lamp_table closed">
-                            <img src="img/room/lamp_top.svg" alt="" class="room-svg room-lamp_top closed">
-                            <img src="img/room/paret.svg" alt="" class="room-svg room-paret closed">
-                            <img src="img/room/PC.svg" alt="" class="room-svg room-PC closed">
-                            <img src="img/room/phone.svg" alt="" class="room-svg room-phone closed">
-                            <img src="img/room/planet_system.svg" alt="" class="room-svg room-planet_system closed">
-                            <img src="img/room/plate_and_cup.svg" alt="" class="room-svg room-plate_and_cup closed">
-                            <img src="img/room/poster.svg" alt="" class="room-svg room-poster closed">
-                            <img src="img/room/robot.svg" alt="" class="room-svg room-robot closed">
-                            <img src="img/room/robot_vacuum_cleaner.svg" alt="" class="room-svg room-robot_vacuum_cleaner closed">
-                            <img src="img/room/scooter.svg" alt="" class="room-svg room-scooter closed">
-                            <img src="img/room/sneakers.svg" alt="" class="room-svg room-sneakers closed">
-                            <img src="img/room/table.svg" alt="" class="room-svg room-table closed">
-                            <img src="img/room/table_PC.svg" alt="" class="room-svg room-table_PC closed">
-                            <img src="img/room/TV.svg" alt="" class="room-svg room-TV closed">
-                            <img src="img/room/vibro_plate.svg" alt="" class="room-svg room-vibro_plate closed">
-                            <img src="img/room/wardrobe.svg" alt="" class="room-svg room-wardrobe closed">
+                            <img src="img/room/bed.svg" alt="" data-name="Bed" class="room-svg room-bed closed">
+                            <img src="img/room/books.svg" alt="" data-name="Books" class="room-svg room-books closed">
+                            <img src="img/room/cactus.svg" alt="" data-name="Cactus" class="room-svg room-cactus closed">
+                            <img src="img/room/chair.svg" alt="" data-name="Chair" class="room-svg room-chair closed">
+                            <img src="img/room/curtain.svg" alt="" data-name="Curtain" class="room-svg room-curtain closed">
+                            <img src="img/room/guitar.svg" alt="" data-name="Guitar" class="room-svg room-guitar closed">
+                            <img src="img/room/jetpack.svg" alt="" data-name="Jetpack" class="room-svg room-jetpack closed">
+                            <img src="img/room/lamp_table.svg" alt="" data-name="Lamp Table" class="room-svg room-lamp_table closed">
+                            <img src="img/room/lamp_top.svg" alt="" data-name="Lamp Top" class="room-svg room-lamp_top closed">
+                            <img src="img/room/paret.svg" alt="" data-name="Paret" class="room-svg room-paret closed">
+                            <img src="img/room/PC.svg" alt="" data-name="PC" class="room-svg room-PC closed">
+                            <img src="img/room/phone.svg" alt="" data-name="Phone" class="room-svg room-phone closed">
+                            <img src="img/room/planet_system.svg" alt="" data-name="Planet System" class="room-svg room-planet_system closed">
+                            <img src="img/room/plate_and_cup.svg" alt="" data-name="Plate and Cup" class="room-svg room-plate_and_cup closed">
+                            <img src="img/room/poster.svg" alt="" data-name="Poster" class="room-svg room-poster closed">
+                            <img src="img/room/robot.svg" alt="" data-name="Robot" class="room-svg room-robot closed">
+                            <img src="img/room/robot_vacuum_cleaner.svg" alt="Robot Vacuum Cleaner" data-name="" class="room-svg room-robot_vacuum_cleaner closed">
+                            <img src="img/room/scooter.svg" alt="" data-name="Scooter" class="room-svg room-scooter closed">
+                            <img src="img/room/sneakers.svg" alt="" data-name="Sneakers" class="room-svg room-sneakers closed">
+                            <img src="img/room/table.svg" alt="" data-name="Table" class="room-svg room-table closed">
+                            <img src="img/room/table_PC.svg" alt="" data-name="Table PC" class="room-svg room-table_PC closed">
+                            <img src="img/room/TV.svg" alt="" data-name="TV" class="room-svg room-TV closed">
+                            <img src="img/room/vibro_plate.svg" alt="" data-name="Vibro Plate" class="room-svg room-vibro_plate closed">
+                            <img src="img/room/wardrobe.svg" alt="" data-name="Wardrobe" class="room-svg room-wardrobe closed">
 						</div>
 					</div>
 					<div id="laboratory">
@@ -328,6 +328,13 @@
 							<p id="buyButton">Buy</p>
 						</div>
 					</div>
+                    <div class="about-room-things">
+                        <h3 class="name"></h3>
+                        <span class="about"></span>
+                        <div class="buttonRun buttonLaboratoryMenu"> 
+                            <p id="buyButton" href="S1_part_04_w">Buy</p>
+                        </div>
+                    </div>
 					<div class="about-persons about-articles">
 						<div class="about-description">
 							<h2 class="type"></h2>
@@ -445,6 +452,7 @@
 		<!--        <script src="/js/move.js"></script>-->
 		<script src="/js/level2.js"></script>
 		<script src="/js/requests.js"></script>
+        <script src="/js/script.js"></script>
 
 	</body>
 </html>

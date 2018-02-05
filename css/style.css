@@ -329,7 +329,7 @@ main {
  margin-top:  13px;
 	width: 100%;
     height: 370px;
-	background: url(../img/lab/lab.png);
+	background: url(../img/lab/lab_background.svg);
 	position: relative;	
     overflow: hidden;
 }
@@ -571,59 +571,59 @@ position: absolute;
 }
 
 .lab_01 {
-	left:0px;
-	top:0px;
+	left:1px;
+	top:5px;
 	position:absolute;
-	width:90px;
+	width:175px;
 	z-index:5;
 }
 .lab_02 {
-	left:0px;
-	top:0px;
+	left:162px;
+	top:72px;
 	position:absolute;
-	width:90px;
+	width:55px;
 	z-index:5;
 }
 .lab_03 {
-	left:0px;
-	top:0px;
+	left:317px;
+	top:121px;
 	position:absolute;
-	width:90px;
+	width:43px;
 	z-index:5;
 }
 .lab_04 {
-	left:0px;
-	top:0px;
+	left:265px;
+	top:115px;
 	position:absolute;
-	width:90px;
+	width:34px;
 	z-index:5;
 }
 .lab_05 {
-	left:0px;
-	top:0px;
+	left:70px;
+	top:116px;
 	position:absolute;
-	width:90px;
+	width:518px;
 	z-index:5;
 }
 .lab_06 {
-	left:0px;
-	top:0px;
+	left:388px;
+	top:138px;
 	position:absolute;
-	width:90px;
+	width:28px;
 	z-index:5;
 }
 .lab_07 {
-	left:0px;
-	top:0px;
+	left:409px;
+	top:77px;
 	position:absolute;
-	width:90px;
+	width:38px;
 	z-index:5;
 }
 .lab_08 {
-	left:0px;
-	top:0px;
+	left:438px;
+	top:146px;
 	position:absolute;
-	width:90px;
+	width:78px;
 	z-index:5;
 }
 .lab_09 {
@@ -677,14 +677,14 @@ position: absolute;
 }
 .lab_16 {
 	left:217px;
-	top:103px;
+	top:101px;
 	position:absolute;
 	width:24px;
 	z-index:6;
 }
 .lab_17 {
 	left:234px;
-	top:103px;
+	top:101px;
 	position:absolute;
 	width:24px;
 	z-index:5;
@@ -738,7 +738,20 @@ position: absolute;
 	width:65px;
 	z-index:5;
 }
-
+.lab_25 {
+	left:26px;
+	top:208px;
+	position:absolute;
+	width:153px;
+	z-index:5;
+}
+.lab_26 {
+	left:267px;
+	top:89px;
+	position:absolute;
+	width:19px;
+	z-index:5;
+}
 
 
 

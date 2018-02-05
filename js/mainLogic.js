@@ -261,7 +261,9 @@ class Logic {
                 }
 
                 if(e.target.tagName ==='IMG'){
-                    id =e.target.className;
+                    
+                    id =e.target.classList[1];
+                    
                 } else {
                     id =e.target.id;
                 }

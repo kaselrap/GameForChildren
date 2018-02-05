@@ -325,6 +325,13 @@ main {
 	background: url(../img/living-room.png);
 	position: relative;
 }
+.content-lab{
+ margin-top:  13px;
+	width: 100%;
+    height: 370px;
+	background: url(../img/lab/lab.png);
+	position: relative;	
+}
 .contentPersons {
 	 margin-top:  13px;
 	width: 100%;
@@ -562,7 +569,174 @@ position: absolute;
 	width: 15px;
 }
 
-
+.lab_01 {
+	left:0px;
+	top:0px;
+	position:absolute;
+	width:90px;
+	z-index:5;
+}
+.lab_02 {
+	left:0px;
+	top:0px;
+	position:absolute;
+	width:90px;
+	z-index:5;
+}
+.lab_03 {
+	left:0px;
+	top:0px;
+	position:absolute;
+	width:90px;
+	z-index:5;
+}
+.lab_04 {
+	left:0px;
+	top:0px;
+	position:absolute;
+	width:90px;
+	z-index:5;
+}
+.lab_05 {
+	left:0px;
+	top:0px;
+	position:absolute;
+	width:90px;
+	z-index:5;
+}
+.lab_06 {
+	left:0px;
+	top:0px;
+	position:absolute;
+	width:90px;
+	z-index:5;
+}
+.lab_07 {
+	left:0px;
+	top:0px;
+	position:absolute;
+	width:90px;
+	z-index:5;
+}
+.lab_08 {
+	left:0px;
+	top:0px;
+	position:absolute;
+	width:90px;
+	z-index:5;
+}
+.lab_09 {
+	left:0px;
+	top:0px;
+	position:absolute;
+	width:90px;
+	z-index:5;
+}
+.lab_10 {
+	left:0px;
+	top:0px;
+	position:absolute;
+	width:90px;
+	z-index:5;
+}
+.lab_11 {
+	left:0px;
+	top:0px;
+	position:absolute;
+	width:90px;
+	z-index:5;
+}
+.lab_12 {
+	left:0px;
+	top:0px;
+	position:absolute;
+	width:90px;
+	z-index:5;
+}
+.lab_13 {
+	left:0px;
+	top:0px;
+	position:absolute;
+	width:90px;
+	z-index:5;
+}
+.lab_14 {
+	left:0px;
+	top:0px;
+	position:absolute;
+	width:90px;
+	z-index:5;
+}
+.lab_15 {
+	left:217px;
+	top:122px;
+	position:absolute;
+	width:42px;
+	z-index:5;
+}
+.lab_16 {
+	left:217px;
+	top:103px;
+	position:absolute;
+	width:24px;
+	z-index:6;
+}
+.lab_17 {
+	left:234px;
+	top:103px;
+	position:absolute;
+	width:24px;
+	z-index:5;
+}
+.lab_18 {
+	left:219px;
+	top:79px;
+	position:absolute;
+	width:10px;
+	z-index:5;
+}
+.lab_19 {
+	left:401px;
+	top:194px;
+	position:absolute;
+	width:32px;
+	z-index:5;
+}
+.lab_20 {
+	left:513px;
+	top:168px;
+	position:absolute;
+	width:52px;
+	z-index:5;
+}
+.lab_21 {
+	left:235px;
+	top:72px;
+	position:absolute;
+	width:21px;
+	z-index:5;
+}
+.lab_22 {
+	left:310px;
+	top:213px;
+	position:absolute;
+	width:71px;
+	z-index:5;
+}
+.lab_23 {
+	left:393px;
+	top:235px;
+	position:absolute;
+	width:111px;
+	z-index:5;
+}
+.lab_24 {
+	left:507px;
+	top:209px;
+	position:absolute;
+	width:65px;
+	z-index:5;
+}
 
 
 

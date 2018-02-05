@@ -348,7 +348,7 @@ class Logic {
 }
 
 //user,day,money,work,study,stadyFull,stadyDist,stadyYor,lang
-let logic = new Logic('admin',0,100,2,1,1,0,0,'ru',0);
+let logic = new Logic('admin',0,100,2,1,100,200,0,'ru',0);
 
 logic.startGame();
 

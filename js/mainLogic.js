@@ -357,3 +357,4 @@ logic.startGame();
 logic.contexmenuArticle('personOpen', 'persons');
 logic.contexmenuArticle('relaxOpen', 'relaxs');
 logic.contexmenuArticle('workOpen', 'works');
+logic.contexmenuArticle('labOpen', 'lab');

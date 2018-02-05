@@ -115,7 +115,7 @@
 						<div class="room-header">
 							<div class="room-about">
 
-								<div class="first circle">
+								<div class="lab circle">
 									<strong></strong>
 
 								</div>
@@ -127,32 +127,32 @@
 						<div class="content-lab">
 
 							
-							<img class="lab_01 closed"src="/img/lab/lab_01.svg" alt="">	
-							<img class="lab_02 closed"src="/img/lab/lab_02.svg" alt="">	
-							<img class="lab_03 closed"src="/img/lab/lab_03.svg" alt="">	
-							<img class="lab_04 closed"src="/img/lab/lab_04.svg" alt="">	
-							<img class="lab_05 closed"src="/img/lab/lab_05.svg" alt="">	
-							<img class="lab_06 closed"src="/img/lab/lab_06.svg" alt="">	
-							<img class="lab_07 closed"src="/img/lab/lab_07.svg" alt="">	
-							<img class="lab_08 closed"src="/img/lab/lab_08.svg" alt="">	
-							<img class="lab_09 closed"src="/img/lab/lab_09.svg" alt="">	
-							<img class="lab_10 closed"src="/img/lab/lab_10.svg" alt="">	
-							<img class="lab_11 closed"src="/img/lab/lab_11.svg" alt="">	
-							<img class="lab_12 closed"src="/img/lab/lab_12.svg" alt="">	
-							<img class="lab_13 closed"src="/img/lab/lab_13.svg" alt="">	
-							<img class="lab_14 closed"src="/img/lab/lab_14.svg" alt="">	
-							<img class="lab_15 closed"src="/img/lab/lab_15.svg" alt="">	
-							<img class="lab_16 closed"src="/img/lab/lab_16.svg" alt="">	
-							<img class="lab_17 closed"src="/img/lab/lab_17.svg" alt="">	
-							<img class="lab_18 closed"src="/img/lab/lab_18.svg" alt="">	
-							<img class="lab_19 closed"src="/img/lab/lab_19.svg" alt="">	
-							<img class="lab_20 closed"src="/img/lab/lab_20.svg" alt="">	
-							<img class="lab_21 closed"src="/img/lab/lab_21.svg" alt="">	
-							<img class="lab_22 closed"src="/img/lab/lab_22.svg" alt="">
-							<img class="lab_23 closed"src="/img/lab/lab_23.svg" alt="">	
-							<img class="lab_24 closed"src="/img/lab/lab_24.svg" alt="">	
-							<img class="lab_25 closed"src="/img/lab/lab_25.svg" alt="">	
-							<img class="lab_26 closed"src="/img/lab/lab_26.svg" alt="">			
+							<img id ="lab_01" class="closed "src="/img/lab/lab_01.svg" alt="">	
+							<img id ="lab_02" class=""src="/img/lab/lab_02.svg" alt="">	
+							<img id ="lab_03" class="closed"src="/img/lab/lab_03.svg" alt="">	
+							<img id ="lab_04" class="closed"src="/img/lab/lab_04.svg" alt="">	
+							<img id ="lab_05" class="closed"src="/img/lab/lab_05.svg" alt="">	
+							<img id ="lab_06" class="closed"src="/img/lab/lab_06.svg" alt="">	
+							<img id ="lab_07" class=""src="/img/lab/lab_07.svg" alt="">	
+							<img id ="lab_08" class="closed"src="/img/lab/lab_08.svg" alt="">	
+							<img id ="lab_09" class=""src="/img/lab/lab_09.svg" alt="">	
+							<img id ="lab_10" class="closed"src="/img/lab/lab_10.svg" alt="">	
+							<img id ="lab_11" class=""src="/img/lab/lab_11.svg" alt="">	
+							<img id ="lab_12" class="closed"src="/img/lab/lab_12.svg" alt="">	
+							<img id ="lab_13" class="closed"src="/img/lab/lab_13.svg" alt="">	
+							<img id ="lab_14" class="closed"src="/img/lab/lab_14.svg" alt="">	
+							<img id ="lab_15" class=""src="/img/lab/lab_15.svg" alt="">	
+							<img id ="lab_16" class="closed"src="/img/lab/lab_16.svg" alt="">	
+							<img id ="lab_17" class=""src="/img/lab/lab_17.svg" alt="">	
+							<img id ="lab_18" class=""src="/img/lab/lab_18.svg" alt="">	
+							<img id ="lab_19" class="closed"src="/img/lab/lab_19.svg" alt="">	
+							<img id ="lab_20" class=""src="/img/lab/lab_20.svg" alt="">	
+							<img id ="lab_21" class="closed"src="/img/lab/lab_21.svg" alt="">	
+							<img id ="lab_22" class=""src="/img/lab/lab_22.svg" alt="">
+							<img id ="lab_23" class="closed"src="/img/lab/lab_23.svg" alt="">	
+							<img id ="lab_24" class=""src="/img/lab/lab_24.svg" alt="">	
+							<img id ="lab_25" class="closed"src="/img/lab/lab_25.svg" alt="">	
+							<img id ="lab_26" class="closed"src="/img/lab/lab_26.svg" alt="">			
 						</div>
 
 
@@ -407,6 +407,19 @@
 							</div>
 						</div>
 					</div>
+					
+						<div class="about-lab about-articles">
+						<div class="about-description">
+							<h2 class="type">Item</h2>
+
+							
+										
+							
+							<div class="buttonRun buttonWork"> 
+								<p id="btnLab">Buy</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="overlay"></div>
@@ -420,9 +433,8 @@
 		<script src="/js/change.js"></script>
 		<script src="/js/rocket.js"></script>
 		<script src="/js/ava.js"></script>
-
+        <script src="/js/lab.js"></script>
 		<!--        <script src="/js/move.js"></script>-->
-		<script src="/js/level2.js"></script>
 		<script src="/js/requests.js"></script>
 
 	</body>

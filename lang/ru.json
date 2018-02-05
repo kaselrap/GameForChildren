@@ -57,7 +57,7 @@
       
 
      "person0":{
-         "name":"Колледж",
+         "name":"Colleges",
          "fullCost":"2",
          "distanceCost":"1",
          "yourselfCost":"0",
@@ -94,7 +94,7 @@
          "yourselfDay":"800"
      },
      "work0":{
-        "name":"Курьер",
+        "name":"Courier",
         "level":"Школа",
         "eduction":"0",
         "speciality":"0",
@@ -103,7 +103,7 @@
         "100daySalary": "800"
      },
      "work1":{
-        "name":"Рабочий",
+        "name":"Worker",
         "level":"Колледж",
         "eduction":"1",
         "speciality":"1",

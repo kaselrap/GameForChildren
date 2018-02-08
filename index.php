@@ -22,8 +22,10 @@
 		<main>
 			<div class="menu">
 				<div class="avatarImg">
+				
 					<img class="girl main-avatarImg" src="/img/export/72w/ava_colo1_mhdpi.png" id="#" alt="">
 					<img class="man main-avatarImg" src="/img/export/72w/ava_colo1_fhdpi.png" id="#" alt="">
+					
 					<img class="scarf" src="/img/export/36w/scarfldpi.png" alt="">
 					<img id="tempH" class="temp" src="/img/export/36w/temp_hldpi.png" alt="">
 					<img id="tempM" class="temp" src="/img/export/36w/temp_mldpi.png" alt="">
@@ -31,10 +33,15 @@
 					<img src="img/export/36w/mouth_smile_color1ldpi.png" alt="" class="mouth mouth_smile">
 					<img src="img/export/36w/mouth_sad_color1ldpi.png" alt="" class="mouth mouth_sad">
 
-
 					<img src="img/export/36w/eyes_normalldpi.png" alt="" class="eye eyes_nor">
 					<img src="img/export/36w/eyes_midleldpi.png" alt="" class="eye eyes_mid">
 					<img src="img/export/36w/eyes_upldpi.png" alt="" class="eye eyes_up">
+				</div>
+				<div class="menu-ava-right">
+				    
+				</div>
+				<div class="menu-ava-buttom">
+				    
 				</div>
 				<div class="status">
 					<div class="status-block"><img src="/img/money.png" alt=""><p class="money-block"></p></div>

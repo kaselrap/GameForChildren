@@ -23,8 +23,12 @@
             <div class="menu">
                 <div class="avatarImg">
 
-                    <img class="girl main-avatarImg" src="/img/export/72w/ava_colo1_mhdpi.png" id="#" alt="">
-                    <img class="man main-avatarImg" src="/img/export/72w/ava_colo1_fhdpi.png" id="#" alt="">
+                   <img src="./img/avatar/stoc/ava_colo1_fxxhdpi.png" class="avaMain ava-change-1"alt="">
+                    <img src="./img/avatar/stoc/ava_colo2_fxxhdpi.png" class="avaMain ava-change-2"alt="">
+                    <img src="./img/avatar/stoc/ava_colo3_fxxhdpi.png" class="avaMain ava-change-3" alt="">
+                    <img src="./img/avatar/stoc/ava_colo1_mxxhdpi.png" class="avaMain ava-change-4"alt="">
+                    <img src="./img/avatar/stoc/ava_colo2_mxxhdpi.png" class="avaMain ava-change-5"alt="">
+                    <img src="./img/avatar/stoc/ava_colo3_mxxhdpi.png" class="avaMain ava-change-6"alt="">
 
                     <img class="scarf" src="/img/export/36w/scarfldpi.png" alt="">
                     <img id="tempH" class="temp" src="/img/export/36w/temp_hldpi.png" alt="">
@@ -33,22 +37,22 @@
                     <img src="img/export/36w/mouth_smile_color1ldpi.png" alt="" class="mouth mouth_smile">
                     <img src="img/export/36w/mouth_sad_color1ldpi.png" alt="" class="mouth mouth_sad">
 
-                    <img src="img/export/36w/eyes_normalldpi.png" alt="" class="eye eyes_nor">
-                    <img src="img/export/36w/eyes_midleldpi.png" alt="" class="eye eyes_mid">
-                    <img src="img/export/36w/eyes_upldpi.png" alt="" class="eye eyes_up">
+                    <img src="img/avatar/eyes_color1_normalxxhdpi.png" alt="" class="eye eyes_nor">
+                    <img src="img/avatar/eyes_color1_normalxxhdpi.png" alt="" class="eye eyes_mid">
+                    <img src="img/avatar/eyes_color1_normalxxhdpi.png" alt="" class="eye eyes_up">
                 </div>
                 <div class="menu-ava-right">
                    <div>
-                    <img src="./img/avatar/ava_colo1_fxxhdpi.png"class="avaChange rightAvaChange" id="ava-1"alt="">
-                    <img src="./img/avatar/ava_colo2_fxxhdpi.png" class="avaChange rightAvaChange" id="ava-2"alt="">
-                    <img src="./img/avatar/ava_colo3_fxxhdpi.png" class="avaChange rightAvaChange" id="ava-3" alt="">
+                    <img src="./img/avatar/avaMain/ava_colo1_fxxhdpi.png"class="avaChange rightAvaChange" id="ava-1"alt="">
+                    <img src="./img/avatar/avaMain/ava_colo2_fxxhdpi.png" class="avaChange rightAvaChange" id="ava-2"alt="">
+                    <img src="./img/avatar/avaMain/ava_colo3_fxxhdpi.png" class="avaChange rightAvaChange" id="ava-3" alt="">
                     </div>
                 </div>
                 <div class="menu-ava-buttom">
                    <div>
-                    <img src="./img/avatar/ava_colo1_mxxhdpi.png" class="avaChange  buttomAvaChange" id="ava-4"alt="">
-                    <img src="./img/avatar/ava_colo2_mxxhdpi.png" class="avaChange buttomAvaChange" id="ava-5"alt="">
-                    <img src="./img/avatar/ava_colo3_mxxhdpi.png" class="avaChange buttomAvaChange" id="ava-6"alt="">
+                    <img src="./img/avatar/avaMain/ava_colo1_mxxhdpi.png" class="avaChange  buttomAvaChange" id="ava-4"alt="">
+                    <img src="./img/avatar/avaMain/ava_colo2_mxxhdpi.png" class="avaChange buttomAvaChange" id="ava-5"alt="">
+                    <img src="./img/avatar/avaMain/ava_colo3_mxxhdpi.png" class="avaChange buttomAvaChange" id="ava-6"alt="">
                     </div>
                 </div>
                 <div class="status">

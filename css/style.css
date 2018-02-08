@@ -572,7 +572,7 @@ position: absolute;
 .mouth {
 	position: absolute;
 	top:59px;
-	width: 15px;
+	width: 16px;
 }
 .menu-ava-right, .menu-ava-buttom {
     display: none;
@@ -599,7 +599,10 @@ position: absolute;
 }
 .avaChange {
     width: 72px;
-
+cursor: pointer;
+}
+.avaMain {
+ width: 72px;   
 }
 .menu-ava-right div {
     width: 100%;
@@ -621,6 +624,15 @@ position: absolute;
 }
 .buttomAvaChange{
      margin:  5px 0;
+}
+.ava-change-2 {
+    margin-top:6px;
+}
+.ava-change-3 {
+    margin-top:10px;
+}
+.ava-change-4 {
+    margin-top:4px;
 }
 /*////////////////////////////*/
 .lab_01 {

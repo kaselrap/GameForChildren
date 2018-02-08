@@ -2,22 +2,23 @@ class Ava {
     constructor(sex,health){
         this.sex = sex;
         this.health = health;
-        this.eye = 2;
+        this.eye = 1;
         this.menuAva = 0;
         this.menuAvaShow = this.menuAvaShow.bind(this);
+        this.clickNewAva = this.clickNewAva.bind(this);
         this.start();
 
     }
 
     start() {
         $('.avatarImg').on('click',this.menuAvaShow);
-        
+        $('.avaChange').on('click',this.clickNewAva);
         Promise.resolve()
             .then(()=>{
             //запрос на бд  
             this.sex = 1;
             this.health = 1;
-            this.eye = 3;
+            this.eye = 2;
         })
             .then(()=>{
 
@@ -29,17 +30,11 @@ class Ava {
     }
 
     changeSex(sex) {
-        switch(sex) {
-            case 1: 
-                $('.girl').css('display','none');
-                $('.man').css('display','block');
-                break;
-            case 2: 
-                $('.girl').css('display','block');
-                $('.man').css('display','none');
-                break;
-
+        for(let i =0;i<=6;i++) {
+            $('.ava-change-'+i).css('display','none'); 
         }
+        
+     $('.ava-change-'+sex).css('display','block');
     }
 
     changeEye(eye){
@@ -104,20 +99,22 @@ class Ava {
             setTimeout( ()=>{
                 this.menuAva = 0
             },500);
-           
+
             return;
         } else {
-            
+
             $(".menu-ava-right").show("slide", { direction: "left" }, 500); 
             $(".menu-ava-buttom").slideDown( 500); 
-            
-             this.menuAva = 1;
+
+            this.menuAva = 1;
             return;
         }
     }
-    
-    clickNewAva() {
-        
+
+    clickNewAva(event) {
+        let id =  event.target.getAttribute('id').split('-')[1];
+        this.changeSex(id);
+        this.menuAvaShow();
     }
 
 

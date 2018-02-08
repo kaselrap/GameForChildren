@@ -33,8 +33,43 @@ class Ava {
         for(let i =0;i<=6;i++) {
             $('.ava-change-'+i).css('display','none'); 
         }
-        
-     $('.ava-change-'+sex).css('display','block');
+
+        $('.ava-change-'+sex).css('display','block');
+        let ava = $('.person-body');
+        switch(parseInt(sex)) {
+            case 1: 
+                ava.each((el)=>{
+                    $(ava[el]).attr("src","img/avatar/ava_colo1_fxxhdpi.png");
+                });
+                break;
+            case 2: 
+                ava.each((el)=>{
+                    $(ava[el]).attr("src","img/avatar/ava_colo2_fxxhdpi.png");
+                });
+
+                break;
+            case 3: 
+                ava.each((el)=>{
+                    $(ava[el]).attr("src","img/avatar/ava_colo3_fxxhdpi.png");
+                });
+                break;
+            case 4: 
+                ava.each((el)=>{
+                    $(ava[el]).attr("src","img/avatar/ava_colo1_mxxhdpi.png");
+                });
+                break;
+            case 5: 
+                ava.each((el)=>{
+                    $(ava[el]).attr("src","img/avatar/ava_colo2_mxxhdpi.png");
+                });
+                break;
+            case 6: 
+                ava.each((el)=>{
+                    $(ava[el]).attr("src","img/avatar/ava_colo3_mxxhdpi.png");
+                });
+                break;
+        }
+        this.saveBd('sex',sex); 
     }
 
     changeEye(eye){

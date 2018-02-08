@@ -20,6 +20,7 @@
 
         ?>
         <main>
+            <div id="preload"></div>
             <div class="menu">
                 <div class="avatarImg">
 
@@ -87,7 +88,7 @@
                 </div>
             </div>
             <div class="main">
-                <div id="preload"></div>
+               
                 <div class="buttonChangeBlock">
                     <div class="buttonChange" href="study" id="buttonChangeOn"><img src="/img/room.png" alt="Study"><div class="after"></div></div>
                     <div class="buttonChange" href="laboratory"><img src="/img/settings.png" alt="Laboratory"><div class="after"></div></div>
@@ -244,7 +245,7 @@
                                 <div class="person article " id="person2">
                                     <img src="img/avatar/ava_colo1_fxxhdpi.png" alt="" class="person-body person2">
                                     <img src="img/avatar/Study_level3_mxxhdpi.png" alt="" class="person-clothes person-headdress person2">
-                                    <!-- <img src="img/avatar/Study_level3_mxxhdpi.png" alt="" class="person-headdress"> -->
+                                  
                                     <img src="img/avatar/eyebrows_color3_normalxxhdpi.png" alt="" class="person-eye-brows person2">
                                     <img src="img/avatar/eyes_color3_normalxxhdpi.png" alt="" class="person-eye person2">
                                     <img src="img/avatar/mouth_colo3_smilexxhdpi.png" alt="" class="person-mouth person2">
@@ -252,7 +253,7 @@
                                 <div class="person article " id="person3">
                                     <img src="img/avatar/ava_colo1_fxxhdpi.png" alt="" class="person-body person3">
                                     <img src="img/avatar/Study_level4_mxxhdpi.png" alt="" class="person-clothes person-headdress person3">
-                                    <!-- <img src="img/avatar/Study_level4_mxxhdpi.png" alt="" class="person-headdress"> -->
+                                   
                                     <img src="img/avatar/eyebrows_color3_normalxxhdpi.png" alt="" class="person-eye-brows person3">
                                     <img src="img/avatar/eyes_color3_normalxxhdpi.png" alt="" class="person-eye person3">
                                     <img src="img/avatar/mouth_colo3_smilexxhdpi.png" alt="" class="person-mouth person3">
@@ -457,7 +458,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="about-lab about-articles">
                         <div class="about-description">
                             <h2 class="type">Item</h2>

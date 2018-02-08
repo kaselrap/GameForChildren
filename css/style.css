@@ -264,6 +264,11 @@ main {
 #laboratory, #research, #rest,#training,#work,#cooperation{
     display: none;
 }
+#cooperation p{
+    text-align: center;
+    margin-top: 222px;
+    font-size: 33px;
+}
 .room {
     width: 610px;
     height: 557px;

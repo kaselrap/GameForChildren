@@ -344,7 +344,10 @@
                             </div>
                         </div>
                     </div>
-                    <div id="cooperation">f</div>
+                    <div id="cooperation">
+                        <p>COMING SOON</p>
+                        
+                    </div>
                     <div class="about-rocket">
                         <span></span>
                         <div class="buttonRun buttonLaboratoryMenu"> 

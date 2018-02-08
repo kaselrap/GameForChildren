@@ -141,6 +141,11 @@ main {
    flex-direction: column;
     align-items: center;
 }
+.select p{
+    margin: 0!important;
+    padding-left: 15px; 
+    width: 100%;
+}
 .num {
     cursor: pointer;
     display: flex;

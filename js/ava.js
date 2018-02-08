@@ -132,7 +132,8 @@ class Ava {
             $(".menu-ava-right").hide("slide", { direction: "left" }, 500); 
             $(".menu-ava-buttom").slideUp( 500);
             setTimeout( ()=>{
-                this.menuAva = 0
+                this.menuAva = 0;
+                $('main').off('click',this.menuAvaShow);
             },500);
 
             return;
@@ -140,7 +141,10 @@ class Ava {
 
             $(".menu-ava-right").show("slide", { direction: "left" }, 500); 
             $(".menu-ava-buttom").slideDown( 500); 
-
+            setTimeout(()=>{
+                 $('main').on('click',this.menuAvaShow);
+            },4);
+           
             this.menuAva = 1;
             return;
         }

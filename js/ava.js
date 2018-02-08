@@ -10,7 +10,8 @@ class Ava {
     }
 
     start() {
-        $('.avatarImg').on('click',this.menuAvaShow)
+        $('.avatarImg').on('click',this.menuAvaShow);
+        
         Promise.resolve()
             .then(()=>{
             //запрос на бд  
@@ -100,14 +101,23 @@ class Ava {
         if(this.menuAva){
             $(".menu-ava-right").hide("slide", { direction: "left" }, 500); 
             $(".menu-ava-buttom").slideUp( 500);
-            this.menuAva = 0;
+            setTimeout( ()=>{
+                this.menuAva = 0
+            },500);
+           
             return;
         } else {
+            
             $(".menu-ava-right").show("slide", { direction: "left" }, 500); 
             $(".menu-ava-buttom").slideDown( 500); 
+            
              this.menuAva = 1;
             return;
         }
+    }
+    
+    clickNewAva() {
+        
     }
 
 

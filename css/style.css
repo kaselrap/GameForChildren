@@ -48,6 +48,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 .main {
     height: 100%;
@@ -67,6 +68,7 @@ main {
     border-radius: 115px;
     background-color: #e8e2b3;
     box-shadow: 0 3px 8px rgba(76,50,0,0.42);
+    cursor: pointer;
 }
 .status {
     display: flex;
@@ -584,14 +586,41 @@ position: absolute;
 .menu-ava-right {
     top: 12px;
     left: 69px;
-    width: 300px;
+    width: 335px;
     height: 115px;
+    
 }
 .menu-ava-buttom {
     top: 69px;
-    left: 11px;
+    left: 9px;
     width: 115px;
-    height: 300px;
+    height: 374px;
+   
+}
+.avaChange {
+    width: 72px;
+
+}
+.menu-ava-right div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.menu-ava-buttom div {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.rightAvaChange{
+    margin: 0 10px;
+}
+.buttomAvaChange{
+     margin:  5px 0;
 }
 /*////////////////////////////*/
 .lab_01 {

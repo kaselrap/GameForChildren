@@ -17,7 +17,6 @@ class Lab{
 
     contexmenuArticle(e) {
         let target = e.target;
-        console.log();
         if(target.tagName!='IMG' || target.className===''   ) {
             return;
         }

@@ -89,7 +89,7 @@ class Logic {
             $('.type-work').text(text['work'+num].name);
             $('.amount-work').text(text['work'+num].salaryInOur);
         });
-}
+    }
 
     moneyAppend(){
         $('.money-block').text(this.money);

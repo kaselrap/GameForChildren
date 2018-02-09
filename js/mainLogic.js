@@ -1,13 +1,11 @@
 class Logic {
-    constructor(user,day,money,work,study,stadyFull,stadyDist,stadyYor,lang,stadyDone) {
+    constructor(user,day,money,work,study,stadyFull,lang,stadyDone) {
         this.user=user; 
         this.day=day;
         this.money=money;
         this.work=work;
         this.study =study;  
         this.stadyFull =stadyFull;
-        this.stadyDist = stadyDist;
-        this.stadyYor =stadyYor;
         this.lang = lang;
         this.nextDay =this.nextDay.bind(this);
         this.workChangeActive =this.workChangeActive.bind(this);
@@ -27,35 +25,32 @@ class Logic {
         this.workActive(this.work);
         $('#newDay').on('click',this.nextDay);
         $('#btn-work').on('click',this.workChangeActive);
-        
+
         $('.closed').on('contextmenu',this.contexmenuClosed);
-         $('.about-closed').on('mouseleave',this.cloaseContextMeny);
+        $('.about-closed').on('mouseleave',this.cloaseContextMeny);
         $('#closedOk').on('click',this.cloaseContextMeny);
-        
+
     }
-    
-   
-    
+
     cloaseContextMeny(){
-         $('.about-closed').css('display','none');
+        $('.about-closed').css('display','none');
     }
-    
-     contexmenuClosed(e) {
+
+    contexmenuClosed(e) {
+        if(!$(this).hasClass('closed')){
+            return;
+        }
         let x = e.pageX;
         let y = e.pageY;
         let topMain = $('.main').offset().top,
             leftMain = $('.main').offset().left;
-         let heightElem = $('.about-closed').outerHeight();
+        let heightElem = $('.about-closed').outerHeight();
         if(x+260>=leftMain+624) {
             x=x-240;
         }
         if(y+heightElem>=topMain+636) {
             y=y-heightElem + 20;
         }
-   
-         
-
-
         $('.about-closed').css({
             'top':y-10,
             'left':x-10,
@@ -84,19 +79,18 @@ class Logic {
         $('.room .about-works').css('display','none');
         this.setWorkText(num);
     }
-    
-   setWorkText(num) {
+
+    setWorkText(num) {
         Promise.resolve() 
-        .then(()=>{
+            .then(()=>{
             return this.getText();
         })
-         .then((text)=>{
-          $('.type-work').text(text['work'+num].name);
+            .then((text)=>{
+            $('.type-work').text(text['work'+num].name);
             $('.amount-work').text(text['work'+num].salaryInOur);
         });
-   }
-    
-    
+}
+
     moneyAppend(){
         $('.money-block').text(this.money);
     }
@@ -107,12 +101,12 @@ class Logic {
         this.workClosedimg();
         this.changeTextStudy(this.stadyNow);
     }
-    
+
     getText() {
         return new Promise((resolve)=>{ 
             resolve($.getJSON('./lang/'+this.lang+'.json'));
         });
-            
+
     }
 
     nextDay() {
@@ -137,41 +131,39 @@ class Logic {
                     break;
 
             }
-            if(cost>this.money) {
+            let study = parseInt($('#2').text());
+            if(cost*study>this.money) {
 
                 return;
             } 
             if(!this.stadyDone) {
 
-                let study = parseInt($('#2').text());
+
                 this.money-=cost;
                 switch (this.stadyNow) {
                     case 1:
                         this.stadyFull+=study;
                         if(this.stadyFull>=dayOll){
                             this.stadyFull =0;
-                            this.stadyDist = 0;
-                            this.stadyYor =0;
+
                             this.study++;
                             this.nextWork(this.study);
                         }
                         break
                         case 2:
-                        this.stadyDist+=study;
-                        if( this.stadyDist>=dayOll){
+                        this.stadyFull+=(study+study/4);
+                        if( this.stadyFull>=dayOll){
                             this.stadyFull =0;
-                            this.stadyDist = 0;
-                            this.stadyYor =0;
+
                             this.study++;
                             this.nextWork(this.study);
                         }
                         break
                         case 3:
-                        this.stadyYor+=study;
-                        if( this.stadyYor>=dayOll ){
+                        this.stadyFull+=(study+study/2);
+                        if( this.stadyFull>=dayOll ){
                             this.stadyFull =0;
-                            this.stadyDist = 0;
-                            this.stadyYor =0;
+
                             this.study++;
                             this.nextWork(this.study);
                         }
@@ -193,9 +185,6 @@ class Logic {
                     .then((val)=>{
                     this.stadyFull = val['person'+(this.study-1)].fullDay;
 
-                    this.stadyDist =  val['person'+(this.study-1)].distanceDay;
-
-                    this.stadyYor =  val['person'+(this.study-1)].yourselfDay;
                 });
 
             }
@@ -253,14 +242,14 @@ class Logic {
                 case 2:
                     $('.room-description').children('.type').text(val['person'+(this.study-1)].name );
                     $('.room-description').children('.cost').children('.amount').text(val['person'+(this.study-1)].distanceCost ); 
-                    $('.room-description').children('.hours-left').children('.count-hours').text((val['person'+(this.study-1)].distanceDay-this.stadyDist )); 
-                    this.circleReset(((this.stadyDist/val['person'+(this.study-1)].distanceDay)*100 ));
+                    $('.room-description').children('.hours-left').children('.count-hours').text((val['person'+(this.study-1)].distanceDay-this.stadyFull )); 
+                    this.circleReset(((this.stadyFull/val['person'+(this.study-1)].distanceDay)*100));
                     break;
                 case 3:
                     $('.room-description').children('.type').text(val['person'+(this.study-1)].name );
                     $('.room-description').children('.cost').children('.amount').text(val['person'+(this.study-1)].yourselfCost ); 
-                    $('.room-description').children('.hours-left').children('.count-hours').text((val['person'+(this.study-1)].yourselfDay-this.stadyYor) ); 
-                    this.circleReset(((this.stadyYor/val['person'+(this.study-1)].yourselfDay)*100 ));
+                    $('.room-description').children('.hours-left').children('.count-hours').text((val['person'+(this.study-1)].yourselfDay-this.stadyFull) ); 
+                    this.circleReset(((this.stadyFull/val['person'+(this.study-1)].yourselfDay)*100));
                     break;
 
             }
@@ -313,14 +302,14 @@ class Logic {
                 if(x+260>=leftMain+624) {
                     x=x-240;
                 }
-                if(y+heightElem>=topMain+636) {
-                    y=y-heightElem + 20;
+                if(y+heightElem>=topMain+626) {
+                    y=y-heightElem + 60;
                 }
 
                 if(e.target.tagName ==='IMG'){
-                    
+
                     id =e.target.classList[1];
-                    
+
                 } else {
                     id =e.target.id;
                 }
@@ -407,7 +396,7 @@ class Logic {
 }
 
 //user,day,money,work,study,stadyFull,stadyDist,stadyYor,lang
-let logic = new Logic('admin',0,100,2,1,100,200,0,'ru',0);
+let logic = new Logic('admin',0,100,2,1,100,'ru',0);
 
 logic.startGame();
 

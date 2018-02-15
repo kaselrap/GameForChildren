@@ -1019,6 +1019,11 @@ cursor: pointer;
     border-top: 23px solid transparent;
     border-left: 30px solid #e8e2b3;
 }
+
+canvas#testCanvas {
+    position: absolute;
+    z-index: 3;
+}
 .freeTime {
     border: 4px solid rgba(120,218,21,1)!important;
 }

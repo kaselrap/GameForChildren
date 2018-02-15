@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/roket.css">
     </head>
-    <body>
+    <body onload="init();">
         <?php
         if ( isset( $_GET ) ) 
             $data = $_GET;
@@ -115,8 +115,9 @@
                         </div>
                         <div class="content content-room">
                             <img src="img/room/walls.svg" alt="" class="room-wall">
-                            <img src="img/room/bed.svg" alt="" data-name="Bed" class="room-svg room-bed closed">
-                            <img src="img/room/books.svg" alt="" data-name="Books" class="room-svg room-books closed">
+                            <canvas id="testCanvas" width="576" height="362"></canvas>
+                            <!-- <object data="img/room/bed.svg" data-name="Bed" class="room-svg room-bed closed"></object> -->
+                            <!-- <img src="img/room/books.svg" alt="" data-name="Books" class="room-svg room-books closed">
                             <img src="img/room/cactus.svg" alt="" data-name="Cactus" class="room-svg room-cactus closed">
                             <img src="img/room/chair.svg" alt="" data-name="Chair" class="room-svg room-chair closed">
                             <img src="img/room/curtain.svg" alt="" data-name="Curtain" class="room-svg room-curtain closed">
@@ -138,7 +139,7 @@
                             <img src="img/room/table_PC.svg" alt="" data-name="Table PC" class="room-svg room-table_PC closed">
                             <img src="img/room/TV.svg" alt="" data-name="TV" class="room-svg room-TV closed">
                             <img src="img/room/vibro_plate.svg" alt="" data-name="Vibro Plate" class="room-svg room-vibro_plate closed">
-                            <img src="img/room/wardrobe.svg" alt="" data-name="Wardrobe" class="room-svg room-wardrobe closed">
+                            <img src="img/room/wardrobe.svg" alt="" data-name="Wardrobe" class="room-svg room-wardrobe closed"> -->
                         </div>
                     </div>
                     <div id="laboratory">
@@ -484,6 +485,7 @@
             <div class="overlay"></div>
         </main>
         <script src="/js/jquery-3.2.1.min.js"></script>
+        <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
         <script src="/js/jquery-ui.min.js"></script>
         <script src="/js/circle-progress.js"></script>
         <script src="/js/examples.js"></script>

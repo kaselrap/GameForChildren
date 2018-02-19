@@ -10,10 +10,10 @@ function Rocket() {
         if(href === 1) {
 
             var id = this.id;
-            //                self.textForItemRocket(id).then(function(text){
+                       
 
-            self.contextMenu(event,"text",id,1);
-            //                });
+            self.contextMenu(event,'This item is bought',id,1);
+                          
 
         } else {
             if(href === 0) {
@@ -30,7 +30,7 @@ function Rocket() {
     }   
     this.buyItemRocket = function() {
         var id = $('#buyButton').attr('href');
-
+			if(id!=='buyRicket') {
         if( level === 1) {
             var redItem = id.slice(0,12),
                 mainItem =id.slice(0,11);
@@ -57,7 +57,7 @@ function Rocket() {
         if(level === 2) {
             self.arrayElementsLevel3[mainItem] = 1;
         }
-
+			}
         self.mouseLeave();
     } 
 
@@ -168,8 +168,8 @@ Rocket.prototype.contextMenu = function(e,text,id,flag) {
     if(x+260>=leftMain+624) {
         x=x-240;
     }
-    if(y+325>=topMain+636) {
-        y=y-305;
+    if(y+150>=topMain+636) {
+        y=y-130;
     }
     if( level === 1) {
         var redItem = id.slice(0,12);
@@ -180,11 +180,13 @@ Rocket.prototype.contextMenu = function(e,text,id,flag) {
 
     }
     if(flag ===0) {
-        $('#buttonLaboratoryMenu').css('display','flex')
+        $('#buttonLaboratoryMenu').css('display','flex');
+		 $('#buyButton').text('Buy');
         $('#buyButton').attr('href',id);
         $('#'+id).css('display','none');
         $('#'+redItem+'r').css('display','block');
         $('.room .about-rocket span').text(text);
+		 $('.costRocket').text('It costs: 50 euro');
         $('.room .about-rocket').css({
             'top':y-10,
             'left':x-10,
@@ -193,18 +195,26 @@ Rocket.prototype.contextMenu = function(e,text,id,flag) {
         });
     }
     if(flag===1) {
+		
+		$('#buyButton').attr('href','buyRicket');
          $('.room .about-rocket span').text(text);
+		$('#buyButton').text('Close');
+		 $('.costRocket').text('');
         $('.room .about-rocket').css({
             'top':y-10,
             'left':x-10,
             'display':'flex',
 
         });
-          $('#buttonLaboratoryMenu').css('display','none')
+          $('#buttonLaboratoryMenu').css('display','flex')
     }
 }
 Rocket.prototype.mouseLeave = function() {
+
     var id = $('#buyButton').attr('href');
+		if(id!=='buyRicket') {
+			
+		
     if(level === 1) {
         var redItem = id.slice(0,12);
 
@@ -216,6 +226,7 @@ Rocket.prototype.mouseLeave = function() {
     $('#'+id).css('display','block');
 
     $('#'+redItem+'r').css('display','none');
+			}
     $('.room .about-rocket').css('display','none');
 }
 Rocket.prototype.textForItemRocket = function(id) {

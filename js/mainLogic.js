@@ -135,6 +135,16 @@ class Logic {
     moneyAppend(){
         $('.money-block').text(this.money);
     }
+	
+	setMoney(money) {
+		this.money+=money;
+		this.moneyAppend();
+	}
+	
+	getMomey() {
+		return this.money;
+	}
+	
 
     nextDayRender() {
         this.moneyAppend();

@@ -306,7 +306,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+   
     padding-left: 8px;
 }
 .room-header .room-about .room-description h3.type {
@@ -334,6 +334,9 @@ main {
     margin: 0 auto;
     display: flex;
     align-items: center;
+}
+.nameblockMargin {
+	margin-top: 14px;
 }
 .room-header .room-title h1 {
     font-size: 71px;
@@ -473,9 +476,9 @@ main {
 .cost {
       font-size: 16px;  
 }
-h3{
+.nameblock{
     font-size: 24px;
-    width: 70px;
+    width: 200px;
 }
 .room-description {
     margin-left: 17px;

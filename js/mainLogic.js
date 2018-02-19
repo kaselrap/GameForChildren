@@ -11,8 +11,7 @@ class Logic {
         this.workChangeActive =this.workChangeActive.bind(this);
         this.stadyNow = 1;
         this.stadyDone = stadyDone;
-
-
+        this.room;
     }
 
     startGame() {
@@ -31,7 +30,49 @@ class Logic {
         $('#closedOk').on('click',this.cloaseContextMeny);
 
     }
+    setMoney(money) { 
+    if(this.getMoney>(-money)) { 
+    this.money+=money; 
+    this.moneyAppend(); 
+    } 
+}
+    setMoney(money) { 
+        if(this.getMoney>(-money)) { 
+            this.money+=money; 
+            this.moneyAppend(); 
+            this.request('set_params_user', {id:2, money:this.money});
+        } else {
+            return 1;
+        }
+    }
 
+    getMoney() { 
+        return this.money; 
+    }
+    request ($functionname, $params) {
+        self = this;
+        var host = "http://"+window.location.hostname;
+        $.ajax({
+            type: "POST",
+            url: host + "/page.php",
+            dataType: 'json',
+            data:{
+                functionname: $functionname, // пишешь какую функцию хочешь взять, список находится в page.php(set_params_user, get_params_user, add_user, isUser)
+                params: $params
+            },
+            success: function(data){
+                self.setRoomParams(data);
+            }
+           
+        });
+    }
+    setRoomParams (params) {
+        this.room = params;
+        console.log(this.room);
+    }
+    getRoomParams () {
+        return this.room;
+    }
     cloaseContextMeny(){
         $('.about-closed').css('display','none');
     }
@@ -397,7 +438,6 @@ class Logic {
 
 //user,day,money,work,study,stadyFull,stadyDist,stadyYor,lang
 let logic = new Logic('admin',0,100,2,1,100,'ru',0);
-
 logic.startGame();
 
 logic.contexmenuArticle('personOpen', 'persons');

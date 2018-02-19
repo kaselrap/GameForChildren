@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/roket.css">
     </head>
-    <body onload="init();">
+    <body>
         <?php
         if ( isset( $_GET ) ) 
             $data = $_GET;
@@ -113,35 +113,9 @@
                                 <h1><?php if ( isset ( $lang['livingRoom'] ) ) echo $lang['livingRoom']; ?></h1>
                             </div>
                         </div>
-                        <div class="content content-room">
+                        <div class="content content-room" onload="initRoom();">
                             <img src="img/room/walls.png" alt="" class="room-wall">
-                            <canvas id="testCanvas" width="576" height="362"></canvas>
-                            <!-- <object data="img/room/bed.svg" data-name="Bed" class="room-svg room-bed closed"></object> -->
-                            
-                            <!-- <img src="img/room/bed.svg" id="roomBed" class="room-svg room-bed closed" data-name="Bed" data-description="This is a bed." data-cost="250" data-buyed="0" alt="" id="roomBed" class="room-svg room-bed closed"> -->
-                            <!-- <object data="img/room/books.svg" alt="" data-name="Books" id="roomBooks" class="room-svg room-books closed"></object>
-                            <object data="img/room/cactus.svg" alt="" data-name="Cactus" class="room-svg room-cactus closed"></object>
-                            <object data="img/room/chair.svg" alt="" data-name="Chair" class="room-svg room-chair closed"></object>
-                            <object data="img/room/curtain.svg" alt="" data-name="Curtain" class="room-svg room-curtain closed"></object>
-                            <object data="img/room/guitar.svg" alt="" data-name="Guitar" class="room-svg room-guitar closed"></object>
-                            <object data="img/room/jetpack.svg" alt="" data-name="Jetpack" class="room-svg room-jetpack closed"></object>
-                            <object data="img/room/lamp_table.svg" alt="" data-name="Lamp Table" class="room-svg room-lamp_table closed"></object>
-                            <object data="img/room/lamp_top.svg" alt="" data-name="Lamp Top" class="room-svg room-lamp_top closed"></object>
-                            <object data="img/room/paret.svg" alt="" data-name="Paret" class="room-svg room-paret closed"></object>
-                            <object data="img/room/PC.svg" alt="" data-name="PC" class="room-svg room-PC closed"></object>
-                            <object data="img/room/phone.svg" alt="" data-name="Phone" class="room-svg room-phone closed"></object>
-                            <object data="img/room/planet_system.svg" alt="" data-name="Planet System" class="room-svg room-planet_system closed"></object>
-                            <object data="img/room/plate_and_cup.svg" alt="" data-name="Plate and Cup" class="room-svg room-plate_and_cup closed"></object>
-                            <object data="img/room/poster.svg" alt="" data-name="Poster" class="room-svg room-poster closed"></object>
-                            <object data="img/room/robot.svg" alt="" data-name="Robot" class="room-svg room-robot closed"></object>
-                            <object data="img/room/robot_vacuum_cleaner.svg" alt="Robot Vacuum Cleaner" data-name="" class="room-svg room-robot_vacuum_cleaner closed"></object>
-                            <object data="img/room/scooter.svg" alt="" data-name="Scooter" class="room-svg room-scooter closed"></object>
-                            <object data="img/room/sneakers.svg" alt="" data-name="Sneakers" class="room-svg room-sneakers closed"></object>
-                            <object data="img/room/table.svg" alt="" data-name="Table" class="room-svg room-table closed"></object>
-                            <object data="img/room/table_PC.svg" alt="" data-name="Table PC" class="room-svg room-table_PC closed"></object>
-                            <object data="img/room/TV.svg" alt="" data-name="TV" class="room-svg room-TV closed"></object>
-                            <object data="img/room/vibro_plate.svg" alt="" data-name="Vibro Plate" class="room-svg room-vibro_plate closed"></object>
-                            <object data="img/room/wardrobe.svg" alt="" data-name="Wardrobe" class="room-svg room-wardrobe closed"></object> -->
+                            <canvas id="roomCanvas" width="576" height="362"></canvas>
                         </div>
                     </div>
                     <div id="laboratory">
@@ -170,10 +144,11 @@
                                 <h1>Laboratory</h1>
                             </div>
                         </div>
-                        <div class="content-lab">
+                        <div class="content-lab" onload="initLaboratory();">
+                            <canvas id="laboratoryCanvas" width="576" height="362"></canvas>
 
 
-                            <img class="lab_01" src="/img/lab/lab_01.svg" alt="">													  <img class="lab_01" src="/img/lab/lab_01.svg" alt="">	
+                            <!-- <img class="lab_01" src="/img/lab/lab_01.svg" alt="">													  <img class="lab_01" src="/img/lab/lab_01.svg" alt="">	
                             <img class="lab_01 closed" src="/img/lab/lab_01.svg" alt="">	
                             <img class="lab_02 closed" src="/img/lab/lab_02.svg" alt="">	
                             <img class="lab_03 closed" src="/img/lab/lab_03.svg" alt="">	
@@ -197,7 +172,7 @@
                             <img class="lab_21 closed" src="/img/lab/lab_21.svg" alt="">	
                             <img class="lab_22 closed" src="/img/lab/lab_22.svg" alt="">
                             <img class="lab_23 closed" src="/img/lab/lab_23.svg" alt="">	
-                            <img class="lab_24 closed" src="/img/lab/lab_24.svg" alt="">		
+                            <img class="lab_24 closed" src="/img/lab/lab_24.svg" alt="">	 -->	
 
 
                         </div>
@@ -366,6 +341,7 @@
                     <div class="about-room-things">
                         <h3 class="name"></h3>
                         <span class="about"></span>
+                        <h4 class="alert"><b></b></h4>
                         <div class="buttonRun buttonLaboratoryMenu"> 
                             <p id="buyButton" href="S1_part_04_w">Buy</p>
                         </div>
@@ -500,7 +476,8 @@
        <script src="/js/freeTime.js"></script>
         <script src="/js/requests.js"></script>
         <script src="/js/imge_to_data_url.js"></script>
-        <script src="/js/script.js"></script>
+        <script src="/js/room.js"></script>
+        <script src="/js/laboratory.js"></script>
 
     </body>
 </html>

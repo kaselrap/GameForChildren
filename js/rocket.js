@@ -29,8 +29,16 @@ function Rocket() {
 
     }   
     this.buyItemRocket = function() {
+		
+		
+		
         var id = $('#buyButton').attr('href');
 			if(id!=='buyRicket') {
+				if(logic.getMoney()<50) {
+			return;
+			
+		}
+		logic.setMoney(-50);
         if( level === 1) {
             var redItem = id.slice(0,12),
                 mainItem =id.slice(0,11);

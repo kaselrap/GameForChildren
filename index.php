@@ -96,6 +96,9 @@
 					<div class="buttonChange" href="training"><img src="/img/tab5.png" alt="Training"><div class="after"></div></div>
 					<div class="buttonChange" href="work"><img src="/img/tab6.png" alt="Work"><div class="after"></div></div>
 					<div class="buttonChange" href="cooperation"><img src="/img/tab7.png" alt="Cooperation"><div class="after"></div></div> 
+					
+				
+					
 				</div>
 
 				<div class="room">
@@ -328,76 +331,97 @@
 						<p>COMING SOON</p>
 
 
-                    </div>
-                    <div class="about-rocket">
-                        <span></span>
-                        <div class="buttonRun buttonLaboratoryMenu"> 
-                            <p id="buyButton">Buy</p>
-                        </div>
-                    </div>
-                    <div class="about-room-things">
-                        <h3 class="name"></h3>
-                        <span class="about"></span>
-                        <h4 class="alert"><b></b></h4>
-                        <div class="buttonRun buttonLaboratoryMenu"> 
-                            <p id="buyButton" href="S1_part_04_w">Buy</p>
-                        </div>
-                    </div>
-                    <div class="about-persons about-articles">
-                        <div class="about-description">
-                            <h2 class="type"></h2>
-                            <div class="study-type">
-                                <div class="choose-radio-button" data-active="1">
-                                    <div class="active-rbtn"></div>
-                                </div>
-                                <div class="description-full">
-                                    <h3 class="title"><?php if ( isset ( $lang['fullTime'] ) ) echo $lang['fullTime']; ?>:</h3>
-                                    <div class="type-full-desctription">
-                                        <span class="amount"></span>
-                                        <span class="currency"><?php if ( isset ( $lang['euro'] ) ) echo $lang['euro']; ?></span>
-                                        <span class="slash">/</span>
-                                        <span class="time"><?php if ( isset ( $lang['hour'] ) ) echo $lang['hour']; ?></span>
-                                        <span class="comma">,</span>
-                                        <span class="amount-hours"><span><?php if ( isset ( $lang['hours'] ) ) echo $lang['hours']; ?></span></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="study-type">
-                                <div class="choose-radio-button" data-active="0"></div>
-                                <div class="description">
-                                    <h3><?php if ( isset ( $lang['distance'] ) ) echo $lang['distance']; ?>:</h3>
-                                    <div class="type-desctription">
-                                        <span class="amount"></span>
-                                        <span class="currency"><?php if ( isset ( $lang['euro'] ) ) echo $lang['euro']; ?></span>
-                                        <span class="slash">/</span>
-                                        <span class="time"><?php if ( isset ( $lang['hour'] ) ) echo $lang['hour']; ?></span>
-                                        <span class="comma">,</span>
-                                        <span class="amount-hours"><span><?php if ( isset ( $lang['hours'] ) ) echo $lang['hours']; ?></span></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="study-type">
-                                <div class="choose-radio-button" data-active="0"></div>
-                                <div class="description-low">
-                                    <h3><?php if ( isset ( $lang['yourself'] ) ) echo $lang['yourself']; ?>:</h3>
-                                    <div class="type-description-low">
-                                        <span class="amount"></span>
-                                        <span class="currency"><?php if ( isset ( $lang['euro'] ) ) echo $lang['euro']; ?></span>
-                                        <span class="slash">/</span>
-                                        <span class="time"><?php if ( isset ( $lang['hour'] ) ) echo $lang['hour']; ?></span>
-                                        <span class="comma">,</span>
-                                        <span class="amount-hours"> <span><?php if ( isset ( $lang['hours'] ) ) echo $lang['hours']; ?></span></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="buttonRun buttonStudy"> 
-                                <p id="study"><?php if ( isset ( $lang['study'] ) ) echo $lang['study']; ?></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-relaxs about-articles">
-                        <div class="about-description">
-                            <h2 class="type"><?php if ( isset ( $lang['tRelax'] ) ) echo $lang['tRelax']; ?></h2>
+					</div>
+					<div class="about-rocket">
+						<span></span>
+						<p class="costRocket"></p>
+						<div class="buttonRun buttonLaboratoryMenu"> 
+							<p id="buyButton">Buy</p>
+						</div>
+					</div>
+					
+					
+				<div class="new-day">
+						<h2>Day <span class="dayN"></span></h2>
+						
+						<span class="dayAvailable"></span>
+						<span> days are available</span>
+						<span class="dayEuroPurchase"></span>
+						<span> euro is charged for the purchase</span>
+						<span class="dayEuroEarned"></span>
+						<span> euro is earned</span>
+						<span class="dayInvented"></span>
+						<span> item is invented</span>
+						
+						<div class="buttonRun"> 
+							<p id="new-day-cloase">Next</p>
+						</div>
+					</div>
+					
+					
+					<div class="about-room-things">
+						<h3 class="name nameblock"></h3>
+						<span class="about"></span>
+						<div class="buttonRun buttonLaboratoryMenu"> 
+							<p id="buyButton" href="S1_part_04_w">Buy</p>
+						</div>
+					</div>
+					<div class="about-persons about-articles">
+						<div class="about-description">
+							<h2 class="type"></h2>
+							<div class="study-type">
+								<div class="choose-radio-button" data-active="1">
+									<div class="active-rbtn"></div>
+								</div>
+								<div class="description-full">
+									<h3 class="title"><?php if ( isset ( $lang['fullTime'] ) ) echo $lang['fullTime']; ?>:</h3>
+									<div class="type-full-desctription">
+										<span class="amount"></span>
+										<span class="currency"><?php if ( isset ( $lang['euro'] ) ) echo $lang['euro']; ?></span>
+										<span class="slash">/</span>
+										<span class="time"><?php if ( isset ( $lang['hour'] ) ) echo $lang['hour']; ?></span>
+										<span class="comma">,</span>
+										<span class="amount-hours"><span><?php if ( isset ( $lang['hours'] ) ) echo $lang['hours']; ?></span></span>
+									</div>
+								</div>
+							</div>
+							<div class="study-type">
+								<div class="choose-radio-button" data-active="0"></div>
+								<div class="description">
+									<h3><?php if ( isset ( $lang['distance'] ) ) echo $lang['distance']; ?>:</h3>
+									<div class="type-desctription">
+										<span class="amount"></span>
+										<span class="currency"><?php if ( isset ( $lang['euro'] ) ) echo $lang['euro']; ?></span>
+										<span class="slash">/</span>
+										<span class="time"><?php if ( isset ( $lang['hour'] ) ) echo $lang['hour']; ?></span>
+										<span class="comma">,</span>
+										<span class="amount-hours"><span><?php if ( isset ( $lang['hours'] ) ) echo $lang['hours']; ?></span></span>
+									</div>
+								</div>
+							</div>
+							<div class="study-type">
+								<div class="choose-radio-button" data-active="0"></div>
+								<div class="description-low">
+									<h3><?php if ( isset ( $lang['yourself'] ) ) echo $lang['yourself']; ?>:</h3>
+									<div class="type-description-low">
+										<span class="amount"></span>
+										<span class="currency"><?php if ( isset ( $lang['euro'] ) ) echo $lang['euro']; ?></span>
+										<span class="slash">/</span>
+										<span class="time"><?php if ( isset ( $lang['hour'] ) ) echo $lang['hour']; ?></span>
+										<span class="comma">,</span>
+										<span class="amount-hours"> <span><?php if ( isset ( $lang['hours'] ) ) echo $lang['hours']; ?></span></span>
+									</div>
+								</div>
+							</div>
+							<div class="buttonRun buttonStudy"> 
+								<p id="study"><?php if ( isset ( $lang['study'] ) ) echo $lang['study']; ?></p>
+							</div>
+						</div>
+					</div>
+					<div class="about-relaxs about-articles">
+						<div class="about-description">
+							<h2 class="type"><?php if ( isset ( $lang['tRelax'] ) ) echo $lang['tRelax']; ?></h2>
+
 
 							<div class="relax-type study-type">
 								<div class="choose-plus">+</div>

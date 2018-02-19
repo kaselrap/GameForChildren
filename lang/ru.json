@@ -17,40 +17,40 @@
     "fullTime":"Дневное",
     "distance":"Дистанционное",
     "yourself":"Самостоятельно",
-    "S1_part_05_w": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S1_part_06_w":" ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S1_part_01_w": "  dolor sit amet, consectetur adipisicing elit.", 
-    "S1_part_02_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S1_part_03_w": "  sit amet, consectetur adipisicing elit.",
-    "S1_part_04_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S1_part_07_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S1_part_08_w": " i amet, consectetur adipisicing elit.",
-    "S1_part_09_w": " ipsum dolor sit amet, consectetur adipisicing elit." ,
-    "S2b_part_01_w": " ipsum dolor sit amet, consectetur adipisicing elit.", 
-    "S2b_part_02_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S2b_part_03_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S2b_part_04_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S2b_part_05_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S2b_part_06_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S2b_part_07_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S2b_part_08_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S2b_part_09_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S2b_part_10_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S3_part_01_w": " ipsum dolor sit amet, consectetur adipisicing elit.", 
-    "S3_part_02_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S3_part_03_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S3_part_04_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S3_part_05_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S3_part_06_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S3_part_07_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S3_part_08_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S3_part_09_w": " ipsum dolor sit amet, consectetur adipisicing elit.",
-    "S3_part_10_w": " ipsum dolor sit amet, consectetur adipisicing elit.",   
-    "S3_part_11_w": " ipsum dolor sit amet, consectetur adipisicing elit.",   
-    "S3_part_12_w": " ipsum dolor sit amet, consectetur adipisicing elit.",   
-    "S3_part_13_w": " ipsum dolor sit amet, consectetur adipisicing elit.",   
-    "S3_part_14_w": " ipsum dolor sit amet, consectetur adipisicing elit.", 
-    "S3_part_15_w": " ipsum dolor sit amet, consectetur adipisicing elit." , 
+    "S1_part_05_w": "Rocket assist",
+    "S1_part_06_w":"Second stage engine",
+    "S1_part_01_w": "Take off area", 
+    "S1_part_02_w": "Loading elevator",
+    "S1_part_03_w": "Support",
+    "S1_part_04_w": "Spacecraft body",
+    "S1_part_07_w": "Access door",
+    "S1_part_08_w": "Window",
+    "S1_part_09_w": "Wireless antennas" ,
+    "S2b_part_01_w": "Spacecraft body", 
+    "S2b_part_02_w": "Window",
+    "S2b_part_03_w": "Airlock",
+    "S2b_part_04_w": "Reaction control system jet",
+    "S2b_part_05_w": "Solar batteries",
+    "S2b_part_06_w": "Warp drive",
+    "S2b_part_07_w": "Orientation engine",
+    "S2b_part_08_w": "An Airlock",
+    "S2b_part_09_w": "Aerials of radio system",
+    "S2b_part_10_w": "An optical orientation instrument",
+    "S3_part_01_w": "Warp drive", 
+    "S3_part_02_w": "Off base video cameras",
+    "S3_part_03_w": "Telemeters",
+    "S3_part_04_w": "Habitation module",
+    "S3_part_05_w": "Accommodation module",
+    "S3_part_06_w": "Solar batteries",
+    "S3_part_07_w": "An Airlock",
+    "S3_part_08_w": "Command module",
+    "S3_part_09_w": "Pressure tight access hatch",
+    "S3_part_10_w": "Onboard control system",   
+    "S3_part_11_w": "Onboard systems section",   
+    "S3_part_12_w": "An optical orientation instrument",   
+    "S3_part_13_w": "Spacecraft body",   
+    "S3_part_14_w": "Window", 
+    "S3_part_15_w": "Wireless antennas" , 
 
    
 
@@ -67,7 +67,7 @@
 
      },
      "person1":{
-         "name":"Университет",
+         "name":"University",
          "fullCost":"4",
          "distanceCost":"2",
          "yourselfCost":"0",
@@ -76,7 +76,7 @@
          "yourselfDay":"800"
      },
      "person2":{
-         "name":"Магистратура",
+         "name":"Master’s program",
          "fullCost":"8",
          "distanceCost":"4",
          "yourselfCost":"0",
@@ -85,7 +85,7 @@
          "yourselfDay":"900"
      },
      "person3":{
-         "name":"Докторантура",
+         "name":"Doctoral program",
          "fullCost":"20",
          "distanceCost":"5",
          "yourselfCost":"0",
@@ -94,7 +94,7 @@
          "yourselfDay":"800"
      },
      "work0":{
-        "name":"Courier",
+        "name":"Delivery boy",
         "level":"Школа",
         "eduction":"0",
         "speciality":"0",
@@ -112,7 +112,7 @@
         "100daySalary": "2000"
      },
      "work2":{
-        "name":"Инженер",
+        "name":"An engineer",
         "level":"Колледж",
         "eduction":"1",
         "speciality":"2",
@@ -121,7 +121,7 @@
         "100daySalary": "3600"
      },
      "work3":{
-        "name":"Инженер",
+        "name":"An engineer",
         "level":"Университет",
         "eduction":"2",
         "speciality":"2",
@@ -130,7 +130,7 @@
         "100daySalary": "4900"
      },
      "work4":{
-        "name":"Начальник",
+        "name":"Boss",
         "level":"Университет",
         "eduction":"2",
         "speciality":"3",
@@ -139,7 +139,7 @@
         "100daySalary": "7800"
      },
      "work5":{
-        "name":"Начальник",
+        "name":"Boss",
         "level":"Университет",
         "eduction":"3",
         "speciality":"3",
@@ -148,7 +148,7 @@
         "100daySalary": "9600"
      },
      "work6":{
-        "name":"Менеджер",
+        "name":"Manager",
         "level":"Магистратура",
         "eduction":"4",
         "speciality":"4",
@@ -157,7 +157,7 @@
         "100daySalary": "8000"
      },
      "work7":{
-        "name":"Менеджер",
+        "name":"Manager",
         "level":"Магистратура",
         "eduction":"4",
         "speciality":"4",
@@ -166,7 +166,7 @@
         "100daySalary": "12000"
      },
      "work8":{
-        "name":"Владелец",
+        "name":"The owner",
         "level":"Докторантура",
         "eduction":"5",
         "speciality":"5",
@@ -239,23 +239,23 @@
 
      },
      "relax1":{
-        "type":"Дерево",
+        "type":"Wander along the park",
         "amount":"1"
      },
      "relax2":{
-        "type":"Мячь",
+        "type":"Sport",
         "amount":"2"
      },
      "relax3":{
-        "type":"Книги",
+        "type":"Reading",
         "amount":"3"
      },
      "relax4":{
-        "type":"Друзья",
+        "type":"Rest with friends",
         "amount":"4"
      },
      "relax5":{
-        "type":"Игры",
+        "type":"Games",
         "amount":"5"
      }
 }

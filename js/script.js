@@ -157,6 +157,7 @@ if(typeof exports!=="undefined")exports.$p=$p})();
         bitmap.money = event.target.getAttribute('money');
         bitmap.buy = event.target.getAttribute('buyed');
         stage.setChildIndex(bitmap, event.target.getAttribute('zi'));
+        stage.update();
         // bitmap.on("mousedown", function (evt) {
         //     this.parent.addChild(this);
         //     this.offset = {x: this.x - evt.stageX, y: this.y - evt.stageY};
@@ -243,22 +244,3 @@ if(typeof exports!=="undefined")exports.$p=$p})();
             stage.update(event);
         }
     }
-
-// var elements = document.querySelectorAll('.room-svg');
-// elements.forEach(function (elem) {
-//     elem.addEventListener("load", function () {
-//         var svgDocument     = elem.contentDocument,
-//             svgElement      = svgDocument.querySelector('svg'),
-//             svgTitle        = svgDocument.querySelector('title').textContent,
-//             innerSvgElement = svgDocument.getElementById(svgTitle),
-//             allPath         = svgDocument.querySelectorAll('path');
-
-//         elem.style.cursor = "pointer";
-//         innerSvgElement.addEventListener('mouseenter', function() {
-//             elem.classList.add('red');
-//         });
-//         innerSvgElement.addEventListener('mouseleave', function() {
-//             elem.classList.remove('red');
-//         });
-//     });
-// });

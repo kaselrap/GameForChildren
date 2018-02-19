@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/roket.css">
     </head>
-    <body>
+    <body onload="init();">
         <?php
         if ( isset( $_GET ) ) 
             $data = $_GET;
@@ -114,12 +114,12 @@
                             </div>
                         </div>
                         <div class="content content-room">
-                            <img src="img/room/walls.svg" alt="" class="room-wall">
-                            <!-- <canvas id="testCanvas" width="576" height="362"></canvas> -->
-                            <object data="img/room/bed.svg" data-name="Bed" class="room-svg room-bed closed"></object>
+                            <img src="img/room/walls.png" alt="" class="room-wall">
+                            <canvas id="testCanvas" width="576" height="362"></canvas>
+                            <!-- <object data="img/room/bed.svg" data-name="Bed" class="room-svg room-bed closed"></object> -->
                             
                             <!-- <img src="img/room/bed.svg" id="roomBed" class="room-svg room-bed closed" data-name="Bed" data-description="This is a bed." data-cost="250" data-buyed="0" alt="" id="roomBed" class="room-svg room-bed closed"> -->
-                            <object data="img/room/books.svg" alt="" data-name="Books" id="roomBooks" class="room-svg room-books closed"></object>
+                            <!-- <object data="img/room/books.svg" alt="" data-name="Books" id="roomBooks" class="room-svg room-books closed"></object>
                             <object data="img/room/cactus.svg" alt="" data-name="Cactus" class="room-svg room-cactus closed"></object>
                             <object data="img/room/chair.svg" alt="" data-name="Chair" class="room-svg room-chair closed"></object>
                             <object data="img/room/curtain.svg" alt="" data-name="Curtain" class="room-svg room-curtain closed"></object>
@@ -141,7 +141,7 @@
                             <object data="img/room/table_PC.svg" alt="" data-name="Table PC" class="room-svg room-table_PC closed"></object>
                             <object data="img/room/TV.svg" alt="" data-name="TV" class="room-svg room-TV closed"></object>
                             <object data="img/room/vibro_plate.svg" alt="" data-name="Vibro Plate" class="room-svg room-vibro_plate closed"></object>
-                            <object data="img/room/wardrobe.svg" alt="" data-name="Wardrobe" class="room-svg room-wardrobe closed"></object>
+                            <object data="img/room/wardrobe.svg" alt="" data-name="Wardrobe" class="room-svg room-wardrobe closed"></object> -->
                         </div>
                     </div>
                     <div id="laboratory">

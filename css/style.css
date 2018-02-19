@@ -126,9 +126,16 @@ main {
     box-shadow: 0px 5px 0px rgba(37,101,128,1);
     transition: 0.3s;
 }
-.buttonRun p:hover { 
+.buttonRun p:hover {
     box-shadow: 0px 0px 0px rgba(37,101,128,1);
     margin-top: 0px;  
+}
+
+.buttonRun p.blocked { 
+    box-shadow: 0px 0px 0px rgba(37,101,128,1);
+    margin-top: 0px;  
+    filter: grayscale(100%);
+    cursor: no-drop;
 }
 .select {
     height: 100px;
@@ -895,6 +902,11 @@ cursor: pointer;
     width: 100px;
     height: auto;
     z-index: 2;
+    pointer-events: all;
+}
+.red {
+    -webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
+    filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
 }
 .room-bed {
     top: 195px;
@@ -1042,7 +1054,16 @@ cursor: pointer;
     border-radius: 4px;
     border-top-right-radius: 0;
     box-shadow: 7px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     z-index: 10;
+}
+.room .about-room-things h4.alert {
+    color: #ff0000;
+    text-align: center;
+    padding: 3px;
+    font-size: 16px;
 }
 .room .about-room-things span {
     display: block;
@@ -1068,7 +1089,7 @@ cursor: pointer;
     border-left: 30px solid #e8e2b3;
 }
 
-canvas#testCanvas {
+canvas#roomCanvas {
     position: absolute;
     z-index: 3;
 }

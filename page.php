@@ -57,6 +57,36 @@ if ( isset ( $_POST ) && !empty( $_POST ) ) {
 					echo json_encode($user);
 				}
 				break;
+			////////////////////////////////////
+			//Изменение параметров комнаты
+			///////////////////////////////////
+			case 'set_params_room':
+				if ( isset ( $data['params']['id'] ) ) {
+					$params = array();
+					$id = $data['params']['id'];
+					foreach ($data['params'] as $key => $value) {
+						if ( isset ( $data['params'][$key] ) ) {
+							if ( $key != 'id' ) {
+								$params[$key] = (int)$value;
+							}
+						}
+					}
+					if ( set_params_room($id, $params) ) {
+						echo 'data rooms was changed';
+					} else {
+						echo 'failure for changed data';
+					}
+				}
+				break;
+			//////////////////////////////////////
+			//Получение параметров комнаты
+			/////////////////////////////////////
+			case 'get_params_room':
+				if ( isset ( $data['params']['id'] ) ) {
+					$room = get_params_room($data['params']['id']);
+					echo json_encode($room);
+				}
+				break;
 			//////////////////////////////////////
 			//Есть ли такой пользователь
 			/////////////////////////////////////

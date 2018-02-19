@@ -1,144 +1,144 @@
 class Logic {
-   	constructor(user,day,money,work,study,stadyFull,lang,stadyDone,dayAvelible) {
+	constructor(user,day,money,work,study,stadyFull,lang,stadyDone,dayAvelible) {
 		this.user=user; 
 		this.day=day;
 		this.dayAvelible = dayAvelible;
-        this.money=money;
-        this.work=work;
-        this.study =study;  
-        this.stadyFull =stadyFull;
-        this.lang = lang;
-        this.nextDay =this.nextDay.bind(this);
-        this.workChangeActive =this.workChangeActive.bind(this);
-        this.stadyNow = 1;
-        this.stadyDone = stadyDone;
-        this.room;
-    }
+		this.money=money;
+		this.work=work;
+		this.study =study;  
+		this.stadyFull =stadyFull;
+		this.lang = lang;
+		this.nextDay =this.nextDay.bind(this);
+		this.workChangeActive =this.workChangeActive.bind(this);
+		this.stadyNow = 1;
+		this.stadyDone = stadyDone;
+		this.room;
+		this.outMoney;
+	}
 
-    startGame() {
-        this.moneyAppend();
-        this.studyClosedimg();
-        this.workClosedimg();
-        this.aboutStudyWindow();
-        this.activeRadioButton();
-        this.changeTextStudy(1);
-        this.workActive(this.work);
-        $('#newDay').on('click',this.nextDay);
-        $('#btn-work').on('click',this.workChangeActive);
+	startGame() {
+		this.moneyAppend();
+		this.studyClosedimg();
+		this.workClosedimg();
+		this.aboutStudyWindow();
+		this.activeRadioButton();
+		this.changeTextStudy(1);
+		this.workActive(this.work);
+		$('#newDay').on('click',this.nextDay);
+		$('#btn-work').on('click',this.workChangeActive);
+		$('#new-day-cloase').on('click',function() {
+			$('.new-day').css('display','none');
+		});
+		$('.closed').on('contextmenu',this.contexmenuClosed);
+		$('.about-closed').on('mouseleave',this.cloaseContextMeny);
+		$('#closedOk').on('click',this.cloaseContextMeny);
 
-        $('.closed').on('contextmenu',this.contexmenuClosed);
-        $('.about-closed').on('mouseleave',this.cloaseContextMeny);
-        $('#closedOk').on('click',this.cloaseContextMeny);
+	}
+	setMoneyOut(money) { 
+		if(this.getMoney()>=(-money)) { 
+			this.money+=money; 
+			this.moneyAppend(); 
+		} 
+	}
+	setMoney(money) { 
+		if(this.getMoney>(-money)) { 
+			this.money+=money; 
+			this.moneyAppend(); 
+			this.request('set_params_user', {id:2, money:this.money});
+		} else {
+			return 1;
+		}
+	}
 
-    }
-    setMoney(money) { 
-    if(this.getMoney>(-money)) { 
-    this.money+=money; 
-    this.moneyAppend(); 
-    } 
-}
-    setMoney(money) { 
-        if(this.getMoney>(-money)) { 
-            this.money+=money; 
-            this.moneyAppend(); 
-            this.request('set_params_user', {id:2, money:this.money});
-        } else {
-            return 1;
-        }
-    }
+	getMoney() { 
+		return this.money; 
+	}
+	request ($functionname, $params) {
+		self = this;
+		var host = "http://"+window.location.hostname;
+		$.ajax({
+			type: "POST",
+			url: host + "/page.php",
+			dataType: 'json',
+			data:{
+				functionname: $functionname, // пишешь какую функцию хочешь взять, список находится в page.php(set_params_user, get_params_user, add_user, isUser)
+				params: $params
+			},
+			success: function(data){
+				self.setRoomParams(data);
+			}
 
-    getMoney() { 
-        return this.money; 
-    }
-    request ($functionname, $params) {
-        self = this;
-        var host = "http://"+window.location.hostname;
-        $.ajax({
-            type: "POST",
-            url: host + "/page.php",
-            dataType: 'json',
-            data:{
-                functionname: $functionname, // пишешь какую функцию хочешь взять, список находится в page.php(set_params_user, get_params_user, add_user, isUser)
-                params: $params
-            },
-            success: function(data){
-                self.setRoomParams(data);
-            }
-           
-        });
-    }
-    setRoomParams (params) {
-        this.room = params;
-        console.log(this.room);
-    }
-    getRoomParams () {
-        return this.room;
-    }
-    cloaseContextMeny(){
-        $('.about-closed').css('display','none');
-    }
+		});
+	}
+	setRoomParams (params) {
+		this.room = params;
+		console.log(this.room);
+	}
+	getRoomParams () {
+		return this.room;
+	}
+	cloaseContextMeny(){
+		$('.about-closed').css('display','none');
+	}
 
-    contexmenuClosed(e) {
-        if(!$(this).hasClass('closed')){
-            return;
-        }
-        let x = e.pageX;
-        let y = e.pageY;
-        let topMain = $('.main').offset().top,
-            leftMain = $('.main').offset().left;
-        let heightElem = $('.about-closed').outerHeight();
-        if(x+260>=leftMain+624) {
-            x=x-240;
-        }
-        if(y+heightElem>=topMain+636) {
-            y=y-heightElem + 20;
-        }
-        $('.about-closed').css({
-            'top':y-10,
-            'left':x-10,
-            'display':'block'
-        });
-    }
+	contexmenuClosed(e) {
+		if(!$(this).hasClass('closed')){
+			return;
+		}
+		let x = e.pageX;
+		let y = e.pageY;
+		let topMain = $('.main').offset().top,
+			leftMain = $('.main').offset().left;
+		let heightElem = $('.about-closed').outerHeight();
+		if(x+260>=leftMain+624) {
+			x=x-240;
+		}
+		if(y+heightElem>=topMain+636) {
+			y=y-heightElem + 20;
+		}
+		$('.about-closed').css({
+			'top':y-10,
+			'left':x-10,
+			'display':'block'
+		});
+	}
 
-    workActive(i) {
+	workActive(i) {
 
-        for(let a = 0;a<5;a++) {
-            $('#work'+a).removeClass('workActive');
-        }
+		for(let a = 0;a<5;a++) {
+			$('#work'+a).removeClass('workActive');
+		}
 
-        $('#work'+(i-1)).addClass('workActive'); 
-        this.setWorkText(i-1);
-    }
+		$('#work'+(i-1)).addClass('workActive'); 
+		this.setWorkText(i-1);
+	}
 
-    workChangeActive(ev) {
-        let target =ev.target;
-        for(let a = 0;a<5;a++) {
-            $('#work'+a).removeClass('workActive');
-        }
-        let num =  parseInt(ev.target.getAttribute('work'));
-        this.work = num;
-        $('#work'+(num)).addClass('workActive');  
-        $('.room .about-works').css('display','none');
-        this.setWorkText(num);
-    }
+	workChangeActive(ev) {
+		let target =ev.target;
+		for(let a = 0;a<5;a++) {
+			$('#work'+a).removeClass('workActive');
+		}
+		let num =  parseInt(ev.target.getAttribute('work'));
+		this.work = num;
+		$('#work'+(num)).addClass('workActive');  
+		$('.room .about-works').css('display','none');
+		this.setWorkText(num);
+	}
 
-    setWorkText(num) {
-        Promise.resolve() 
-            .then(()=>{
-            return this.getText();
-        })
-            .then((text)=>{
-            $('.type-work').text(text['work'+num].name);
-            $('.amount-work').text(text['work'+num].salaryInOur);
-        });
-    }
+	setWorkText(num) {
+		Promise.resolve() 
+			.then(()=>{
+			return this.getText();
+		})
+			.then((text)=>{
+			$('.type-work').text(text['work'+num].name);
+			$('.amount-work').text(text['work'+num].salaryInOur);
+		});
+	}
 
-    moneyAppend(){
-        $('.money-block').text(this.money);
-    }
-	
-	setMoney(money) {
-		this.money+=money;
+	moneyAppend(){
+		$('.money-block').text(this.money);
+	}
 
 	cloaseContextMeny(){
 		$('.about-closed').css('display','none');
@@ -209,8 +209,9 @@ class Logic {
 		});
 		$('.dayN').text(this.day);
 		$('.dayAvailable').text(this.dayAvelible);
-		$('.dayEuroEarned').text(this.dayAvelible);
-		
+		$('.dayEuroPurchase').text(this.outMoney);
+	
+
 	}
 	nextDayRender() {
 		this.nextContext();
@@ -256,9 +257,9 @@ class Logic {
 			} 
 			if(!this.stadyDone) {
 
-
-				this.money-=cost;
-				this.day--;
+				this.outMoney =cost*study;
+				this.money-=cost*study;
+				this.day++;
 				this.dayAvelible --;
 				switch (this.stadyNow) {
 					case 1:
@@ -405,7 +406,7 @@ class Logic {
 			$('#work'+i).addClass('closed');
 		}
 	}
-	
+
 	contexmenuArticle(clickedClass, hiddenClass) {
 		let self = this;
 		$(document).on('contextmenu','.'+ clickedClass +'',function(e){
@@ -517,7 +518,7 @@ class Logic {
 
 //user,day,money,work,study,stadyFull,stadyDist,stadyYor,lang
 
-let logic = new Logic('admin',0,100,2,1,100,'ru',0,100);
+let logic = new Logic('admin',10,300,2,1,100,'ru',0,100);
 
 
 logic.startGame();

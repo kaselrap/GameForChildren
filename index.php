@@ -342,16 +342,16 @@
 					
 					
 				<div class="new-day">
-						<h2>Day <span class="dayN"></span></h2>
+					<div class="dayTitle"><span class="dayN"></span> Day </div>
 						
-						<span class="dayAvailable"></span>
-						<span> days are available</span>
-						<span class="dayEuroPurchase"></span>
-						<span> euro is charged for the purchase</span>
-						<span class="dayEuroEarned"></span>
-						<span> euro is earned</span>
-						<span class="dayInvented"></span>
-						<span> item is invented</span>
+						
+						<div><span class="dayAvailable"></span> days are available</div>
+						
+						<div><span class="dayEuroPurchase"></span> euro is charged for the purchase</div>
+						
+						<div><span class="dayEuroEarned">0</span> euro is earned</div>
+						
+						<div><span class="dayInvented">0</span> item is invented</div>
 						
 						<div class="buttonRun"> 
 							<p id="new-day-cloase">Next</p>

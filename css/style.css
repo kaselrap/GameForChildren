@@ -333,16 +333,26 @@ main {
     border-radius: 4px;
     border-top-right-radius: 0;
     box-shadow: 7px 5px 10px 0px rgba(0, 0, 0, 0.25);
-    z-index: 5;
+    z-index: 10;
 }
-.new-day h2 {
-	 font-size: 38px;
-}
+
  .new-day span {
-    display: block;
-    text-align: center;
+   
+ 
     font-size: 22px;
-    margin-top: 6px;
+   
+}
+.dayTitle {
+ font-size: 38px!important;	 
+}
+.dayTitle span {
+ font-size: 38px!important;		
+}
+.new-day div
+{
+	 font-size: 22px;
+	 text-align: center;
+	margin-top: 16px;
 }
  .new-day:before,
  .new-day:after {

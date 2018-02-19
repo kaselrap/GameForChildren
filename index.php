@@ -24,7 +24,7 @@
             <div class="menu">
                 <div class="avatarImg">
 
-                   <img src="./img/avatar/stoc/ava_colo1_fxxhdpi.png" class="avaMain ava-change-1"alt="">
+                    <img src="./img/avatar/stoc/ava_colo1_fxxhdpi.png" class="avaMain ava-change-1"alt="">
                     <img src="./img/avatar/stoc/ava_colo2_fxxhdpi.png" class="avaMain ava-change-2"alt="">
                     <img src="./img/avatar/stoc/ava_colo3_fxxhdpi.png" class="avaMain ava-change-3" alt="">
                     <img src="./img/avatar/stoc/ava_colo1_mxxhdpi.png" class="avaMain ava-change-4"alt="">
@@ -43,17 +43,17 @@
                     <img src="img/avatar/eyes_color1_normalxxhdpi.png" alt="" class="eye eyes_up">
                 </div>
                 <div class="menu-ava-right">
-                   <div>
-                    <img src="./img/avatar/avaMain/ava_colo1_fxxhdpi.png"class="avaChange rightAvaChange" id="ava-1"alt="">
-                    <img src="./img/avatar/avaMain/ava_colo2_fxxhdpi.png" class="avaChange rightAvaChange" id="ava-2"alt="">
-                    <img src="./img/avatar/avaMain/ava_colo3_fxxhdpi.png" class="avaChange rightAvaChange" id="ava-3" alt="">
+                    <div>
+                        <img src="./img/avatar/avaMain/ava_colo1_fxxhdpi.png"class="avaChange rightAvaChange" id="ava-1"alt="">
+                        <img src="./img/avatar/avaMain/ava_colo2_fxxhdpi.png" class="avaChange rightAvaChange" id="ava-2"alt="">
+                        <img src="./img/avatar/avaMain/ava_colo3_fxxhdpi.png" class="avaChange rightAvaChange" id="ava-3" alt="">
                     </div>
                 </div>
                 <div class="menu-ava-buttom">
-                   <div>
-                    <img src="./img/avatar/avaMain/ava_colo1_mxxhdpi.png" class="avaChange  buttomAvaChange" id="ava-4"alt="">
-                    <img src="./img/avatar/avaMain/ava_colo2_mxxhdpi.png" class="avaChange buttomAvaChange" id="ava-5"alt="">
-                    <img src="./img/avatar/avaMain/ava_colo3_mxxhdpi.png" class="avaChange buttomAvaChange" id="ava-6"alt="">
+                    <div>
+                        <img src="./img/avatar/avaMain/ava_colo1_mxxhdpi.png" class="avaChange  buttomAvaChange" id="ava-4"alt="">
+                        <img src="./img/avatar/avaMain/ava_colo2_mxxhdpi.png" class="avaChange buttomAvaChange" id="ava-5"alt="">
+                        <img src="./img/avatar/avaMain/ava_colo3_mxxhdpi.png" class="avaChange buttomAvaChange" id="ava-6"alt="">
                     </div>
                 </div>
                 <div class="status">
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="main">
-               
+
                 <div class="buttonChangeBlock">
                     <div class="buttonChange" href="study" id="buttonChangeOn"><img src="/img/room.png" alt="Study"><div class="after"></div></div>
                     <div class="buttonChange" href="laboratory"><img src="/img/settings.png" alt="Laboratory"><div class="after"></div></div>
@@ -248,7 +248,7 @@
                                 <div class="person article " id="person2">
                                     <img src="img/avatar/ava_colo1_fxxhdpi.png" alt="" class="person-body person2">
                                     <img src="img/avatar/Study_level3_mxxhdpi.png" alt="" class="person-clothes person-headdress person2">
-                                  
+
                                     <img src="img/avatar/eyebrows_color3_normalxxhdpi.png" alt="" class="person-eye-brows person2">
                                     <img src="img/avatar/eyes_color3_normalxxhdpi.png" alt="" class="person-eye person2">
                                     <img src="img/avatar/mouth_colo3_smilexxhdpi.png" alt="" class="person-mouth person2">
@@ -256,7 +256,7 @@
                                 <div class="person article " id="person3">
                                     <img src="img/avatar/ava_colo1_fxxhdpi.png" alt="" class="person-body person3">
                                     <img src="img/avatar/Study_level4_mxxhdpi.png" alt="" class="person-clothes person-headdress person3">
-                                   
+
                                     <img src="img/avatar/eyebrows_color3_normalxxhdpi.png" alt="" class="person-eye-brows person3">
                                     <img src="img/avatar/eyes_color3_normalxxhdpi.png" alt="" class="person-eye person3">
                                     <img src="img/avatar/mouth_colo3_smilexxhdpi.png" alt="" class="person-mouth person3">
@@ -266,9 +266,13 @@
                     </div>
                     <div id="training">
                         <div class="room-header">
-                            <div class="room-about">
-                                <div class="second circle">
-                                    <strong></strong>
+                             <div class="room-description">
+                                <h3 class="type-work">йцу</h3>
+                                <div class="cost">
+                                    <span class="amount-work">йцу</span>
+                                    <span class="currency"><?php if ( isset ( $lang['euro'] ) ) echo $lang['euro']; ?></span>
+                                    <span class="slash">/</span>
+                                    <span class="time"><?php if ( isset ( $lang['hour'] ) ) echo $lang['hour']; ?></span>
                                 </div>
                             </div>
                             <div class="room-title">
@@ -318,9 +322,11 @@
                     </div>
                     <div id="work">
                         <div class="room-header">
-                            <div class="room-about">
-                                <div class="second circle">
-                                    <strong></strong>
+                            <div class="room-description">
+                                <h3 class="type-relax"></h3>
+                                <div class="cost">
+                                    <span class="amount-relax"></span>
+                                     <span> чего то</span>
                                 </div>
                             </div>
                             <div class="room-title">
@@ -329,27 +335,27 @@
                         </div>
                         <div class="content-articles free-time">
                             <div class="articles">
-                                <div class="relaxOpen article">
-                                    <img id="relax article-opened" src="/img/freetime/free_time_1.png" alt="">
+                                <div class="article freeTime">
+                                    <img id="relax1" src="/img/freetime/free_time_1.png" alt="">
                                 </div>
-                                <div class="relaxOpen article">
-                                    <img id="relax article-opened" src="/img/freetime/free_time_2.png" alt="">
+                                <div class="article">
+                                    <img id="relax2" src="/img/freetime/free_time_2.png" alt="">
                                 </div>
-                                <div class="relax article ">
-                                    <img id="relax " src="/img/freetime/free_time_3.png" alt="">
+                                <div class="article ">
+                                    <img id="relax3" src="/img/freetime/free_time_3.png" alt="">
                                 </div>
-                                <div class="relax article ">
-                                    <img id="relax " src="/img/freetime/free_time_4.png" alt="">
+                                <div class="article ">
+                                    <img id="relax4" src="/img/freetime/free_time_4.png" alt="">
                                 </div>
-                                <div class="relax article ">
-                                    <img id="relax " src="/img/freetime/free_time_5.png" alt="">
+                                <div class="article ">
+                                    <img id="relax5" src="/img/freetime/free_time_5.png" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div id="cooperation">
                         <p>COMING SOON</p>
-                        
+
                     </div>
                     <div class="about-rocket">
                         <span></span>
@@ -464,15 +470,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="about-lab about-articles">
+                    <div class="about-closed about-articles">
                         <div class="about-description">
-                            <h2 class="type">Item</h2>
+                            <h2 class="type-closed">Closed</h2>
 
 
 
 
-                            <div class="buttonRun buttonWork"> 
-                                <p id="btnLab">Buy</p>
+                            <div class="buttonRun "> 
+                                <p id="closedOk">Ok</p>
                             </div>
                         </div>
                     </div>
@@ -491,7 +497,7 @@
         <script src="/js/rocket.js"></script>
         <script src="/js/ava.js"></script>
         <script src="/js/lab.js"></script>
-        <!--        <script src="/js/move.js"></script>-->
+       <script src="/js/freeTime.js"></script>
         <script src="/js/requests.js"></script>
         <script src="/js/imge_to_data_url.js"></script>
         <script src="/js/script.js"></script>

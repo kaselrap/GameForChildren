@@ -237,5 +237,25 @@
         "hourStudying":"11",
         "hourRest":"4"
 
+     },
+     "relax1":{
+        "type":"Дерево",
+        "amount":"1"
+     },
+     "relax2":{
+        "type":"Мячь",
+        "amount":"2"
+     },
+     "relax3":{
+        "type":"Книги",
+        "amount":"3"
+     },
+     "relax4":{
+        "type":"Друзья",
+        "amount":"4"
+     },
+     "relax5":{
+        "type":"Игры",
+        "amount":"5"
      }
 }

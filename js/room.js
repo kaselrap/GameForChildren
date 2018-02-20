@@ -140,17 +140,9 @@ function Room () {
 					leftMain = $('.main').offset().left;
 				let width  = $('.room .about-room-things').width(),
 					height = $('.room .about-room-things').height();
-				if ( x <= width ) {
-					x = x + width + 20;
-				} else {
-					x += 40;
-				}
+				
 				console.log(y);
-				if ( y >= height ) {
-					y = y - height;
-				} else {
-					y += height;
-				}
+				
 //				if(x+260>=leftMain+624) {
 //				  x=x-240;
 //				}

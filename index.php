@@ -360,8 +360,9 @@
 					
 					
 					<div class="about-room-things">
-						<h3 class="name nameblock"></h3>
+						<h3 class="name"></h3>
 						<span class="about"></span>
+						<h4 class="alert"><b></b></h4>
 						<div class="buttonRun buttonLaboratoryMenu"> 
 							<p id="buyButton" href="S1_part_04_w">Buy</p>
 						</div>

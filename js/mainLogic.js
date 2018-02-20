@@ -41,10 +41,10 @@ class Logic {
 		} 
 	}
 	setMoney(money) { 
-		if(this.getMoney>(-money)) { 
+		if(this.getMoney() >= (-money)) { 
 			this.money+=money; 
 			this.moneyAppend(); 
-			this.request('set_params_user', {id:2, money:this.money});
+//			this.request('set_params_user', {id:2, money:this.money});
 		} else {
 			return 1;
 		}

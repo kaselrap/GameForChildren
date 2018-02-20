@@ -14,30 +14,30 @@ function Laboratory() {
         // load the source image:
         // var subjectIsBy = logic.request('get_params_room',{id:1});
         // console.log(logic.getRoomParams());
-        imager("/img/lab/lab_01.png", 86, 140, 1, "lab_01", "This is a vibro plate.", 250, 0, 5);
-        imager("/img/lab/lab_02.png", 188, 117, 1, "lab_02", "This is a table PC.", 250, 0, 5);
-        imager("/img/lab/lab_03.png", 328, 148, 1, "lab_03", "This is a bed.", 50, 0, 5);
-        imager("/img/lab/lab_04.png", 266, 129, 1, "lab_04", "This is a books.", 250, 0, 5);
-        imager("/img/lab/lab_05.png", 317, 233, 1, "lab_05", "This is a curtain.", 250, 0, 5);
-        imager("/img/lab/lab_06.png", 392, 139, 1, "lab_06", "This is a lamp table.", 250, 0, 5);
-        imager("/img/lab/lab_07.png", 418, 112, 1, "lab_07", "This is a lamp table.", 250, 0, 5);
-        imager("/img/lab/lab_08.png", 466, 177, 1, "lab_08", "This is a lamp top.", 250, 0, 5);
-        imager("/img/lab/lab_09.png", 183, 169, 1, "lab_09", "This is a poster.", 250, 0, 5);
-        imager("/img/lab/lab_10.png", 137, 205, 1, "lab_10", "This is a TV.", 250, 0, 5);
-        imager("/img/lab/lab_11.png", 345, 138, 1, "lab_11", "This is a scooter.", 250, 0, 5);
-        imager("/img/lab/lab_12.png", 518, 150, 1, "lab_12", "This is a planet system.", 250, 0, 5);
-        imager("/img/lab/lab_13.png", 360, 147, 1.2, "lab_13", "This is a robot vacuum cleaner.", 250, 0, 5);
-        imager("/img/lab/lab_14.png", 364, 101, 1, "lab_14", "This is a jetpack.", 250, 0, 5);
-        imager("/img/lab/lab_15.png", 229, 130, 1, "lab_15", "This is a wardrobe.", 250, 0, 4);
-        imager("/img/lab/lab_16.png", 245, 108, 1.2, "lab_16", "This is a robot.", 250, 0, 6);
-        imager("/img/lab/lab_17.png", 228, 108, 1.2, "lab_17", "This is a sneakers.", 250, 0, 5);
-        imager("/img/lab/lab_18.png", 221, 87, 1.2, "lab_18", "This is a guitar.", 250, 0, 5);
-        imager("/img/lab/lab_19.png", 402, 198, 1, "lab_19", "This is a chair.", 250, 0, 5);
-        imager("/img/lab/lab_20.png", 532, 171, 1, "lab_20", "This is a table.", 250, 0, 5);
-        imager("/img/lab/lab_21.png", 238, 83, 1, "lab_21", "This is a PC.", 250, 0, 5);
-        imager("/img/lab/lab_22.png", 340, 288, 1, "lab_22", "This is a phone.", 250, 0, 5);
-        imager("/img/lab/lab_23.png", 441, 261, 1, "lab_23", "This is a paret.", 250, 0, 5);
-        imager("/img/lab/lab_24.png", 535, 240, 1, "lab_24", "This is a plate and cup.", 250, 0, 5);
+        imager("/img/lab/lab_01.png", 86, 140, 1, "Test chamber", "", 250, 0, 5);
+        imager("/img/lab/lab_02.png", 188, 117, 1, "Cabinet", "", 250, 0, 5);
+        imager("/img/lab/lab_03.png", 328, 148, 1, "Gas analyser", "", 50, 0, 5);
+        imager("/img/lab/lab_04.png", 266, 129, 1, "Notice board  with stickers", "", 250, 0, 5);
+        imager("/img/lab/lab_05.png", 317, 233, 1, "Lab bench", "", 250, 0, 5);
+        imager("/img/lab/lab_06.png", 392, 139, 1, "Reagent cabinet", "", 250, 0, 5);
+        imager("/img/lab/lab_07.png", 418, 112, 1, "Climate chamber", "", 250, 0, 5);
+        imager("/img/lab/lab_08.png", 466, 177, 1, "Set of tools", "", 250, 0, 5);
+        imager("/img/lab/lab_09.png", 183, 169, 1, "Laboratory robot", "", 250, 0, 5);
+        imager("/img/lab/lab_10.png", 137, 205, 1, "Recording oscillometer", "", 250, 0, 5);
+        imager("/img/lab/lab_11.png", 345, 138, 1, "Centrifuge", "", 250, 0, 5);
+        imager("/img/lab/lab_12.png", 518, 150, 1, "Drawing table", "", 250, 0, 5);
+        imager("/img/lab/lab_13.png", 360, 147, 1.2, "Electronic scale", "", 250, 0, 5);
+        imager("/img/lab/lab_14.png", 364, 101, 1, "Temperature meter", "", 250, 0, 5);
+        imager("/img/lab/lab_15.png", 229, 130, 1, "Amperemeter", "", 250, 0, 4);
+        imager("/img/lab/lab_16.png", 245, 108, 1.2, "Supercomputer", "", 250, 0, 6);
+        imager("/img/lab/lab_17.png", 228, 108, 1.2, "Voltage meter", "", 250, 0, 5);
+        imager("/img/lab/lab_18.png", 221, 87, 1.2, "Aspirator", "", 250, 0, 5);
+        imager("/img/lab/lab_19.png", 402, 198, 1, "Set for drawing", "", 250, 0, 5);
+        imager("/img/lab/lab_20.png", 532, 171, 1, "Moisture analyzer", "", 250, 0, 5);
+        imager("/img/lab/lab_21.png", 238, 83, 1, "Set for drawing", "", 250, 0, 5);
+        imager("/img/lab/lab_22.png", 340, 288, 1, "Microscope", "", 250, 0, 5);
+        imager("/img/lab/lab_23.png", 441, 261, 1, "Set of flasks", "", 250, 0, 5);
+        imager("/img/lab/lab_24.png", 535, 240, 1, "Alcohol burner", "", 250, 0, 5);
     }
     function imager (src, x, y, scale, name, desc, money, bued, zi) {
         var image = new Image();
@@ -137,7 +137,7 @@ function Laboratory() {
                 this.filters = [RedMask];
                 this.cache(0, 0, bitmap.image.width, bitmap.image.height);
                 $('.room .about-room-things h3.name').text(this.name);
-                $('.room .about-room-things span').text(this.description + ' It coast is ' + this.money + '$');
+                $('.room .about-room-things span').text(this.description + ' It is coast  ' + this.money + '$');
                 $('.room .about-room-things').css({
                     'display':'flex',
                 });

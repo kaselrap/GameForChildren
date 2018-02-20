@@ -1,8 +1,9 @@
-function Rocket() {
+function Rocket(rocketCount) {
 
 	var self = this;
 	this.lang = 'ru';
-
+	this.rocketCount = rocketCount;
+	
 	this.clickImgRoket = function(event) {
 
 		var href = this.href;
@@ -37,7 +38,8 @@ function Rocket() {
 			if(logic.getMoney()>=50) {
 
 
-
+				self.rocketCount+=3;
+				self.setRocketItem();
 				logic.setMoneyOut(-50);
 				if( level === 1) {
 					var redItem = id.slice(0,12),
@@ -70,7 +72,9 @@ function Rocket() {
 		self.mouseLeave();
 
 	} 
-
+	
+	
+	
 	this.toLevel2 = function() {
 		if(self.scanItem(self,self.arrayElements)){
 			$('#Level2').off('click',self.toLevel2);
@@ -118,6 +122,11 @@ function Rocket() {
 		}
 	}
 }
+
+Rocket.prototype.setRocketItem = function() {
+		$('.rocketCount').text(this.rocketCount+'%');	
+	}
+
 Rocket.prototype.removeItemAddbigItem = function(self) {
 
 	return new Promise(function(resolve){
@@ -178,8 +187,8 @@ Rocket.prototype.contextMenu = function(e,text,id,flag) {
 	if(x+260>=leftMain+624) {
 		x=x-240;
 	}
-	if(y+150>=topMain+636) {
-		y=y-130;
+	if(y+180>=topMain+636) {
+		y=y-160;
 	}
 	if( level === 1) {
 		var redItem = id.slice(0,12);
@@ -195,7 +204,7 @@ Rocket.prototype.contextMenu = function(e,text,id,flag) {
 		$('#buyButton').attr('href',id);
 		$('#'+id).css('display','none');
 		$('#'+redItem+'r').css('display','block');
-		$('.room .about-rocket span').text(text);
+		$('.room .about-rocket h4').text(text);
 		$('.costRocket').text('It costs: 50 euro');
 		$('.room .about-rocket').css({
 			'top':y-10,
@@ -207,7 +216,7 @@ Rocket.prototype.contextMenu = function(e,text,id,flag) {
 	if(flag===1) {
 
 		$('#buyButton').attr('href','buyRicket');
-		$('.room .about-rocket span').text(text);
+		$('.room .about-rocket h4').text(text);
 		$('#buyButton').text('Close');
 		$('.costRocket').text('');
 		$('.room .about-rocket').css({
@@ -411,7 +420,8 @@ Rocket.prototype.animateRocket = function(self) {
 
 var level = 0;
 
-var rocket = new Rocket();
+var rocket = new Rocket(26);
+rocket.setRocketItem();
 if(level === 0) {
 	rocket.getElementsCondition()
 		.then(rocket.outputImgRoket('/img/Stages/Stage 1/',rocket.arrayElements));

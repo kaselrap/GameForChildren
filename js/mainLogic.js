@@ -424,7 +424,7 @@ class Logic {
 					x=x-240;
 				}
 				if(y+heightElem>=topMain+626) {
-					y=y-heightElem + 60;
+					y=y-heightElem + 40;
 				}
 
 				if(e.target.tagName ==='IMG'){

@@ -57,7 +57,7 @@
 				</div>
 				<div class="status">
 					<div class="status-block"><img src="/img/money.png" alt=""><p class="money-block"></p></div>
-					<div class="status-block"><img src="/img/Rocket-Progress.png" alt=""><p>13%</p></div>
+					<div class="status-block"><img src="/img/Rocket-Progress.png" alt=""><p class="rocketCount">13%</p></div>
 					<div class="status-block"><img src="/img/health.png" alt=""><p><?php if ( isset ( $lang['good'] ) ) echo $lang['good']; ?></p></div>
 					<div class="status-block"><img src="/img/mood.png" alt=""><p><?php if ( isset ( $lang['nice'] ) ) echo $lang['nice']; ?></p></div>
 					<div class="status-block"><img src="/img/sleep.png" alt=""> <div class="selectButton" > 
@@ -104,14 +104,13 @@
 				<div class="room">
 					<div id="study">
 						<div class="room-header">
+						
 							<div class="room-about">
-
 								<div class="first circle">
 									<strong></strong>
-
-
                                 </div>
                             </div>
+                            
                             <div class="room-title">
                                 <h1><?php if ( isset ( $lang['livingRoom'] ) ) echo $lang['livingRoom']; ?></h1>
                             </div>
@@ -333,8 +332,8 @@
 
 					</div>
 					<div class="about-rocket">
-						<span></span>
-						<p class="costRocket"></p>
+						<h4></h4>
+						<span class="costRocket"></span>
 						<div class="buttonRun buttonLaboratoryMenu"> 
 							<p id="buyButton">Buy</p>
 						</div>

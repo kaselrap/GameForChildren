@@ -334,7 +334,7 @@
 					</div>
 					<div class="about-rocket">
 						<span></span>
-						<p class="costRocket"></p>
+						<h3 class="costRocket"></h3>
 						<div class="buttonRun buttonLaboratoryMenu"> 
 							<p id="buyButton">Buy</p>
 						</div>

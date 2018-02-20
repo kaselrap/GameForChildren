@@ -138,7 +138,25 @@ function Laboratory() {
                 this.cache(0, 0, bitmap.image.width, bitmap.image.height);
                 $('.room .about-room-things h3.name').text(this.name);
                 $('.room .about-room-things span').text(this.description + ' It is coast  ' + this.money + '$');
+				let topMain = $('.main').offset().top,
+					leftMain = $('.main').offset().left;
+				let x = parseInt(evt.rawX)+leftMain;
+				let y = parseInt(evt.rawY)+topMain+175;
+				
+				let width  = $('.room .about-room-things').width(),
+					height = $('.room .about-room-things').height();
+				
+				
+				
+				if(x+260>=leftMain+624) {
+				  x=x-220;
+				}
+				if(y+190>=topMain+636) {
+					y=y-160;
+				}
                 $('.room .about-room-things').css({
+					'left':x,
+					'top':y,
                     'display':'flex',
                 });
                 $(document).on('mouseleave', '.room .about-room-things', function () {

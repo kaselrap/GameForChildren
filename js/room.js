@@ -134,23 +134,23 @@ function Room () {
                 active = 1;
                 this.filters = [RedMask];
                 this.cache(0, 0, bitmap.image.width, bitmap.image.height);
-				let x = parseInt(evt.rawX);
-				let y = parseInt(evt.rawY);
 				let topMain = $('.main').offset().top,
 					leftMain = $('.main').offset().left;
+				let x = parseInt(evt.rawX)+leftMain;
+				let y = parseInt(evt.rawY)+topMain+175;
+				
 				let width  = $('.room .about-room-things').width(),
 					height = $('.room .about-room-things').height();
 				
-				console.log(y);
 				
-//				if(x+260>=leftMain+624) {
-//				  x=x-240;
-//				}
-//				if(y+325>=topMain+636) {
-//					y=y-305;
-//				}
-//				console.log(x);
-//				console.log(y);
+				
+				if(x+260>=leftMain+624) {
+				  x=x-220;
+				}
+				if(y+190>=topMain+636) {
+					y=y-160;
+				}
+				
                 $('.room .about-room-things h3.name').text(this.name);
                 $('.room .about-room-things span').text(this.description + ' It coast is ' + this.money + '$');
                 $('.room .about-room-things').css({

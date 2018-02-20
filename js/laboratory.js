@@ -151,8 +151,8 @@ function Laboratory() {
 				if(x+260>=leftMain+624) {
 				  x=x-220;
 				}
-				if(y+190>=topMain+636) {
-					y=y-160;
+				if(y+250>=topMain+636) {
+					y=y-220;
 				}
                 $('.room .about-room-things').css({
 					'left':x,

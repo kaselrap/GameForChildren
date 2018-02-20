@@ -178,8 +178,8 @@ Rocket.prototype.contextMenu = function(e,text,id,flag) {
 	if(x+260>=leftMain+624) {
 		x=x-240;
 	}
-	if(y+150>=topMain+636) {
-		y=y-130;
+	if(y+180>=topMain+636) {
+		y=y-160;
 	}
 	if( level === 1) {
 		var redItem = id.slice(0,12);
@@ -195,7 +195,7 @@ Rocket.prototype.contextMenu = function(e,text,id,flag) {
 		$('#buyButton').attr('href',id);
 		$('#'+id).css('display','none');
 		$('#'+redItem+'r').css('display','block');
-		$('.room .about-rocket span').text(text);
+		$('.room .about-rocket h4').text(text);
 		$('.costRocket').text('It costs: 50 euro');
 		$('.room .about-rocket').css({
 			'top':y-10,
@@ -207,7 +207,7 @@ Rocket.prototype.contextMenu = function(e,text,id,flag) {
 	if(flag===1) {
 
 		$('#buyButton').attr('href','buyRicket');
-		$('.room .about-rocket span').text(text);
+		$('.room .about-rocket h4').text(text);
 		$('#buyButton').text('Close');
 		$('.costRocket').text('');
 		$('.room .about-rocket').css({

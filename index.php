@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="/css/roket.css">
-    </head>
-    <body>
-        <?php
-        if ( isset( $_GET ) ) 
-            $data = $_GET;
-        if ( isset ( $data['lang'] ) ) {
-            $lang = json_decode(file_get_contents('http://' . $_SERVER['HTTP_HOST'] . '/lang/' . $data['lang'] . '.json'),true);
-        } else {
-            $lang = json_decode(file_get_contents('http://' . $_SERVER['HTTP_HOST'] . '/lang/en.json'),true);
-        }
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/roket.css">
+	</head>
+	<body>
+		<?php
+		if ( isset( $_GET ) ) 
+			$data = $_GET;
+		if ( isset ( $data['lang'] ) ) {
+			$lang = json_decode(file_get_contents('http://' . $_SERVER['HTTP_HOST'] . '/lang/' . $data['lang'] . '.json'),true);
+		} else {
+			$lang = json_decode(file_get_contents('http://' . $_SERVER['HTTP_HOST'] . '/lang/en.json'),true);
+		}
 		?>
 		<main>
+			<div class ="newDayOverflow">
+
+			</div>
+			<div class ="greyBlock">
+
+			</div>
 			<div id="preload"></div>
 			<div class="menu">
 				<div class="avatarImg">
@@ -87,7 +93,6 @@
 				</div>
 			</div>
 			<div class="main">
-
 				<div class="buttonChangeBlock">
 					<div class="buttonChange" href="study" id="buttonChangeOn"><img src="/img/room.png" alt="Study"><div class="after"></div></div>
 					<div class="buttonChange" href="laboratory"><img src="/img/settings.png" alt="Laboratory"><div class="after"></div></div>
@@ -96,89 +101,88 @@
 					<div class="buttonChange" href="training"><img src="/img/tab5.png" alt="Training"><div class="after"></div></div>
 					<div class="buttonChange" href="work"><img src="/img/tab6.png" alt="Work"><div class="after"></div></div>
 					<div class="buttonChange" href="cooperation"><img src="/img/tab7.png" alt="Cooperation"><div class="after"></div></div> 
-					
-				
-					
-				</div>
 
+
+
+				</div>
 				<div class="room">
 					<div id="study">
 						<div class="room-header">
-						
+
 							<div class="room-about">
 								<div class="first circle">
 									<strong></strong>
-                                </div>
-                            </div>
-                            
-                            <div class="room-title">
-                                <h1><?php if ( isset ( $lang['livingRoom'] ) ) echo $lang['livingRoom']; ?></h1>
-                            </div>
-                        </div>
-                        <div class="content content-room" onload="initRoom();">
-                            <img src="img/room/walls.png" alt="" class="room-wall">
-                            <canvas id="roomCanvas" width="576" height="362"></canvas>
-                        </div>
-                    </div>
-                    
-                    <div id="laboratory">
-                        <div class="divButtonLaboratory">
-                            <div class="buttonRun buttonLaboratory"> 
-                                <p id="Level3">Level 3</p>
-                            </div>
-                            <div class="buttonRun buttonLaboratory"> 
-                                <p id="Level2">Level 2</p>
-                            </div>
-                            <div class="buttonRun buttonLaboratory buttonLaboratoryActive"> 
-                                <p id="Level1">Level 1</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div id="research">
-                        <div class="room-header">
-                            <div class="room-about">
+								</div>
+							</div>
+
+							<div class="room-title">
+								<h1><?php if ( isset ( $lang['livingRoom'] ) ) echo $lang['livingRoom']; ?></h1>
+							</div>
+						</div>
+						<div class="content content-room" onload="initRoom();">
+							<img src="img/room/walls.png" alt="" class="room-wall">
+							<canvas id="roomCanvas" width="576" height="362"></canvas>
+						</div>
+					</div>
+
+					<div id="laboratory">
+						<div class="divButtonLaboratory">
+							<div class="buttonRun buttonLaboratory"> 
+								<p id="Level3">Level 3</p>
+							</div>
+							<div class="buttonRun buttonLaboratory"> 
+								<p id="Level2">Level 2</p>
+							</div>
+							<div class="buttonRun buttonLaboratory buttonLaboratoryActive"> 
+								<p id="Level1">Level 1</p>
+							</div>
+						</div>
+					</div>
+
+					<div id="research">
+						<div class="room-header">
+							<div class="room-about">
 
 
 								<div class="lab circle">
 									<strong></strong>
 
 
-                                </div>
-                            </div>
-                            <div class="room-title">
-                                <h1>Laboratory</h1>
-                            </div>
-                        </div>
-                        <div class="content-lab" onload="initLaboratory();">
-                            <canvas id="laboratoryCanvas" width="576" height="362"></canvas>
+								</div>
+							</div>
+							<div class="room-title">
+								<h1>Laboratory</h1>
+							</div>
+						</div>
+						<div class="content-lab" onload="initLaboratory();">
+							<canvas id="laboratoryCanvas" width="576" height="362"></canvas>
 
 
-                            <!-- <img class="lab_01" src="/img/lab/lab_01.svg" alt="">													  <img class="lab_01" src="/img/lab/lab_01.svg" alt="">	
-                            <img class="lab_01 closed" src="/img/lab/lab_01.svg" alt="">	
-                            <img class="lab_02 closed" src="/img/lab/lab_02.svg" alt="">	
-                            <img class="lab_03 closed" src="/img/lab/lab_03.svg" alt="">	
-                            <img class="lab_04 closed" src="/img/lab/lab_04.svg" alt="">	
-                            <img class="lab_05 closed" src="/img/lab/lab_05.svg" alt="">	
-                            <img class="lab_06 closed" src="/img/lab/lab_06.svg" alt="">	
-                            <img class="lab_07 closed" src="/img/lab/lab_07.svg" alt="">	
-                            <img class="lab_08 closed" src="/img/lab/lab_08.svg" alt="">	
-                            <img class="lab_09 closed" src="/img/lab/lab_09.svg" alt="">	
-                            <img class="lab_10 closed" src="/img/lab/lab_10.svg" alt="">	
-                            <img class="lab_11 closed" src="/img/lab/lab_11.svg" alt="">	
-                            <img class="lab_12 closed" src="/img/lab/lab_12.svg" alt="">	
-                            <img class="lab_13 closed" src="/img/lab/lab_13.svg" alt="">	
-                            <img class="lab_14 closed" src="/img/lab/lab_14.svg" alt="">	
-                            <img class="lab_15 closed" src="/img/lab/lab_15.svg" alt="">	
-                            <img class="lab_16 closed" src="/img/lab/lab_16.svg" alt="">	
-                            <img class="lab_17 closed" src="/img/lab/lab_17.svg" alt="">	
-                            <img class="lab_18 closed" src="/img/lab/lab_18.svg" alt="">	
-                            <img class="lab_19 closed" src="/img/lab/lab_19.svg" alt="">	
-                            <img class="lab_20 closed" src="/img/lab/lab_20.svg" alt="">	
-                            <img class="lab_21 closed" src="/img/lab/lab_21.svg" alt="">	
-                            <img class="lab_22 closed" src="/img/lab/lab_22.svg" alt="">
-                            <img class="lab_23 closed" src="/img/lab/lab_23.svg" alt="">	
-                            <img class="lab_24 closed" src="/img/lab/lab_24.svg" alt="">	 -->	
+							<!-- <img class="lab_01" src="/img/lab/lab_01.svg" alt="">													  <img class="lab_01" src="/img/lab/lab_01.svg" alt="">	
+<img class="lab_01 closed" src="/img/lab/lab_01.svg" alt="">	
+<img class="lab_02 closed" src="/img/lab/lab_02.svg" alt="">	
+<img class="lab_03 closed" src="/img/lab/lab_03.svg" alt="">	
+<img class="lab_04 closed" src="/img/lab/lab_04.svg" alt="">	
+<img class="lab_05 closed" src="/img/lab/lab_05.svg" alt="">	
+<img class="lab_06 closed" src="/img/lab/lab_06.svg" alt="">	
+<img class="lab_07 closed" src="/img/lab/lab_07.svg" alt="">	
+<img class="lab_08 closed" src="/img/lab/lab_08.svg" alt="">	
+<img class="lab_09 closed" src="/img/lab/lab_09.svg" alt="">	
+<img class="lab_10 closed" src="/img/lab/lab_10.svg" alt="">	
+<img class="lab_11 closed" src="/img/lab/lab_11.svg" alt="">	
+<img class="lab_12 closed" src="/img/lab/lab_12.svg" alt="">	
+<img class="lab_13 closed" src="/img/lab/lab_13.svg" alt="">	
+<img class="lab_14 closed" src="/img/lab/lab_14.svg" alt="">	
+<img class="lab_15 closed" src="/img/lab/lab_15.svg" alt="">	
+<img class="lab_16 closed" src="/img/lab/lab_16.svg" alt="">	
+<img class="lab_17 closed" src="/img/lab/lab_17.svg" alt="">	
+<img class="lab_18 closed" src="/img/lab/lab_18.svg" alt="">	
+<img class="lab_19 closed" src="/img/lab/lab_19.svg" alt="">	
+<img class="lab_20 closed" src="/img/lab/lab_20.svg" alt="">	
+<img class="lab_21 closed" src="/img/lab/lab_21.svg" alt="">	
+<img class="lab_22 closed" src="/img/lab/lab_22.svg" alt="">
+<img class="lab_23 closed" src="/img/lab/lab_23.svg" alt="">	
+<img class="lab_24 closed" src="/img/lab/lab_24.svg" alt="">	 -->	
 
 						</div>
 
@@ -333,6 +337,7 @@
 
 
 					</div>
+
 					<div class="about-rocket">
 						<h4></h4>
 						<span class="costRocket"></span>
@@ -340,26 +345,46 @@
 							<p id="buyButton">Buy</p>
 						</div>
 					</div>
-					
-					
-				<div class="new-day">
-					<div class="dayTitle"><span class="dayN"></span> Day </div>
-						
-						
-						<div><span class="dayAvailable"></span> days are available</div>
-						
-						<div><span class="dayEuroPurchase"></span> euro is charged for the purchase</div>
-						
-						<div><span class="dayEuroEarned">0</span> euro is earned</div>
-						
-						<div><span class="dayInvented">0</span> item is invented</div>
-						
+
+
+					<div class="new-day">
+						<div class="dayTitle"><span class="dayN"></span> Day </div>		
+						<div><span class="dayAvailable"></span> days are available</div>		
+						<div><span class="dayEuroPurchase"></span> euro is charged for the purchase</div>		
+						<div><span class="dayEuroEarned">0</span> euro is earned</div>		
+						<div><span class="dayInvented">0</span> item is invented</div>		
 						<div class="buttonRun"> 
 							<p id="new-day-cloase">Next</p>
 						</div>
 					</div>
+
+					<div class="new-day-ask">
+						<div class="new-day-ask-center">
+							<h3>Warning</h3>	
+							<span >The number of available </span>
+							<span>steps is 0.</span>
+							<span>We offer to fulfill some additional task.</span><br>
+
+							<div id="new-day-ask"><span class="askNum"></span><span>= </span><input class="numberInput" type="number"> <span class="askComp"> ?</span></div>	
+							<p class="hint"></p>	
+							<div class="new-day-buttonRun buttonRun"> 
+								<p id="new-day-ask-cloase">Check</p>
+							</div>
+						</div>
+					</div>
 					
-					
+					<div class="new-day-dayAvelible">
+						<div class="new-day-ask-center">
+							<h3>Well done</h3>	
+							<span >10 steps are available for use</span>
+							
+							
+							<div class="new-day-buttonRun buttonRun"> 
+								<p class="cloas-dayAvelible">Next</p>
+							</div>
+						</div>
+					</div>
+
 					<div class="about-room-things">
 						<h3 class="name"></h3>
 						<span class="about"></span>
@@ -475,30 +500,30 @@
 							<h2 class="type-closed">Closed</h2>
 
 
-                            <div class="buttonRun "> 
-                                <p id="closedOk">Ok</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="overlay"></div>
-        </main>
-        <script src="/js/jquery-3.2.1.min.js"></script>
-        <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
-        <script src="/js/jquery-ui.min.js"></script>
-        <script src="/js/circle-progress.js"></script>
-        <script src="/js/examples.js"></script>
-        <script src="/js/profile.js"></script>
-        <script src="/js/mainLogic.js"></script>
-        <script src="/js/change.js"></script>
-        <script src="/js/rocket.js"></script>
-        <script src="/js/ava.js"></script>
-       <script src="/js/freeTime.js"></script>
-        <script src="/js/requests.js"></script>
-        <script src="/js/imge_to_data_url.js"></script>
-        <script src="/js/room.js"></script>
-        <script src="/js/laboratory.js"></script>
+							<div class="buttonRun "> 
+								<p id="closedOk">Ok</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="overlay"></div>
+		</main>
+		<script src="/js/jquery-3.2.1.min.js"></script>
+		<script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+		<script src="/js/jquery-ui.min.js"></script>
+		<script src="/js/circle-progress.js"></script>
+		<script src="/js/examples.js"></script>
+		<script src="/js/profile.js"></script>
+		<script src="/js/mainLogic.js"></script>
+		<script src="/js/change.js"></script>
+		<script src="/js/rocket.js"></script>
+		<script src="/js/ava.js"></script>
+		<script src="/js/freeTime.js"></script>
+		<script src="/js/requests.js"></script>
+		<script src="/js/imge_to_data_url.js"></script>
+		<script src="/js/room.js"></script>
+		<script src="/js/laboratory.js"></script>
 
 
 	</body>

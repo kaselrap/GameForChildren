@@ -53,6 +53,14 @@ class Logic {
 	getMoney() { 
 		return this.money; 
 	}
+	initCircle (classCircle, countBued = 0, countThings = 24) {
+        var percentageBued = countBued / countThings;
+        $('.' + classCircle +'.circle').circleProgress({ 
+            value: percentageBued 
+        }).on('circle-animation-progress', function(event, progress) { 
+            $(this).find('strong').html(Math.round(percentageBued * 100 * progress) + '<i>%</i>'); 
+        });
+    }
 	request ($functionname, $params) {
 		self = this;
 		var host = "http://"+window.location.hostname;

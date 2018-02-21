@@ -1,14 +1,7 @@
 function Room () {
     var canvasR, stageR;
     var updateL = true;
-    function initCircle (countBued = 0, countThings = 24) {
-        var percentageBued = countBued / countThings;
-        $('.first.circle').circleProgress({ 
-            value: percentageBued 
-        }).on('circle-animation-progress', function(event, progress) { 
-            $(this).find('strong').html(Math.round(percentageBued * 100 * progress) + '<i>%</i>'); 
-        });
-    }
+    var getCountBuyed = 3;
     function initRoom() {
         // create stage and point it to the canvas:
         canvasR = document.getElementById("roomCanvas");
@@ -21,8 +14,7 @@ function Room () {
         // load the source image:
         // var subjectIsBy = logic.request('get_params_room',{id:1});
         // console.log(logic.getRoomParams());
-        var getCountBuyed = 3;
-        initCircle(getCountBuyed);
+        logic.initCircle('first', getCountBuyed);
         imager("/img/room/vibro_plate.png", 412, 285, 0.7, "Hydraulic bed-shaker ", "This is a vibro plate.", 250, 0, 1);
         imager("/img/room/table_PC.png", 210, 263, 1, "Table PC", "This is a table PC.", 250, 0, 2);
         imager("/img/room/bed.png", 411, 253, 1, "Car -bed", "This is a bed.", 50, 0, 2);
@@ -142,10 +134,10 @@ function Room () {
                                 self.filters = [Original];
                             }
                             self.cache(0, 0, self.image.width, self.image.height);
-                            logic.setMoney( - bitmap.money )
+                            logic.setMoney( - bitmap.money );
+                            getCountBuyed++;
+                            logic.initCircle('first', getCountBuyed);
                             bitmap.cursor = "not-allowed";
-                            getCountBuyed++ж
-                            initCircle(getCountBuyed);
                         }
                     });
                 }

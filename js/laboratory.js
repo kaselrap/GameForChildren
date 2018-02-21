@@ -2,6 +2,7 @@ function Laboratory() {
     var canvasL, stageL;
     var offset;
     var updateL = true;
+    var getCountBuyed = 5;
     function initLaboratory() {
         // create stage and point it to the canvas:
         canvasL = document.getElementById("laboratoryCanvas");
@@ -14,6 +15,7 @@ function Laboratory() {
         // load the source image:
         // var subjectIsBy = logic.request('get_params_room',{id:1});
         // console.log(logic.getRoomParams());
+        logic.initCircle('lab', getCountBuyed);
         imager("/img/lab/lab_01.png", 86, 140, 1, "Test chamber", "", 250, 0, 5);
         imager("/img/lab/lab_02.png", 188, 117, 1, "Cabinet", "", 250, 0, 5);
         imager("/img/lab/lab_03.png", 328, 148, 1, "Gas analyser", "", 50, 0, 5);
@@ -128,7 +130,9 @@ function Laboratory() {
                             self.filters = [Original];
                         }
                         self.cache(0, 0, self.image.width, self.image.height);
-                        logic.setMoney( - bitmap.money )
+                        logic.setMoney( - bitmap.money );
+                        getCountBuyed++;
+                        logic.initCircle('lab', getCountBuyed);
                         logic.request('set_params_room', {id : 1, bed:1});
                         bitmap.cursor = "not-allowed";
                     });

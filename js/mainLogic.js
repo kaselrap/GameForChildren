@@ -34,12 +34,14 @@ class Logic {
 		$('#closedOk').on('click',this.cloaseContextMeny);
 
 	}
+	
 	setMoneyOut(money) { 
 		if(this.getMoney()>=(-money)) { 
 			this.money+=money; 
 			this.moneyAppend(); 
 		} 
 	}
+	
 	setMoney(money) { 
 		if(this.getMoney() >= (-money)) { 
 			this.money+=money; 
@@ -53,6 +55,7 @@ class Logic {
 	getMoney() { 
 		return this.money; 
 	}
+	
 	initCircle (classCircle, countBued = 0, countThings = 24) {
         var percentageBued = countBued / countThings;
         $('.' + classCircle +'.circle').circleProgress({ 
@@ -61,6 +64,7 @@ class Logic {
             $(this).find('strong').html(Math.round(percentageBued * 100 * progress) + '<i>%</i>'); 
         });
     }
+	
 	request ($functionname, $params) {
 		self = this;
 		var host = "http://"+window.location.hostname;
@@ -78,13 +82,17 @@ class Logic {
 
 		});
 	}
+	
 	setRoomParams (params) {
 		this.room = params;
 		console.log(this.room);
 	}
+	
 	getRoomParams () {
+		
 		return this.room;
 	}
+	
 	cloaseContextMeny(){
 		$('.about-closed').css('display','none');
 	}
@@ -148,68 +156,6 @@ class Logic {
 		$('.money-block').text(this.money);
 	}
 
-	cloaseContextMeny(){
-		$('.about-closed').css('display','none');
-	}
-
-	contexmenuClosed(e) {
-		if(!$(this).hasClass('closed')){
-			return;
-		}
-		let x = e.pageX;
-		let y = e.pageY;
-		let topMain = $('.main').offset().top,
-			leftMain = $('.main').offset().left;
-		let heightElem = $('.about-closed').outerHeight();
-		if(x+260>=leftMain+624) {
-			x=x-240;
-		}
-		if(y+heightElem>=topMain+636) {
-			y=y-heightElem + 20;
-		}
-		$('.about-closed').css({
-			'top':y-10,
-			'left':x-10,
-			'display':'block'
-		});
-	}
-
-	workActive(i) {
-
-		for(let a = 0;a<5;a++) {
-			$('#work'+a).removeClass('workActive');
-		}
-
-		$('#work'+(i-1)).addClass('workActive'); 
-		this.setWorkText(i-1);
-	}
-
-	workChangeActive(ev) {
-		let target =ev.target;
-		for(let a = 0;a<5;a++) {
-			$('#work'+a).removeClass('workActive');
-		}
-		let num =  parseInt(ev.target.getAttribute('work'));
-		this.work = num;
-		$('#work'+(num)).addClass('workActive');  
-		$('.room .about-works').css('display','none');
-		this.setWorkText(num);
-	}
-
-	setWorkText(num) {
-		Promise.resolve() 
-			.then(()=>{
-			return this.getText();
-		})
-			.then((text)=>{
-			$('.type-work').text(text['work'+num].name);
-			$('.amount-work').text(text['work'+num].salaryInOur);
-		});
-	}
-
-	moneyAppend(){
-		$('.money-block').text(this.money);
-	}
 	nextContext() {
 		$('.new-day').css({
 			'display':'flex',
@@ -221,6 +167,7 @@ class Logic {
 	
 
 	}
+	
 	nextDayRender() {
 		this.nextContext();
 		this.moneyAppend();

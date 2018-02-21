@@ -120,6 +120,7 @@
                             <canvas id="roomCanvas" width="576" height="362"></canvas>
                         </div>
                     </div>
+                    
                     <div id="laboratory">
                         <div class="divButtonLaboratory">
                             <div class="buttonRun buttonLaboratory"> 
@@ -133,6 +134,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div id="research">
                         <div class="room-header">
                             <div class="room-about">
@@ -492,7 +494,6 @@
         <script src="/js/change.js"></script>
         <script src="/js/rocket.js"></script>
         <script src="/js/ava.js"></script>
-        <script src="/js/lab.js"></script>
        <script src="/js/freeTime.js"></script>
         <script src="/js/requests.js"></script>
         <script src="/js/imge_to_data_url.js"></script>

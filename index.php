@@ -502,7 +502,7 @@
         <script src="/js/imge_to_data_url.js"></script>
         <script src="/js/room.js"></script>
         <script src="/js/laboratory.js"></script>
-        <script src="/js/rockets.js"></script>
+<!--        <script src="/js/rockets.js"></script>-->
         <script src="/js/rocket.js"></script>
 
 	</body>

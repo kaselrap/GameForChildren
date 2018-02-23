@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="/css/roket.css">
-    </head>
-    <body>
-        <?php
-        if ( isset( $_GET ) ) 
-            $data = $_GET;
-        if ( isset ( $data['lang'] ) ) {
-            $lang = json_decode(file_get_contents('http://' . $_SERVER['HTTP_HOST'] . '/lang/' . $data['lang'] . '.json'),true);
-        } else {
-            $lang = json_decode(file_get_contents('http://' . $_SERVER['HTTP_HOST'] . '/lang/en.json'),true);
-        }
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/roket.css">
+	</head>
+	<body>
+		<?php
+		if ( isset( $_GET ) ) 
+			$data = $_GET;
+		if ( isset ( $data['lang'] ) ) {
+			$lang = json_decode(file_get_contents('http://' . $_SERVER['HTTP_HOST'] . '/lang/' . $data['lang'] . '.json'),true);
+		} else {
+			$lang = json_decode(file_get_contents('http://' . $_SERVER['HTTP_HOST'] . '/lang/en.json'),true);
+		}
 		?>
 		<main>
+			<div class ="newDayOverflow">
+
+			</div>
+			<div class ="greyBlock">
+
+			</div>
 			<div id="preload"></div>
 			<div class="menu">
 				<div class="avatarImg">
@@ -87,7 +93,6 @@
 				</div>
 			</div>
 			<div class="main">
-
 				<div class="buttonChangeBlock">
 					<div class="buttonChange" href="study" id="buttonChangeOn"><img src="/img/room.png" alt="Study"><div class="after"></div></div>
 					<div class="buttonChange" href="laboratory"><img src="/img/settings.png" alt="Laboratory"><div class="after"></div></div>
@@ -96,18 +101,18 @@
 					<div class="buttonChange" href="training"><img src="/img/tab5.png" alt="Training"><div class="after"></div></div>
 					<div class="buttonChange" href="work"><img src="/img/tab6.png" alt="Work"><div class="after"></div></div>
 					<div class="buttonChange" href="cooperation"><img src="/img/tab7.png" alt="Cooperation"><div class="after"></div></div> 
-					
-				
-					
-				</div>
 
+
+
+				</div>
 				<div class="room">
 					<div id="study">
 						<div class="room-header">
-						
+
 							<div class="room-about">
 								<div class="first circle">
 									<strong></strong>
+
                                 </div>
                             </div>
                             
@@ -139,9 +144,9 @@
                             <div class="room-about">
 
 
+
 								<div class="lab circle">
 									<strong></strong>
-
 
                                 </div>
                             </div>
@@ -304,6 +309,7 @@
 
 
 					</div>
+
 					<div class="about-rocket">
 						<h4></h4>
 						<span class="costRocket"></span>
@@ -311,26 +317,46 @@
 							<p id="buyButton">Buy</p>
 						</div>
 					</div>
-					
-					
-				<div class="new-day">
-					<div class="dayTitle"><span class="dayN"></span> Day </div>
-						
-						
-						<div><span class="dayAvailable"></span> days are available</div>
-						
-						<div><span class="dayEuroPurchase"></span> euro is charged for the purchase</div>
-						
-						<div><span class="dayEuroEarned">0</span> euro is earned</div>
-						
-						<div><span class="dayInvented">0</span> item is invented</div>
-						
+
+
+					<div class="new-day">
+						<div class="dayTitle"><span class="dayN"></span> Day </div>		
+						<div><span class="dayAvailable"></span> days are available</div>		
+						<div><span class="dayEuroPurchase"></span> euro is charged for the purchase</div>		
+						<div><span class="dayEuroEarned">0</span> euro is earned</div>		
+						<div><span class="dayInvented">0</span> item is invented</div>		
 						<div class="buttonRun"> 
 							<p id="new-day-cloase">Next</p>
 						</div>
 					</div>
+
+					<div class="new-day-ask">
+						<div class="new-day-ask-center">
+							<h3>Warning</h3>	
+							<span >The number of available </span>
+							<span>steps is 0.</span>
+							<span>We offer to fulfill some additional task.</span><br>
+
+							<div id="new-day-ask"><span class="askNum"></span><span>= </span><input class="numberInput" type="number"> <span class="askComp"> ?</span></div>	
+							<p class="hint"></p>	
+							<div class="new-day-buttonRun buttonRun"> 
+								<p id="new-day-ask-cloase">Check</p>
+							</div>
+						</div>
+					</div>
 					
-					
+					<div class="new-day-dayAvelible">
+						<div class="new-day-ask-center">
+							<h3>Well done</h3>	
+							<span >10 steps are available for use</span>
+							
+							
+							<div class="new-day-buttonRun buttonRun"> 
+								<p class="cloas-dayAvelible">Next</p>
+							</div>
+						</div>
+					</div>
+
 					<div class="about-room-things">
 						<h3 class="name"></h3>
 						<span class="about"></span>
@@ -452,8 +478,6 @@
 					<div class="about-closed about-articles">
 						<div class="about-description">
 							<h2 class="type-closed">Closed</h2>
-
-
                             <div class="buttonRun "> 
                                 <p id="closedOk">Ok</p>
                             </div>
@@ -480,5 +504,6 @@
         <script src="/js/laboratory.js"></script>
         <script src="/js/rockets.js"></script>
         <script src="/js/rocket.js"></script>
+
 	</body>
 </html>

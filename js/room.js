@@ -1,16 +1,16 @@
 function Room () {
-    var canvasR, stageR;
-    var updateL = true;
+    var canvas, stage;
+    var update = true;
     var getCountBuyed = 3;
-    function initRoom() {
+    function init() {
         // create stage and point it to the canvas:
-        canvasR = document.getElementById("roomCanvas");
-        stageR = new createjs.Stage(canvasR);
+        canvas = document.getElementById("roomCanvas");
+        stage = new createjs.Stage(canvas);
         // enable touch interactions if supported on the current device:
-        createjs.Touch.enable(stageR);
+        createjs.Touch.enable(stage);
         // enabled mouse over / out events
-        stageR.enableMouseOver(10);
-        stageR.mouseMoveOutside = true; // keep tracking the mouse even when it leaves the canvasR
+        stage.enableMouseOver(10);
+        stage.mouseMoveOutside = true; // keep tracking the mouse even when it leaves the canvas
         // load the source image:
         // var subjectIsBy = logic.request('get_params_room',{id:1});
         // console.log(logic.getRoomParams());
@@ -71,7 +71,7 @@ function Room () {
         ]);
         var Original = new createjs.ColorFilter();
         var RedMask = new createjs.ColorFilter(0,0,0,1,255,0,0,0);
-        stageR.addChild(container);
+        stage.addChild(container);
         bitmap = new createjs.Bitmap(image);
         container.addChild(bitmap);
         bitmap.x = event.target.getAttribute('x');
@@ -92,24 +92,23 @@ function Room () {
         if ( bitmap.buy == 0 ) {
             bitmap.cursor = "pointer";
         }
-        stageR.setChildIndex(bitmap, event.target.getAttribute('zi'));
-        stageR.update();
+        stage.setChildIndex(bitmap, event.target.getAttribute('zi'));
+        stage.update();
         // bitmap.on("mousedown", function (evt) {
         //     this.parent.addChild(this);
-        //     this.offset = {x: this.x - evt.stageRX, y: this.y - evt.stageRY};
+        //     this.offset = {x: this.x - evt.stageX, y: this.y - evt.stageY};
         // });
 
         // // the pressmove event is dispatched when the mouse moves after a mousedown on the target until the mouse is released.
         // bitmap.on("pressmove", function (evt) {
-        //     this.x = evt.stageRX + this.offset.x;
-        //     this.y = evt.stageRY + this.offset.y;
+        //     this.x = evt.stageX + this.offset.x;
+        //     this.y = evt.stageY + this.offset.y;
         //     console.log(this.x + ', ' +this.y);
-        //     // indicate that the stageR should be updateLd on the next tick:
-        //     updateL = true;
+        //     // indicate that the stage should be updated on the next tick:
+        //     update = true;
         // });
          bitmap.on("click", function (evt) {
             let self = this;
-
             if ( this.buy == 0 ) {
                 if ( logic.getMoney() < bitmap.money ) {
                     $('.room .about-room-things .buttonRun p').addClass('blocked');
@@ -125,7 +124,7 @@ function Room () {
                             $(this).parent().parent().css('display','none');
 
                             self.buy = 1;
-                            updateL = true;
+                            update = true;
                             if ( self.buy == 0 && active == 0) {
                                 self.filters = [Grayscale];
                             } else if ( active == 1 ) { 
@@ -180,14 +179,14 @@ function Room () {
                         self.filters = [Original];
                     }
                     self.cache(0, 0, self.image.width, self.image.height);
-                    updateL = true;
+                    update = true;
                     return;
                 });
             } else {
                 this.filters = [Original];
-                updateL = true;
+                update = true;
             }
-            updateL = true;
+            update = true;
         });
         bitmap.on("mouseover", function (evt) {
             if ( this.buy == 0 ) {
@@ -196,7 +195,7 @@ function Room () {
                 this.filters = [Original];
             }
             this.cache(0, 0, bitmap.image.width, bitmap.image.height);
-            updateL = true;
+            update = true;
         });
         bitmap.on("mouseout", function (evt) {
             if ( this.buy == 0 && active == 0) {
@@ -207,20 +206,20 @@ function Room () {
                 this.filters = [Original];
             }
             this.cache(0, 0, bitmap.image.width, bitmap.image.height);
-            updateL = true;
+            update = true;
         });     
         createjs.Ticker.addEventListener("tick", tick);
     }
     function tick(event) {
-        // this set makes it so the stageR only re-renders when an event handler indicates a change has happened.
-        if (updateL) {
+        // this set makes it so the stage only re-renders when an event handler indicates a change has happened.
+        if (update) {
             self = null;
-            updateL = false; // only updateL once
-            stageR.update(event);
+            update = false; // only update once
+            stage.update(event);
         }
     }
     window.addEventListener('DOMContentLoaded', function () {
-        initRoom();
+        init();
     });
 
 }

@@ -16,6 +16,9 @@ class Logic {
 		this.room;
 		this.outMoney;
 	}
+	getLang() {
+		return this.lang;
+	}
 
 	startGame() {
 		this.moneyAppend();
@@ -126,7 +129,6 @@ class Logic {
 
 	setRoomParams (params) {
 		this.room = params;
-		console.log(this.room);
 	}
 
 	getRoomParams () {
@@ -259,6 +261,8 @@ class Logic {
 					this.ask((Math.floor(Math.random() * (3 - 1)) + 1));
 					flag = 0;
 				} else {
+					ava.healthIdentify();
+					ava.moodIdentify();
 					this.outMoney =cost*study;
 					this.money-=cost*study;
 					this.day++;

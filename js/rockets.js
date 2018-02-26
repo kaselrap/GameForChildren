@@ -15,16 +15,23 @@ function Rockets () {
         // load the source image:
         // var subjectIsBy = logic.request('get_params_room',{id:1});
         // console.log(logic.getRoomParams());
-        imager("/img/Stages/Stage 1/S1_part_03.png", 381, 206, .47, "Car - bed", "This is a bed.", 50, 0, 1, 0);
-        imager("/img/Stages/Stage 1/S1_part_01.png", 302, 476, .47, "S1_part_01", "This is a vibro plate.", 250, 0, 1, 0);
-        imager("/img/Stages/Stage 1/S1_part_02.png", 172, 257, .47, "Table PC", "This is a table PC.", 250, 0, 10, 0);
-        imager("/img/Stages/Stage 1/S1_part_04.png", 315, 218, .47, "Books", "This is a books.", 250, 0, 200, 0);
-        imager("/img/Stages/Stage 1/S1_part_05.png", 315, 196, .47, "Curtain", "This is a curtain.", 250, 0, 300, 0);
-        imager("/img/Stages/Stage 1/S1_part_06.png", 318, 356, .47, "Lamp Table", "This is a lamp table.", 250, 0, 300, 0);
-        imager("/img/Stages/Stage 1/S1_part_07.png", 274, 120, .47, "Lamp Top", "This is a lamp top.", 250, 0, 300, 0);
-        imager("/img/Stages/Stage 1/S1_part_08.png", 316, 103, .47, "Scientific poster or  Einstein's photo ", "This is a poster.", 250, 0, 300, 0);
-        imager("/img/Stages/Stage 1/S1_part_09.png", 315, 6, .47, "TV set", "This is a TV.", 250, 0, 300, 0);
-        
+		if (allBuyed) {
+			imager("/img/Stages/Stage 2a/S2a_part_01.png", 318, 356, 0, "S1_part_01", "This is a vibro plate.", 250, 0, 0, 0);
+			imager("/img/Stages/Stage 2a/S2a_part_01.png", 318, 356, .47, "S1_part_01", "This is a vibro plate.", 250, 0, -1, 0);
+			imager("/img/Stages/Stage 2a/S2a_part_02.png", 317, 123, .47, "Table PC", "This is a table PC.", 250, 0, 7777, 0);
+			imager("/img/Stages/Stage 2a/S2a_part_04.png", 316, 153, .47, "Books", "This is a books.", 250, 0, 8888, 0);
+			imager("/img/Stages/Stage 2a/S2a_part_03.png", 314, 123, .47, "Car - bed", "This is a bed.", 50, 0, 9999, 0);
+		} else {
+			imager("/img/Stages/Stage 1/S1_part_03.png", 381, 206, .47, "Car - bed", "This is a bed.", 50, 0, 1, 0);
+			imager("/img/Stages/Stage 1/S1_part_01.png", 302, 476, .47, "S1_part_01", "This is a vibro plate.", 250, 0, 1, 0);
+			imager("/img/Stages/Stage 1/S1_part_02.png", 172, 257, .47, "Table PC", "This is a table PC.", 250, 0, 10, 0);
+			imager("/img/Stages/Stage 1/S1_part_04.png", 315, 218, .47, "Books", "This is a books.", 250, 0, 200, 0);
+			imager("/img/Stages/Stage 1/S1_part_05.png", 315, 196, .47, "Curtain", "This is a curtain.", 250, 0, 300, 0);
+			imager("/img/Stages/Stage 1/S1_part_06.png", 318, 356, .47, "Lamp Table", "This is a lamp table.", 250, 0, 300, 0);
+			imager("/img/Stages/Stage 1/S1_part_07.png", 274, 120, .47, "Lamp Top", "This is a lamp top.", 250, 0, 300, 0);
+			imager("/img/Stages/Stage 1/S1_part_08.png", 316, 103, .47, "Scientific poster or  Einstein's photo ", "This is a poster.", 250, 0, 300, 0);
+			imager("/img/Stages/Stage 1/S1_part_09.png", 315, 6, .47, "TV set", "This is a TV.", 250, 0, 300, 0);
+		}        
     }
     function imager (src, x, y, scale, name, desc, time, explored, zi, activeExplore) {
         var image = new Image();
@@ -60,7 +67,6 @@ function Rockets () {
         var RedMask = new createjs.ColorFilter(0,0,0,1,255,0,0,0);
         stage.addChild(container);
         bitmap = new createjs.Bitmap(image);
-        container.addChild(bitmap);
         bitmap.x = event.target.getAttribute('x');
         bitmap.y = event.target.getAttribute('y');
         bitmap.regX = bitmap.image.width / 2 | 0;
@@ -87,21 +93,22 @@ function Rockets () {
             bitmap.filters = [Original];
         }
         bitmap.cache(0, 0, bitmap.image.width, bitmap.image.height);
-        stage.setChildIndex(bitmap, event.target.getAttribute('zi'));
+        container.addChild(bitmap, event.target.getAttribute('zi'));
+//        stage.setChildIndex(bitmap, event.target.getAttribute('zi'));
         stage.update();
-        // bitmap.on("mousedown", function (evt) {
-        //     this.parent.addChild(this);
-        //     this.offset = {x: this.x - evt.stageX, y: this.y - evt.stageY};
-        // });
-
-        // // the pressmove event is dispatched when the mouse moves after a mousedown on the target until the mouse is released.
-        // bitmap.on("pressmove", function (evt) {
-        //     this.x = evt.stageX + this.offset.x;
-        //     this.y = evt.stageY + this.offset.y;
-        //     console.log(this.x + ', ' +this.y);
-        //     // indicate that the stage should be updated on the next tick:
-        //     update = true;
-        // });
+//         bitmap.on("mousedown", function (evt) {
+//             this.parent.addChild(this);
+//             this.offset = {x: this.x - evt.stageX, y: this.y - evt.stageY};
+//         });
+//
+//         // the pressmove event is dispatched when the mouse moves after a mousedown on the target until the mouse is released.
+//         bitmap.on("pressmove", function (evt) {
+//             this.x = evt.stageX + this.offset.x;
+//             this.y = evt.stageY + this.offset.y;
+//             console.log(this.x + ', ' +this.y);
+//             // indicate that the stage should be updated on the next tick:
+//             update = true;
+//         });
          bitmap.on("click", function (evt) {
             let self = this;
             if ( this.explored == 0 && globalActiveExplore.explored == 0 ) {

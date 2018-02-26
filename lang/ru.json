@@ -257,5 +257,6 @@
      "relax5":{
         "type":"Games",
         "amount":"5"
-     }
+     },
+	"mood":["Super","Good","Bad"]
 }

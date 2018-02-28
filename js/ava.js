@@ -103,7 +103,7 @@ class Ava {
 				freeTimeVal =  parseInt($('#4').text()),
 				roomVal =  parseInt(room.getRoom()),
 				rocket =  parseInt(10),
-				freeTimeWhat = freeTime.freeTimeNow,
+				freeTimeWhat = parseInt(freeTime.freeTimeNow),
 				freeTimeСoefficient;
 			switch(freeTimeWhat) {
 				case 1:freeTimeСoefficient = 1;
@@ -136,21 +136,22 @@ class Ava {
 				freeTimeVal =  parseInt($('#4').text()),
 				roomVal =  parseInt(laboratory.getLab()),
 				rocket =  parseInt(10),
-				freeTimeWhat = freeTime.freeTimeNow,
+				freeTimeWhat = parseInt(freeTime.freeTimeNow),
 				freeTimeСoefficient;
 			switch(freeTimeWhat) {
-				case 1:freeTimeСoefficient = 1;
+				case 1:freeTimeСoefficient = 1.2;
 					break;
-				case 2:freeTimeСoefficient = 1;
+				case 2:freeTimeСoefficient = 1.5;
 					break;
 				case 3:freeTimeСoefficient = 1;
 					break;
-				case 4:freeTimeСoefficient = 1.2;
+				case 4:freeTimeСoefficient = 0.7;
 					break;
-				case 5:freeTimeСoefficient = 1.5;
+				case 5:freeTimeСoefficient = 0.7;
 					break;				
 			}
 			let mood = ((sleep + freeTimeVal + freeTimeСoefficient)/10 + (roomVal + rocket)/(roomVal + rocket))*2;
+			
 			if(mood >6) {
 				this.changeHealth(1);
 				return;

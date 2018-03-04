@@ -356,6 +356,18 @@
 							</div>
 						</div>
 					</div>
+					
+					<div class="new-day-dayAvelible-mood">
+						<div class="new-day-ask-center-mood">
+							<h3>Well done</h3>	
+							<span class="new-day-mood-discription">Grandma has come and the mood goes up!</span>
+
+
+							<div class="new-day-buttonRun-mood buttonRun"> 
+								<p class="cloas-dayAvelible-mood">Next</p>
+							</div>
+						</div>
+					</div>
 
 					<div class="about-room-things">
 						<h3 class="name"></h3>
@@ -483,6 +495,9 @@
 							</div>
 						</div>
 					</div>
+					
+					
+					
 				</div>
 			</div>
 			<div class="overlay"></div>

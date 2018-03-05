@@ -1060,7 +1060,7 @@ cursor: pointer;
     width: 86px;
     z-index: 3;
 }
-.room .about-room-things {
+.room .about-modal {
     display: none;
      border: 4px solid #fff;
     flex-direction: column;
@@ -1074,36 +1074,36 @@ cursor: pointer;
     box-shadow: 7px 5px 10px 0px rgba(0, 0, 0, 0.25);
     z-index: 10;
 }
-.room .about-room-things h3 {
+.room .about-modal h3 {
 	    font-size: 34px;
 	text-align: center;
 	margin-top: 10px;
 }
-.room .about-room-things h4.alert {
+.room .about-modal h4.alert {
     color: #ff0000;
     text-align: center;
     padding: 3px;
     font-size: 16px;
 }
-.room .about-room-things span {
+.room .about-modal span {
     display: block;
     text-align: center;
     font-size: 22px;
     margin-top: 10px;
 }
-.room .about-room-things:before,
-.room .about-room-things:after {
+.room .about-modal:before,
+.room .about-modal:after {
     content: '';
     display: none;
     position: absolute;
     right: -30px;
 }
-.room .about-room-things:before {
+.room .about-modal:before {
     top: 0;
     border-bottom: 23px solid transparent;
     border-left: 30px solid #e8e2b3;
 }
-.room .about-room-things:after {
+.room .about-modal:after {
     bottom: 0;
     border-top: 23px solid transparent;
     border-left: 30px solid #e8e2b3;

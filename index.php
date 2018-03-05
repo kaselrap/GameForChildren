@@ -331,7 +331,7 @@
 					</div>
 					
 					
-					<div class="about-room-things">
+					<div class="about-room-things about-modal">
 						<h3 class="name"></h3>
 						<span class="about"></span>
 						<h4 class="alert"><b></b></h4>
@@ -339,7 +339,7 @@
 							<p id="buyButton" href="S1_part_04_w">Buy</p>
 						</div>
 					</div>
-					<div class="about-rocket-things about-room-things">
+					<div class="about-rocket-things about-modal">
 						<h3 class="name"></h3>
 						<span class="about"><span class="time"></span></span>
 						<h4 class="alert"><b></b></h4>
@@ -479,6 +479,6 @@
         <script src="/js/room.js"></script>
         <script src="/js/laboratory.js"></script>
         <script src="/js/rockets.js"></script>
-        <script src="/js/rocket.js"></script>
+        <!-- <script src="/js/rocket.js"></script> -->
 	</body>
 </html>

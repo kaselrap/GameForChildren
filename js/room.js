@@ -1,7 +1,7 @@
 function Room () {
     var canvas, stage;
     var update = true;
-    var getCountBuyed = 3;
+    var getCountBuyed = 0;
     function init() {
         // create stage and point it to the canvas:
         canvas = document.getElementById("roomCanvas");
@@ -122,7 +122,6 @@ function Room () {
                         if ( thisName == self.name ) {
                             $('.room .about-room-things h4.alert b').text('');
                             $(this).parent().parent().css('display','none');
-
                             self.buy = 1;
                             update = true;
                             if ( self.buy == 0 && active == 0) {

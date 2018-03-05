@@ -54,11 +54,12 @@ class Logic {
 		return this.money; 
 	}
 	initCircle (classCircle, countBued = 0, countThings = 24) {
-        var percentageBued = countBued / countThings;
+        var percentageBued = Math.floor(countBued / countThings * 100) / 100;
+        console.log(countBued, countThings, percentageBued);
         $('.' + classCircle +'.circle').circleProgress({ 
-            value: percentageBued 
+            value: percentageBued
         }).on('circle-animation-progress', function(event, progress) { 
-            $(this).find('strong').html(Math.round(percentageBued * 100 * progress) + '<i>%</i>'); 
+            $(this).find('strong').html(Math.floor(percentageBued * 100 * progress) + '<i>%</i>'); 
         });
     }
 	request ($functionname, $params) {
@@ -526,7 +527,7 @@ class Logic {
 
 //user,day,money,work,study,stadyFull,stadyDist,stadyYor,lang
 
-let logic = new Logic('admin',10,300,2,1,100,'ru',0,100);
+let logic = new Logic('admin',10,300000,2,1,100,'ru',0,100);
 
 
 logic.startGame();

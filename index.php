@@ -64,8 +64,8 @@
 				<div class="status">
 					<div class="status-block"><img src="/img/money.png" alt=""><p class="money-block"></p></div>
 					<div class="status-block"><img src="/img/Rocket-Progress.png" alt=""><p class="rocketCount">13%</p></div>
-					<div class="status-block"><img src="/img/health.png" alt=""><p><?php if ( isset ( $lang['good'] ) ) echo $lang['good']; ?></p></div>
-					<div class="status-block"><img src="/img/mood.png" alt=""><p><?php if ( isset ( $lang['nice'] ) ) echo $lang['nice']; ?></p></div>
+					<div class="status-block"><img src="/img/health.png" alt=""><p class="health"></p></div>
+					<div class="status-block"><img src="/img/mood.png" alt=""><p class="mood"></p></div>
 					<div class="status-block"><img src="/img/sleep.png" alt=""> <div class="selectButton" > 
 						<div class="num"  id="0">7</div>
 						<div class="select"  id="div0">
@@ -113,49 +113,49 @@
 								<div class="first circle">
 									<strong></strong>
 
-                                </div>
-                            </div>
-                            
-                            <div class="room-title">
-                                <h1><?php if ( isset ( $lang['livingRoom'] ) ) echo $lang['livingRoom']; ?></h1>
-                            </div>
-                        </div>
-                        <div class="content content-room" onload="initRoom();">
-                            <img src="img/room/walls.png" alt="" class="room-wall">
-                            <canvas id="roomCanvas" width="576" height="362"></canvas>
-                        </div>
-                    </div>
-                    <div id="laboratory">
-                        <canvas id="rocketCanvas" width="602" height="549"></canvas>
-                        <div class="divButtonLaboratory">
-                            <div class="buttonRun buttonLaboratory"> 
-                                <p id="Level3">Level 3</p>
-                            </div>
-                            <div class="buttonRun buttonLaboratory"> 
-                                <p id="Level2">Level 2</p>
-                            </div>
-                            <div class="buttonRun buttonLaboratory buttonLaboratoryActive"> 
-                                <p id="Level1">Level 1</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="research">
-                        <div class="room-header">
-                            <div class="room-about">
+								</div>
+							</div>
+
+							<div class="room-title">
+								<h1><?php if ( isset ( $lang['livingRoom'] ) ) echo $lang['livingRoom']; ?></h1>
+							</div>
+						</div>
+						<div class="content content-room" onload="initRoom();">
+							<img src="img/room/walls.png" alt="" class="room-wall">
+							<canvas id="roomCanvas" width="576" height="362"></canvas>
+						</div>
+					</div>
+					<div id="laboratory">
+						<canvas id="rocketCanvas" width="602" height="549"></canvas>
+						<div class="divButtonLaboratory">
+							<div class="buttonRun buttonLaboratory"> 
+								<p id="Level3">Level 3</p>
+							</div>
+							<div class="buttonRun buttonLaboratory"> 
+								<p id="Level2">Level 2</p>
+							</div>
+							<div class="buttonRun buttonLaboratory buttonLaboratoryActive"> 
+								<p id="Level1">Level 1</p>
+							</div>
+						</div>
+					</div>
+					<div id="research">
+						<div class="room-header">
+							<div class="room-about">
 
 
 
 								<div class="lab circle">
 									<strong></strong>
 
-                                </div>
-                            </div>
-                            <div class="room-title">
-                                <h1>Laboratory</h1>
-                            </div>
-                        </div>
-                        <div class="content-lab" onload="initLaboratory();">
-                            <canvas id="laboratoryCanvas" width="576" height="362"></canvas>
+								</div>
+							</div>
+							<div class="room-title">
+								<h1>Laboratory</h1>
+							</div>
+						</div>
+						<div class="content-lab" onload="initLaboratory();">
+							<canvas id="laboratoryCanvas" width="576" height="362"></canvas>
 						</div>
 
 
@@ -343,26 +343,32 @@
 								<p id="new-day-ask-cloase">Check</p>
 							</div>
 						</div>
-					</div>
-					
-<<<<<<< HEAD
-					
+					</div>					
+          
 					<div class="about-room-things about-modal">
-=======
 					<div class="new-day-dayAvelible">
 						<div class="new-day-ask-center">
 							<h3>Well done</h3>	
 							<span >10 steps are available for use</span>
-							
-							
 							<div class="new-day-buttonRun buttonRun"> 
 								<p class="cloas-dayAvelible">Next</p>
 							</div>
 						</div>
 					</div>
+					
+					<div class="new-day-dayAvelible-mood">
+						<div class="new-day-ask-center-mood">
+							<h3>Well done</h3>	
+							<span class="new-day-mood-discription">Grandma has come and the mood goes up!</span>
+
+
+							<div class="new-day-buttonRun-mood buttonRun"> 
+								<p class="cloas-dayAvelible-mood">Next</p>
+							</div>
+						</div>
+					</div>
 
 					<div class="about-room-things">
->>>>>>> d19ae42946939eac2da729588af7970fb3b6d89a
 						<h3 class="name"></h3>
 						<span class="about"></span>
 						<h4 class="alert"><b></b></h4>
@@ -483,36 +489,37 @@
 					<div class="about-closed about-articles">
 						<div class="about-description">
 							<h2 class="type-closed">Closed</h2>
-                            <div class="buttonRun "> 
-                                <p id="closedOk">Ok</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="overlay"></div>
-        </main>
-        <script src="/js/jquery-3.2.1.min.js"></script>
-        <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
-        <script src="/js/jquery-ui.min.js"></script>
-        <script src="/js/circle-progress.js"></script>
-        <script src="/js/examples.js"></script>
-        <script src="/js/profile.js"></script>
-        <script src="/js/mainLogic.js"></script>
-        <script src="/js/change.js"></script>
-        <script src="/js/ava.js"></script>
-        <script src="/js/lab.js"></script>
-        <script src="/js/freeTime.js"></script>
-        <script src="/js/requests.js"></script>
-        <script src="/js/imge_to_data_url.js"></script>
-        <script src="/js/room.js"></script>
-        <script src="/js/laboratory.js"></script>
-        <script src="/js/rockets.js"></script>
-<<<<<<< HEAD
-        <!-- <script src="/js/rocket.js"></script> -->
-=======
-        <script src="/js/rocket.js"></script>
+							<div class="buttonRun "> 
+								<p id="closedOk">Ok</p>
+							</div>
+						</div>
+					</div>
+					
+					
+					
+				</div>
+			</div>
+			<div class="overlay"></div>
+		</main>
+		<script src="/js/jquery-3.2.1.min.js"></script>
+		<script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+		<script src="/js/jquery-ui.min.js"></script>
+		<script src="/js/circle-progress.js"></script>
+		<script src="/js/examples.js"></script>
+		<script src="/js/profile.js"></script>
+		<script src="/js/mainLogic.js"></script>
+		<script src="/js/room.js"></script>
+		<script src="/js/change.js"></script>
 
->>>>>>> d19ae42946939eac2da729588af7970fb3b6d89a
+		<script src="/js/freeTime.js"></script>
+		<script src="/js/requests.js"></script>
+		<script src="/js/imge_to_data_url.js"></script>
+		
+
+		<script src="/js/laboratory.js"></script>
+		<!--        <script src="/js/rockets.js"></script>-->
+		<script src="/js/rocket.js"></script>
+		<script src="/js/ava.js"></script>
+
 	</body>
 </html>

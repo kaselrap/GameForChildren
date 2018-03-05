@@ -16,6 +16,9 @@ class Logic {
 		this.room;
 		this.outMoney;
 	}
+	getLang() {
+		return this.lang;
+	}
 
 	startGame() {
 		this.moneyAppend();
@@ -27,7 +30,15 @@ class Logic {
 		this.workActive(this.work);
 		$('#newDay').on('click',this.nextDay);
 		$('#btn-work').on('click',this.workChangeActive);
-		$('#new-day-cloase').on('click',function() {
+		$('.cloas-dayAvelible-mood').on('click',function(){
+			$('.new-day-dayAvelible-mood').css('display','none');
+		});
+		$('#new-day-cloase').on('click',()=> {
+			if(this.day%7) {
+				
+				$('.new-day-dayAvelible-mood').css('display','flex');
+				ava.changeMood(1);
+			}
 			$('.new-day').css('display','none');
 			$('.newDayOverflow').css('display','none');
 		});
@@ -137,7 +148,6 @@ class Logic {
 
 	setRoomParams (params) {
 		this.room = params;
-		console.log(this.room);
 	}
 
 	getRoomParams () {
@@ -270,6 +280,8 @@ class Logic {
 					this.ask((Math.floor(Math.random() * (3 - 1)) + 1));
 					flag = 0;
 				} else {
+					ava.healthIdentify();
+					ava.moodIdentify();
 					this.outMoney =cost*study;
 					this.money-=cost*study;
 					this.day++;

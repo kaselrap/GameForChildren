@@ -2,6 +2,10 @@ function Room () {
     var canvas, stage;
     var update = true;
     var getCountBuyed = 0;
+	
+	this.getRoom = function () {
+		return getCountBuyed;
+	}
     function init() {
         // create stage and point it to the canvas:
         canvas = document.getElementById("roomCanvas");

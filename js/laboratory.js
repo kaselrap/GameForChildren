@@ -3,6 +3,9 @@ function Laboratory() {
     var offset;
     var updateL = true;
     var getCountBuyed = 5;
+	this.getLab = function() {
+		return getCountBuyed;
+	}
     function initLaboratory() {
         // create stage and point it to the canvas:
         canvasL = document.getElementById("laboratoryCanvas");

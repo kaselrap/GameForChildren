@@ -10,6 +10,7 @@ class Logic {
 		this.lang = lang;
 		this.nextDay =this.nextDay.bind(this);
 		this.workChangeActive =this.workChangeActive.bind(this);
+		this.checkAsk =this.checkAsk.bind(this);
 		this.stadyNow = 1;
 		this.stadyDone = stadyDone;
 		this.room;
@@ -28,23 +29,65 @@ class Logic {
 		$('#btn-work').on('click',this.workChangeActive);
 		$('#new-day-cloase').on('click',function() {
 			$('.new-day').css('display','none');
+			$('.newDayOverflow').css('display','none');
 		});
 		$('.closed').on('contextmenu',this.contexmenuClosed);
 		$('.about-closed').on('mouseleave',this.cloaseContextMeny);
 		$('#closedOk').on('click',this.cloaseContextMeny);
+		$('.newDayOverflow').on('click',function(){
+			$('.new-day').css('display','none');
+			$('.newDayOverflow').css('display','none');
+		});
+		$('#new-day-ask-cloase').on('click',this.checkAsk);
+		$('.cloas-dayAvelible').on('click', function(){
+			$('.new-day-dayAvelible').css('display','none');
+				$('.greyBlock').css('display','none');
+		})
+
 
 	}
+
+	ask(i) {
+		Promise.resolve()
+			.then(()=>{
+			return $.getJSON('/lang/ask.json');
+		}) 
+			.then((inf)=>{
+			$('.new-day-ask').css('display','flex');
+			$('.greyBlock').css('display','block');
+			$('#new-day-ask-cloase').attr('href',inf['ask'+i][1]);
+			$('.askNum').text(inf['ask'+i][0])
+			$('.askComp').on('click',function(){
+				$('.hint').text(inf['ask'+i][1]);
+			});
+		});
+	}
+
+	checkAsk(){
+		let num = parseInt($('#new-day-ask-cloase').attr('href')),
+			input = parseInt($('.numberInput').val());
+
+		if(num===input) {
+			$('.new-day-ask').css('display','none');
+			$('.new-day-dayAvelible').css('display','block');
+		
+			this.dayAvelible = 10;
+		}
+		$('.numberInput').val('');
+	}
+
 	setMoneyOut(money) { 
 		if(this.getMoney()>=(-money)) { 
 			this.money+=money; 
 			this.moneyAppend(); 
 		} 
 	}
+
 	setMoney(money) { 
 		if(this.getMoney() >= (-money)) { 
 			this.money+=money; 
 			this.moneyAppend(); 
-//			this.request('set_params_user', {id:2, money:this.money});
+			//			this.request('set_params_user', {id:2, money:this.money});
 		} else {
 			return 1;
 		}
@@ -53,7 +96,9 @@ class Logic {
 	getMoney() { 
 		return this.money; 
 	}
+
 	initCircle (classCircle, countBued = 0, countThings = 24) {
+<<<<<<< HEAD
         var percentageBued = Math.floor(countBued / countThings * 100) / 100;
         console.log(countBued, countThings, percentageBued);
         $('.' + classCircle +'.circle').circleProgress({ 
@@ -62,6 +107,16 @@ class Logic {
             $(this).find('strong').html(Math.floor(percentageBued * 100 * progress) + '<i>%</i>'); 
         });
     }
+=======
+		var percentageBued = countBued / countThings;
+		$('.' + classCircle +'.circle').circleProgress({ 
+			value: percentageBued 
+		}).on('circle-animation-progress', function(event, progress) { 
+			$(this).find('strong').html(Math.round(percentageBued * 100 * progress) + '<i>%</i>'); 
+		});
+	}
+
+>>>>>>> d19ae42946939eac2da729588af7970fb3b6d89a
 	request ($functionname, $params) {
 		self = this;
 		var host = "http://"+window.location.hostname;
@@ -79,75 +134,16 @@ class Logic {
 
 		});
 	}
+
 	setRoomParams (params) {
 		this.room = params;
 		console.log(this.room);
 	}
+
 	getRoomParams () {
+
 		return this.room;
 	}
-	cloaseContextMeny(){
-		$('.about-closed').css('display','none');
-	}
-
-	contexmenuClosed(e) {
-		if(!$(this).hasClass('closed')){
-			return;
-		}
-		let x = e.pageX;
-		let y = e.pageY;
-		let topMain = $('.main').offset().top,
-			leftMain = $('.main').offset().left;
-		let heightElem = $('.about-closed').outerHeight();
-		if(x+260>=leftMain+624) {
-			x=x-240;
-		}
-		if(y+heightElem>=topMain+636) {
-			y=y-heightElem + 20;
-		}
-		$('.about-closed').css({
-			'top':y-10,
-			'left':x-10,
-			'display':'block'
-		});
-	}
-
-	workActive(i) {
-
-		for(let a = 0;a<5;a++) {
-			$('#work'+a).removeClass('workActive');
-		}
-
-		$('#work'+(i-1)).addClass('workActive'); 
-		this.setWorkText(i-1);
-	}
-
-	workChangeActive(ev) {
-		let target =ev.target;
-		for(let a = 0;a<5;a++) {
-			$('#work'+a).removeClass('workActive');
-		}
-		let num =  parseInt(ev.target.getAttribute('work'));
-		this.work = num;
-		$('#work'+(num)).addClass('workActive');  
-		$('.room .about-works').css('display','none');
-		this.setWorkText(num);
-	}
-
-	setWorkText(num) {
-		Promise.resolve() 
-			.then(()=>{
-			return this.getText();
-		})
-			.then((text)=>{
-			$('.type-work').text(text['work'+num].name);
-			$('.amount-work').text(text['work'+num].salaryInOur);
-		});
-	}
-
-	moneyAppend(){
-		$('.money-block').text(this.money);
-	}
 
 	cloaseContextMeny(){
 		$('.about-closed').css('display','none');
@@ -211,7 +207,9 @@ class Logic {
 	moneyAppend(){
 		$('.money-block').text(this.money);
 	}
+
 	nextContext() {
+		$('.newDayOverflow').css('display','block');
 		$('.new-day').css({
 			'display':'flex',
 			'top':202
@@ -219,9 +217,10 @@ class Logic {
 		$('.dayN').text(this.day);
 		$('.dayAvailable').text(this.dayAvelible);
 		$('.dayEuroPurchase').text(this.outMoney);
-	
+
 
 	}
+
 	nextDayRender() {
 		this.nextContext();
 		this.moneyAppend();
@@ -238,11 +237,13 @@ class Logic {
 	}
 
 	nextDay() {
+		let flag = 1;
 		Promise.resolve()
 			.then(()=>{
 			return $.getJSON('./lang/'+this.lang+'.json'); 
 		})
 			.then((val)=>{
+			
 			let cost,dayOll;
 			switch(this.stadyNow) {
 				case 1:
@@ -265,44 +266,47 @@ class Logic {
 				return;
 			} 
 			if(!this.stadyDone) {
+				if(this.dayAvelible===0) {
+					this.ask((Math.floor(Math.random() * (3 - 1)) + 1));
+					flag = 0;
+				} else {
+					this.outMoney =cost*study;
+					this.money-=cost*study;
+					this.day++;
+					this.dayAvelible --;
+					switch (this.stadyNow) {
+						case 1:
+							this.stadyFull+=study;
+							if(this.stadyFull>=dayOll){
+								this.stadyFull =0;
 
-				this.outMoney =cost*study;
-				this.money-=cost*study;
-				this.day++;
-				this.dayAvelible --;
-				switch (this.stadyNow) {
-					case 1:
-						this.stadyFull+=study;
-						if(this.stadyFull>=dayOll){
-							this.stadyFull =0;
+								this.study++;
+								this.nextWork(this.study);
+							}
+							break
+							case 2:
+							this.stadyFull+=(study+study/4);
+							if( this.stadyFull>=dayOll){
+								this.stadyFull =0;
 
-							this.study++;
-							this.nextWork(this.study);
-						}
-						break
-						case 2:
-						this.stadyFull+=(study+study/4);
-						if( this.stadyFull>=dayOll){
-							this.stadyFull =0;
+								this.study++;
+								this.nextWork(this.study);
+							}
+							break
+							case 3:
+							this.stadyFull+=(study+study/2);
+							if( this.stadyFull>=dayOll ){
+								this.stadyFull =0;
 
-							this.study++;
-							this.nextWork(this.study);
-						}
-						break
-						case 3:
-						this.stadyFull+=(study+study/2);
-						if( this.stadyFull>=dayOll ){
-							this.stadyFull =0;
+								this.study++;
+								this.nextWork(this.study);
+							}
+							break
 
-							this.study++;
-							this.nextWork(this.study);
-						}
-						break
-
-				}
+					}
 
 
-			}
+				} }
 		})
 			.then(()=>{
 			if(this.study===5) {
@@ -322,7 +326,9 @@ class Logic {
 
 		})
 			.then(()=>{
+			if(flag) {
 			this.nextDayRender();
+			}
 		});
 
 
@@ -527,7 +533,11 @@ class Logic {
 
 //user,day,money,work,study,stadyFull,stadyDist,stadyYor,lang
 
+<<<<<<< HEAD
 let logic = new Logic('admin',10,300000,2,1,100,'ru',0,100);
+=======
+let logic = new Logic('admin',10,300,2,1,100,'ru',0,3);
+>>>>>>> d19ae42946939eac2da729588af7970fb3b6d89a
 
 
 logic.startGame();

@@ -8,6 +8,31 @@
     font-family:  Dimbo-Regular; 
     box-sizing: border-box;
 }
+
+.newDayOverflow {
+	display: none;
+	width: 100%;
+    height: 100%;
+	opacity: 0.3;
+	background: grey;
+	position: absolute;
+	z-index: 8;
+	top: 0;
+	left: 0;
+}
+
+.greyBlock {
+	display: none;
+	width: 100%;
+    height: 100%;
+	opacity: 0.3;
+	background: grey;
+	position: absolute;
+	z-index: 8;
+	top: 0;
+	left: 0;
+}
+
 #preload{
     display: block;
     position: absolute;
@@ -317,7 +342,18 @@ main {
 .room-header .room-about .room-description .hours-left span {
     font-size: 16px;
 }
-
+.dayTitle{
+ font-size: 38px!important;	
+	
+}
+ .about-rocket h4 {
+ font-size: 38px!important;	
+	text-align: center;
+	 margin-top: 10px;
+}
+.dayTitle span {
+ font-size: 38px!important;		
+}
 .new-day{
     display: none;
      border: 4px solid #fff;
@@ -333,7 +369,7 @@ main {
     border-radius: 4px;
     border-top-right-radius: 0;
     box-shadow: 7px 5px 10px 0px rgba(0, 0, 0, 0.25);
-    z-index: 10;
+    z-index: 12;
 }
 
  .new-day span {
@@ -342,18 +378,7 @@ main {
     font-size: 22px;
    
 }
-.dayTitle{
- font-size: 38px!important;	
-	
-}
- .about-rocket h4 {
- font-size: 38px!important;	
-	text-align: center;
-	 margin-top: 10px;
-}
-.dayTitle span {
- font-size: 38px!important;		
-}
+
 .new-day div
 {
 	 font-size: 22px;
@@ -373,6 +398,125 @@ main {
     border-left: 30px solid #e8e2b3;
 }
  .new-day:after {
+    bottom: 0;
+    border-top: 23px solid transparent;
+    border-left: 30px solid #e8e2b3;
+}
+.new-day-dayAvelible {
+	   border: 4px solid #fff;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+	left: 43%;
+	top: 202px;
+	display: none;
+    height: 223px;
+    width: 260px;
+    background: #e8e2b3;
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    box-shadow: 7px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    z-index: 12;
+}
+
+ .new-day-dayAvelible h3 {
+    font-size: 38px;  
+}
+
+.new-day-dayAvelible div
+{
+	 font-size: 22px;
+	 text-align: center;
+	margin-top: 16px;
+}
+
+ .new-day-dayAvelible:before,
+ .new-day-dayAvelible:after {
+    content: '';
+    display: none;
+    position: absolute;
+    right: -30px;
+}
+ .new-day-dayAvelible:before {
+    top: 0;
+    border-bottom: 23px solid transparent;
+    border-left: 30px solid #e8e2b3;
+}
+ .new-day-dayAvelible:after {
+    bottom: 0;
+    border-top: 23px solid transparent;
+    border-left: 30px solid #e8e2b3;
+}
+.new-day-ask{
+    
+     border: 4px solid #fff;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+	left: 43%;
+	top: 202px;
+	display: none;
+    height: 350px;
+    width: 260px;
+    background: #e8e2b3;
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    box-shadow: 7px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    z-index: 12;
+}
+.new-day-buttonRun {
+	margin-left: 67px;
+	margin-top: 55px!important;
+	
+}
+
+.hint {
+	
+	height: 22px;
+}
+
+.new-day-ask-center {
+	width: 100%;
+}
+
+ .new-day-ask span {
+    font-size: 22px;  
+}
+
+.askComp {
+	color: red;
+	cursor: pointer;
+}
+
+.numberInput {
+	width: 63px;
+    font-size: 22px;
+}
+
+ .new-day-ask h3 {
+    font-size: 38px;  
+}
+
+.new-day-ask div
+{
+	 font-size: 22px;
+	 text-align: center;
+	margin-top: 16px;
+}
+
+ .new-day-ask:before,
+ .new-day-ask:after {
+    content: '';
+    display: none;
+    position: absolute;
+    right: -30px;
+}
+ .new-day-ask:before {
+    top: 0;
+    border-bottom: 23px solid transparent;
+    border-left: 30px solid #e8e2b3;
+}
+ .new-day-ask:after {
     bottom: 0;
     border-top: 23px solid transparent;
     border-left: 30px solid #e8e2b3;
@@ -1116,3 +1260,5 @@ canvas#roomCanvas {
 .freeTime {
     border: 4px solid rgba(120,218,21,1)!important;
 }
+
+
